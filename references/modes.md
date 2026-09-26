@@ -138,4 +138,4 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 ## Mode réponse finale
 
-Quel que soit le mode, la réponse finale doit être proportionnée à la demande et indiquer les limites importantes. Pour une modification, inclure les fichiers, tests, diff Git et version. Pour une analyse, inclure la conclusion, les preuves, les risques et les options. Pour une tâche bloquée, expliquer le blocage et la prochaine information nécessaire.
+Lire `references/formats-reponses.md` pour choisir le contrat de sortie adapté. Quel que soit le mode, la réponse finale doit être proportionnée à la demande et indiquer les limites importantes.

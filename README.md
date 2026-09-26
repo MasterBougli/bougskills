@@ -11,6 +11,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - passation structurée vers une session fraîche pour éviter les boucles de raisonnement ;
 - sélection automatique d'un mode adapté à chaque type de demande ;
 - séparation entre faits, hypothèses, inconnues et décisions pour fiabiliser le raisonnement ;
+- formats de sortie adaptés à chaque mode de travail ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
