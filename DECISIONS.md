@@ -26,6 +26,35 @@ Répondre en français par défaut avec un ton direct, humain et patient. Adapte
 - `SKILL.md`
 - `references/formats-reponses.md`
 
+## ADR-006 — Audit transversal avec livrables séparés
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : audit de sites, boutiques, applications, API et services
+
+### Contexte
+
+Un audit utile doit couvrir l'expérience réelle du produit, son contenu, sa conversion, sa sécurité et sa qualité technique, pas uniquement le SEO.
+
+### Décision
+
+Ajouter un mode Audit qui crée d'abord `Audit/plan-audit.md`, puis `Audit/rapport-audit.md`. Chaque constat doit comporter une preuve et l'une des cinq classifications définies par Boug. Les domaines non applicables, partiels ou non vérifiables doivent être déclarés.
+
+### Alternatives
+
+- Utiliser uniquement la revue finale — rejeté car elle ne fournit pas un parcours d'audit assez détaillé.
+- Produire uniquement une checklist SEO/technique — rejeté car trop étroit pour un produit réel.
+
+### Conséquences
+
+- Positives : audits reproductibles, lisibles et adaptés aux sites comme aux applications.
+- Négatives : un audit complet demande davantage de cadrage et de preuves.
+
+### Références
+
+- `references/mode-audit.md`
+- `references/modes.md`
+
 ## ADR-002 — Création guidée de projet
 
 - Statut : Acceptée

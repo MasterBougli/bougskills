@@ -25,6 +25,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - définition explicite des critères qui permettent de déclarer une tâche terminée ;
 - vérification des informations évolutives avec des sources adaptées et datées ;
 - utilisation encadrée des commandes, scripts, navigateurs et services externes ;
+- mode Audit transversal pour les sites, boutiques, applications, API et services ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -45,6 +46,7 @@ Mentionner explicitement `BougSkills` ou demander directement l'action souhaité
 - création guidée de projet ;
 - modification, diagnostic ou débogage ;
 - revue de sécurité ou revue finale ;
+- audit global avec plan, rapport, preuves et classifications de gravité ;
 - passation vers une nouvelle session ;
 - résumé copiable du contexte.
 
@@ -71,6 +73,12 @@ Lorsqu'un nouveau projet est demandé, BougSkills crée la structure documentair
 Le protocole sécurité adapte le niveau de contrôle au projet. Il couvre la modélisation des menaces, les secrets, les permissions, les entrées, les dépendances, les tests, les headers, les sauvegardes, le monitoring et la checklist avant mise en ligne.
 
 Un test actif contre un hôte réel nécessite toujours une autorisation explicite et un périmètre confirmé.
+
+### Audit transversal
+
+Pour demander un audit complet, préciser la cible et le périmètre. BougSkills crée d'abord `Audit/plan-audit.md`, pose les questions nécessaires une par une, puis produit `Audit/rapport-audit.md`. L'audit couvre les aspects pertinents du produit, pas seulement le SEO et la technique : design, UX, responsive, accessibilité, contenu, conversion, parcours, performance, SEO, liens, données produit, confiance, obligations à vérifier, compatibilité moteurs/assistants IA et, pour une application, code, architecture, tests et sécurité.
+
+Chaque constat est classé `bloquant`, `important`, `amélioration recommandée`, `cosmétique` ou `à vérifier avec toi ou un professionnel`, avec une preuve, un impact, une recommandation et un statut de vérification. Voir [`references/mode-audit.md`](references/mode-audit.md).
 
 ### Passation entre sessions
 

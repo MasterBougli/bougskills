@@ -17,6 +17,8 @@ Pour reprendre un travail dans une session fraîche, après une session longue, 
 
 Pour choisir la bonne méthode de travail, lire [references/modes.md](references/modes.md) et sélectionner un mode principal avant d'agir.
 
+Pour auditer globalement un site, une boutique, une application, une API ou un service, lire [references/mode-audit.md](references/mode-audit.md). Créer `Audit/plan-audit.md` avant l'audit puis `Audit/rapport-audit.md`, avec chaque constat classé par gravité et accompagné de preuves, limites et recommandations.
+
 Pour analyser une situation non triviale, lire [references/fiabilite-raisonnement.md](references/fiabilite-raisonnement.md) afin de séparer les faits, hypothèses, inconnues et décisions.
 
 Pour structurer le résultat final selon le mode utilisé, lire [references/formats-reponses.md](references/formats-reponses.md).

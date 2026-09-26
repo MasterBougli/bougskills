@@ -13,15 +13,16 @@ En cas de chevauchement, appliquer cette priorité :
 1. **Sécurité** si la demande touche à une vulnérabilité, un secret, une donnée sensible ou une action à risque.
 2. **Passation** si l'objectif est de transférer ou reprendre un contexte.
 3. **Création de projet** si le projet n'a pas encore de structure.
-4. **Modification** si des fichiers doivent être changés.
-5. **Diagnostic** si Boug demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
-6. **Débogage** si l'objectif est de trouver et corriger un problème reproductible.
-7. **Conception** si une solution, une architecture ou un plan doit être défini avant l'implémentation.
-8. **Exploration** si des choix importants restent ouverts.
-9. **Explication** si Boug veut comprendre un sujet.
-10. **Revue finale** si Boug demande une vérification globale.
-11. **Résumé** si Boug demande de condenser une information ou une conversation.
-12. **Réponse simple** pour les demandes directes sans travail de fond.
+4. **Audit** si Boug demande une analyse globale multi-domaines avec un plan et un rapport.
+5. **Modification** si des fichiers doivent être changés.
+6. **Diagnostic** si Boug demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
+7. **Débogage** si l'objectif est de trouver et corriger un problème reproductible.
+8. **Conception** si une solution, une architecture ou un plan doit être défini avant l'implémentation.
+9. **Exploration** si des choix importants restent ouverts.
+10. **Explication** si Boug veut comprendre un sujet.
+11. **Revue finale** si Boug demande une vérification globale avant livraison.
+12. **Résumé** si Boug demande de condenser une information ou une conversation.
+13. **Réponse simple** pour les demandes directes sans travail de fond.
 
 Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièvement les modes secondaires utilisés lorsque cela clarifie la réponse.
 
@@ -125,6 +126,17 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Classer les problèmes par priorité.
 - Dire clairement ce qui est validé, non validé ou hors périmètre.
 - Vérifier qu'aucune exigence validée ne reste sans implémentation, test ou documentation appropriée.
+
+## Mode Audit
+
+À utiliser pour un audit global d'un site, d'une boutique, d'une application, d'une API ou d'un service. Lire `references/mode-audit.md`.
+
+- Créer `Audit/plan-audit.md` avant de commencer, puis `Audit/rapport-audit.md` après l'analyse.
+- Couvrir tous les domaines applicables : produit, design, UX, responsive, accessibilité, contenu, conversion, parcours, performance, SEO, liens, données métier, confiance, obligations à vérifier, compatibilité moteurs/IA et sécurité/code pour les applications.
+- Poser les questions manquantes une par une et distinguer le statique de l'actif.
+- Exiger une autorisation explicite avant toute requête ou action contre une cible réelle.
+- Produire chaque constat avec preuve, impact, localisation, recommandation, statut de vérification et une classification autorisée.
+- Déclarer les domaines non applicables, partiels ou non vérifiables ; ne pas les omettre silencieusement.
 
 ## Mode passation
 
