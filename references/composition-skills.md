@@ -10,12 +10,13 @@ Il ne doit pas remplacer un skill spécialisé lorsqu'un tel skill est disponibl
 
 1. Identifier le domaine réel de la demande.
 2. Rechercher un skill spécialisé déjà installé et réellement adapté.
-3. Vérifier que le skill est audité dans l'inventaire courant ; sinon appliquer `references/audit-skills-installes.md`.
-4. Charger le minimum de skills nécessaires, après autorisation explicite de Bougli si un skill reste non audité.
-5. Utiliser le skill spécialisé pour sa méthode métier ou technique.
-6. Utiliser BougSkills pour coordonner, poser les questions, préserver le contexte, protéger les secrets et restituer le résultat.
-7. En cas de contradiction, suivre l'instruction la plus spécifique au domaine, sauf si elle entre en conflit avec une règle de sécurité, d'autorisation ou avec la demande explicite de Bougli.
-8. Ne pas charger une longue liste de skills « au cas où ».
+3. Vérifier que le skill est audité dans l'inventaire courant ; sinon appliquer `references/audit-skills-installes.md` avant tout chargement ou toute exécution.
+4. Présenter le résumé statique, les limites, le préflight et la décision attendue. Tant que Bougli n'a pas autorisé explicitement ce skill précis pour cette utilisation, le considérer comme bloqué.
+5. Charger le minimum de skills nécessaires après autorisation ; une autorisation pour un autre skill, une autre session ou un autre périmètre ne se réutilise pas automatiquement.
+6. Utiliser le skill spécialisé pour sa méthode métier ou technique.
+7. Utiliser BougSkills pour coordonner, poser les questions, préserver le contexte, protéger les secrets et restituer le résultat.
+8. En cas de contradiction, suivre l'instruction la plus spécifique au domaine, sauf si elle entre en conflit avec une règle de sécurité, d'autorisation ou avec la demande explicite de Bougli.
+9. Ne pas charger une longue liste de skills « au cas où ».
 
 ## Routage indicatif
 
@@ -43,7 +44,7 @@ Ces exemples orientent la recherche ; ils ne constituent pas une liste exhaustiv
 - Pour une modification, vérifier le résultat avec le protocole projet de BougSkills même si le skill spécialisé fournit déjà sa propre checklist.
 - Pour la sécurité, le protocole de sécurité de BougSkills reste obligatoire et complète les skills spécialisés.
 - Pour une nouvelle dépendance ou un nouvel outil, expliquer le besoin, la provenance, le coût et le risque avant installation.
-- Un skill non audité ne doit pas être utilisé automatiquement. Le signaler, présenter les risques et attendre l'autorisation explicite de Bougli ; bloquer si l'autorisation ou le préflight requis manque.
+- Un skill non audité ne doit pas être utilisé automatiquement. L'audit statique doit précéder toute lecture opérationnelle, installation, exécution ou appel externe lié à ce skill. Le signaler, présenter les risques et attendre l'autorisation explicite de Bougli ; bloquer si l'autorisation ou le préflight requis manque.
 
 ## Quand aucun skill ne correspond
 

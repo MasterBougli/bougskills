@@ -634,6 +634,31 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
 
+## ADR-033 — Porte obligatoire pour un skill non audité
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : composition et utilisation de skills spécialisés
+
+### Contexte
+
+La présence d'un skill dans le dossier installé ne prouve pas que ses instructions, scripts, dépendances ou appels externes sont sûrs. Le charger avant son audit pourrait déclencher une lecture de credentials, une installation ou une transmission de données.
+
+### Décision
+
+Un skill non audité est bloqué. BougSkills réalise d'abord un audit statique en lecture seule, présente les risques, les limites et le préflight, puis demande l'autorisation explicite de Bougli pour ce skill et ce périmètre précis. Aucune instruction opérationnelle, installation, exécution ou action externe liée au skill ne doit précéder cette autorisation.
+
+### Conséquences
+
+- Positives : séparation nette entre inspection et confiance opérationnelle.
+- Négatives : l'utilisation du premier skill ou d'un skill modifié demande une étape supplémentaire.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `references/composition-skills.md`
+- `tests/scenarios.md`
+
 ## ADR-032 — Exception pour la vérification publique de version
 
 - Statut : Acceptée

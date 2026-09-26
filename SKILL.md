@@ -69,6 +69,8 @@ Pour produire ou vérifier des constats fiables, appliquer [references/protocole
 
 Au premier usage de BougSkills, puis lorsque l'inventaire change, lire [references/audit-skills-installes.md](references/audit-skills-installes.md) et effectuer un audit statique en lecture seule des skills installés. Prévenir Bougli des lectures de credentials, télémétries, uploads, installations et appels externes détectés avant d'utiliser les skills concernés.
 
+Un skill spécialisé non audité est bloqué : l'audit statique, le résumé des risques et le préflight doivent précéder toute lecture opérationnelle, installation, exécution ou action externe. Demander ensuite l'autorisation explicite pour ce skill et ce périmètre précis ; ne pas réutiliser silencieusement une autorisation différente.
+
 Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, identifier les données transmises ou lues, la destination, le fournisseur, l'autorisation disponible et la possibilité de désactivation. Ne rien déclencher tant qu'une autorisation ou une information indispensable manque.
 
 Demander une confirmation à Bougli juste avant chaque appel externe effectif. Une autorisation précédente ne se prolonge pas automatiquement à une nouvelle requête, un nouvel upload, une installation ou une modification distante. Exception : la lecture publique du fichier `VERSION` de BougSkills, une fois par session ou à la demande explicite, peut être faite sans confirmation interactive ; elle ne transmet aucun contenu local et reste désactivable.
