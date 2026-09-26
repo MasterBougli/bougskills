@@ -685,6 +685,31 @@ BougSkills anonymise par défaut les requêtes et URL avant toute vérification 
 - `references/outils-externes.md`
 - `tests/scenarios.md`
 
+## ADR-031 — Confirmation à chaque appel externe
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : services, navigateurs, téléchargements, installations et actions distantes
+
+### Contexte
+
+Une autorisation donnée pour un appel externe ne décrit pas nécessairement une requête ultérieure, ses données, son coût ou son effet. La réutiliser automatiquement pourrait élargir le périmètre sans que Bougli le voie.
+
+### Décision
+
+BougSkills demande une confirmation juste avant chaque appel externe effectif. La demande résume l'action, les données, la destination, le fournisseur, le périmètre, l'effet et la désactivation ou le retour arrière. Une autorisation précédente aide à préparer le préflight mais n'autorise jamais silencieusement un nouvel appel.
+
+### Conséquences
+
+- Positives : contrôle explicite et périmètre visible à chaque action.
+- Négatives : davantage de confirmations, y compris pour des appels en lecture seule.
+
+### Références
+
+- `references/outils-externes.md`
+- `references/audit-skills-installes.md`
+- `tests/scenarios.md`
+
 ## ADR-028 — Version et mise à jour contrôlée de BougSkills
 
 - Statut : Acceptée

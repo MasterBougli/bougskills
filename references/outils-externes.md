@@ -17,6 +17,12 @@ Vérifier :
 
 Avant une recherche, un navigateur ou un appel de service, anonymiser les requêtes et URL : supprimer paramètres, fragments, tokens, identifiants, chemins privés et données personnelles non indispensables. Utiliser le domaine public ou une requête générique lorsque cela suffit. Une donnée identifiante ne peut être transmise qu'après validation explicite de Bougli et justification de sa nécessité.
 
+## Confirmation au moment de l'action
+
+Demander l'autorisation de l'utilisateur juste avant chaque appel externe effectif, même si le même fournisseur ou le même périmètre a déjà été autorisé dans la session. Une autorisation précédente sert à préparer le préflight, mais ne vaut pas confirmation pour une nouvelle requête, un nouvel upload, une nouvelle installation ou une nouvelle modification distante.
+
+La demande doit résumer : l'action exacte, les données transmises, la destination, le fournisseur, le périmètre, le coût ou l'effet attendu, et la possibilité de désactivation ou de retour arrière. Sans réponse positive claire, ne pas déclencher l'action.
+
 Commencer par une inspection en lecture seule lorsque c'est possible. Ne pas installer un outil ou une dépendance uniquement par habitude.
 
 ## Règles d'exécution

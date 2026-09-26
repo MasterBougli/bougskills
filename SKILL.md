@@ -71,6 +71,8 @@ Au premier usage de BougSkills, puis lorsque l'inventaire change, lire [referenc
 
 Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, identifier les données transmises ou lues, la destination, le fournisseur, l'autorisation disponible et la possibilité de désactivation. Ne rien déclencher tant qu'une autorisation ou une information indispensable manque.
 
+Demander une confirmation à Bougli juste avant chaque appel externe effectif. Une autorisation précédente ne se prolonge pas automatiquement à une nouvelle requête, un nouvel upload, une installation ou une modification distante.
+
 Pour développer une fonctionnalité non triviale, lire [references/entretien-developpement.md](references/entretien-developpement.md), poser les questions une par une et couvrir la feature de bout en bout : produit, parcours, données, architecture, code, sécurité, performance, tests, observabilité et livraison. Pour une fonctionnalité importante, utiliser [references/gabarit-cadrage-developpement.md](references/gabarit-cadrage-developpement.md).
 
 Pour appliquer le cycle complet d'une feature, lire [references/cycle-developpement.md](references/cycle-developpement.md) : sécurité et inconnues, contrat, reconnaissance, architecture, implémentation, tests/revue, livraison puis passation.
