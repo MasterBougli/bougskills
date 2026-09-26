@@ -248,3 +248,27 @@ Imposer un résumé d'audit, un préflight par skill et trois décisions explici
 
 - `references/audit-skills-installes.md`
 - `references/garde-fous.md`
+
+## ADR-011 — Cadrage de développement conservable
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : fonctionnalités non triviales et documentation projet
+
+### Contexte
+
+Les questions posées avant une feature peuvent être perdues après la conversation, alors que les décisions et hypothèses doivent rester vérifiables pendant l'implémentation et la livraison.
+
+### Décision
+
+Pour une fonctionnalité importante, BougSkills peut conserver un cadrage structuré dans la documentation existante du projet. Il réutilise le système documentaire déjà présent et n'en crée pas un concurrent sans raison.
+
+### Conséquences
+
+- Positives : meilleure continuité, traçabilité des choix et définition de terminé plus claire.
+- Négatives : un document supplémentaire doit être maintenu lorsqu'il est réellement nécessaire.
+
+### Références
+
+- `references/entretien-developpement.md`
+- `references/gabarit-cadrage-developpement.md`

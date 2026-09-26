@@ -91,6 +91,8 @@ Le résumé d'audit et le préflight suivent un format stable avec une décision
 
 Pour une fonctionnalité non triviale, BougSkills commence par un entretien adaptatif et pose une question à la fois. Il vérifie le besoin, les utilisateurs, les parcours et états d'erreur, les données et règles métier, l'architecture, les conventions de code, la sécurité, la performance, les tests, l'observabilité, le déploiement et le rollback. Il présente ensuite un cadrage court avant de modifier le projet. Une correction triviale reste proportionnée.
 
+Pour une fonctionnalité importante, le cadrage peut être conservé dans `docs/` à partir du [gabarit de cadrage](references/gabarit-cadrage-developpement.md), sans remplacer la documentation déjà utilisée par le projet.
+
 ### Audit transversal
 
 Pour demander un audit complet, préciser la cible et le périmètre. BougSkills crée d'abord `Audit/plan-audit.md`, pose les questions nécessaires une par une, puis produit `Audit/rapport-audit.md`. L'audit couvre les aspects pertinents du produit, pas seulement le SEO et la technique : design, UX, responsive, accessibilité, contenu, conversion, parcours, performance, SEO, liens, données produit, confiance, obligations à vérifier, compatibilité moteurs/assistants IA et, pour une application, code, architecture, tests et sécurité.

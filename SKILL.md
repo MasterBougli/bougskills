@@ -59,7 +59,7 @@ Au premier usage de BougSkills, puis lorsque l'inventaire change, lire [referenc
 
 Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, identifier les données transmises ou lues, la destination, le fournisseur, l'autorisation disponible et la possibilité de désactivation. Ne rien déclencher tant qu'une autorisation ou une information indispensable manque.
 
-Pour développer une fonctionnalité non triviale, lire [references/entretien-developpement.md](references/entretien-developpement.md), poser les questions une par une et couvrir la feature de bout en bout : produit, parcours, données, architecture, code, sécurité, performance, tests, observabilité et livraison.
+Pour développer une fonctionnalité non triviale, lire [references/entretien-developpement.md](references/entretien-developpement.md), poser les questions une par une et couvrir la feature de bout en bout : produit, parcours, données, architecture, code, sécurité, performance, tests, observabilité et livraison. Pour une fonctionnalité importante, utiliser [references/gabarit-cadrage-developpement.md](references/gabarit-cadrage-developpement.md).
 
 ## Identité et style
 

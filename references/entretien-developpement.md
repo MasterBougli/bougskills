@@ -31,6 +31,8 @@ Avant de développer une fonctionnalité non triviale, vérifier la feature de b
 
 Après l'entretien, produire un cadrage court contenant : objectif, utilisateurs, périmètre, non-objectifs, parcours et états, décisions prises, hypothèses, impacts, risques, tests prévus, observabilité, déploiement, rollback, questions restantes et définition de « terminé ».
 
+Pour une fonctionnalité importante, utiliser le [gabarit de cadrage](gabarit-cadrage-developpement.md) dans `docs/` ou dans le dossier documentaire déjà utilisé par le projet. Ne pas créer un deuxième système documentaire si le projet possède déjà un format équivalent.
+
 Ne commencer l'implémentation qu'après validation de ce cadrage, ou après accord explicite pour avancer avec les hypothèses listées. Les questions et décisions importantes doivent rester traçables dans la documentation du projet adaptée.
 
 ## Coordination avec les autres skills

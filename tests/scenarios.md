@@ -302,6 +302,10 @@ Si Boug ne sait pas répondre à une question critique, BougSkills distingue l'i
 
 Avant un skill qui envoie du contenu vers un fournisseur distant, BougSkills affiche les données, destination, fournisseur, autorisation, désactivation et type d'action. Il demande les informations manquantes ou bloque ; il ne déduit pas une autorisation générale.
 
+### 39. Cadrage conservé
+
+Pour une fonctionnalité importante, BougSkills conserve un cadrage structuré avec objectif, parcours, données, architecture, code, sécurité, performance, tests, observabilité, livraison, décisions et définition de terminé, sans créer de documentation concurrente inutile.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

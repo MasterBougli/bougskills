@@ -31,6 +31,7 @@ function Assert-Path([string]$RelativePath) {
     'references/qualite-livraison.md',
     'references/audit-skills-installes.md',
     'references/entretien-developpement.md',
+    'references/gabarit-cadrage-developpement.md',
     'references/fiabilite-raisonnement.md',
     'references/formats-reponses.md',
     'references/gestion-decisions.md',
