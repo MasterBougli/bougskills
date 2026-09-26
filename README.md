@@ -22,6 +22,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - analyse d'impact avant les changements importants ou transversaux ;
 - reconnaissance ciblée des projets existants avant conception ou modification ;
 - traçabilité des exigences vers les décisions, fichiers, tests et documentation ;
+- définition explicite des critères qui permettent de déclarer une tâche terminée ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -100,6 +101,8 @@ Les modifications importantes sont précédées d'une analyse d'impact couvrant 
 Avant d'agir dans un projet existant, BougSkills inspecte les instructions locales, l'état Git, la structure, la stack, les versions et les tests, sans afficher les secrets.
 
 Pour les projets importants, il peut maintenir une matrice `docs/traceability.md` reliant chaque exigence à son implémentation, ses tests et sa documentation.
+
+Une tâche n'est déclarée terminée que lorsque son objectif et ses preuves sont vérifiés ; sinon le statut est `partiel`, `bloqué` ou `terminé sous conditions`.
 
 Les tâches parallélisables peuvent être déléguées avec un périmètre et un format de retour explicites, mais la vérification finale reste toujours dans le contexte principal.
 

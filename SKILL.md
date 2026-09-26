@@ -43,6 +43,8 @@ Pour inspecter un projet existant avant d'agir, appliquer [references/reconnaiss
 
 Pour relier les besoins, décisions, fichiers, tests et documentation d'un projet, appliquer [references/traceabilite.md](references/traceabilite.md).
 
+Pour déterminer si une tâche est réellement terminée, appliquer [references/definition-terminaison.md](references/definition-terminaison.md) avant le bilan final.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

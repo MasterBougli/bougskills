@@ -143,4 +143,4 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 ## Mode réponse finale
 
-Lire `references/formats-reponses.md` pour choisir le contrat de sortie adapté. Quel que soit le mode, la réponse finale doit être proportionnée à la demande et indiquer les limites importantes.
+Lire `references/formats-reponses.md` et `references/definition-terminaison.md` pour choisir le contrat de sortie et le statut réel de fin. Quel que soit le mode, la réponse finale doit être proportionnée à la demande et indiquer les limites importantes.
