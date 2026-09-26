@@ -11,6 +11,8 @@ Utilise ce skill lorsque la demande de Boug bénéficie de la continuité entre 
 
 Pour créer un projet depuis zéro, lire [references/creation-projet.md](references/creation-projet.md) et appliquer son parcours de démarrage guidé.
 
+Pour concevoir, auditer ou renforcer la sécurité d'un projet, lire [references/protocole-securite.md](references/protocole-securite.md) et appliquer le niveau de sécurité adapté au risque.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
@@ -41,6 +43,12 @@ Avant toute modification : expliquer brièvement ce qui va changer. Avant de ter
 ## Création d'un projet depuis zéro
 
 Quand Boug demande de créer un projet entièrement nouveau, activer le mode de démarrage guidé. Créer le dossier du projet et sa structure documentaire avant de commencer l'implémentation, puis poser les questions prévues une par une. Ne pas envoyer une liste de questions groupées et ne pas inventer les décisions importantes qui doivent venir de l'utilisateur.
+
+## Sécurité par défaut
+
+Tout code nouveau ou modifié doit être évalué selon le protocole de sécurité applicable au projet. La sécurité ne doit pas être ajoutée uniquement à la fin : les menaces, données sensibles, frontières de confiance et contrôles attendus doivent être identifiés avant l'implémentation.
+
+Les analyses statiques, la modélisation des menaces, la revue de code et les vérifications locales peuvent être effectuées directement. Tout test qui envoie des requêtes vers un hôte réel, même présenté comme un simple audit, nécessite une confirmation explicite de l'autorisation et du périmètre avant son exécution.
 
 ## Fin de tâche
 

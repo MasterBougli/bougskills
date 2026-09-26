@@ -7,6 +7,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - réponses concises mais approfondies ;
 - questions et hypothèses explicites ;
 - protection des informations sensibles ;
+- processus de sécurité par niveaux, de la modélisation des menaces à la validation finale ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
