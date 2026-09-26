@@ -74,6 +74,8 @@ Lis passation.md, vérifie l'état réel des fichiers et de Git, puis reprends e
 
 Les scénarios d'évaluation se trouvent dans [`tests/scenarios.md`](tests/scenarios.md). Ils couvrent les demandes simples, la création de projet, les modifications, le diagnostic, la sécurité, les secrets, la passation et la mise en ligne.
 
+La notation, les seuils de qualité et le journal de régression sont définis dans [`tests/grille-evaluation.md`](tests/grille-evaluation.md).
+
 Pour vérifier automatiquement la structure du skill, ses références, ses liens internes, son frontmatter et quelques motifs de secrets :
 
 ```powershell

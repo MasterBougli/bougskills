@@ -23,6 +23,8 @@ Pour structurer le résultat final selon le mode utilisé, lire [references/form
 
 Pour évaluer le comportement du skill ou vérifier une évolution, utiliser les scénarios de [tests/scenarios.md](tests/scenarios.md).
 
+Pour noter une évaluation et décider si une évolution est acceptable, utiliser [tests/grille-evaluation.md](tests/grille-evaluation.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
