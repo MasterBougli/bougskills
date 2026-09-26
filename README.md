@@ -31,6 +31,7 @@ Skill Codex personnel de Bougli, conçu pour travailler en français avec un mé
 - qualité de livraison couvrant tests utiles, dépendances, secrets, CI/CD et retour arrière ;
 - audit statique des skills installés au premier usage, avec avertissement sur les credentials, uploads, télémétries et appels externes ;
 - pré-vérification obligatoire des données, destinations, fournisseurs, autorisations et options de désactivation avant une action externe ;
+- nettoyage local et conservateur des marqueurs Unicode invisibles, avec copie de sortie et rapport ;
 - entretien adaptatif avant une fonctionnalité non triviale, couvrant la feature de A à Z ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
@@ -93,6 +94,10 @@ Le résumé d'audit et le préflight suivent un format stable avec une décision
 Pour une fonctionnalité non triviale, BougSkills commence par un entretien adaptatif et pose une question à la fois. Il vérifie le besoin, les utilisateurs, les parcours et états d'erreur, les données et règles métier, l'architecture, les conventions de code, la sécurité, la performance, les tests, l'observabilité, le déploiement et le rollback. Il présente ensuite un cadrage court avant de modifier le projet. Une correction triviale reste proportionnée.
 
 Pour une fonctionnalité importante, le cadrage peut être conservé dans `docs/` à partir du [gabarit de cadrage](references/gabarit-cadrage-developpement.md), sans remplacer la documentation déjà utilisée par le projet.
+
+### Nettoyage de contenu
+
+BougSkills peut inspecter et nettoyer localement certains marqueurs Unicode invisibles dans un fichier texte UTF-8. Le fichier source n'est jamais écrasé, aucun service externe n'est contacté et les caractères potentiellement utiles aux langues ou emojis sont conservés. Voir [`references/nettoyage-contenu.md`](references/nettoyage-contenu.md).
 
 ### Audit transversal
 

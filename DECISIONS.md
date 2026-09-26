@@ -393,6 +393,30 @@ Le bilan distingue la validation technique, la validation de Bougli et la valida
 - `references/definition-terminaison.md`
 - `references/formats-reponses.md`
 
+## ADR-021 — Nettoyage local et conservateur des marqueurs Unicode
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : textes locaux et hygiène de contenu
+
+### Contexte
+
+Certains contenus peuvent contenir des caractères invisibles ou des espaces atypiques. Un nettoyage utile doit éviter de casser les langues, les emojis, les documents originaux ou de transmettre le contenu à un service externe sans autorisation.
+
+### Décision
+
+Ajouter un mode local d'inspection et de nettoyage conservateur pour les fichiers texte UTF-8. Le mode produit une copie et un rapport JSON, refuse les binaires inconnus, conserve les caractères potentiellement sémantiques et ne prétend pas supprimer une provenance ou contourner une détection.
+
+### Conséquences
+
+- Positives : hygiène reproductible, confidentialité locale et restauration facile grâce à la source conservée.
+- Négatives : les métadonnées de fichiers et la réécriture de texte restent hors périmètre initial.
+
+### Références
+
+- `references/nettoyage-contenu.md`
+- `scripts/clean-content.py`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

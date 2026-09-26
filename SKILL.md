@@ -53,6 +53,8 @@ Pour vérifier une information actuelle, spécialisée, juridique, financière o
 
 Pour utiliser une commande, un script, un navigateur, un scanner ou un service externe, appliquer [references/outils-externes.md](references/outils-externes.md).
 
+Pour inspecter ou nettoyer les marqueurs Unicode invisibles d'un texte local, lire [references/nettoyage-contenu.md](references/nettoyage-contenu.md) et utiliser uniquement le script local prévu. Ne pas présenter ce mode comme un contournement de détection ou une suppression garantie de provenance.
+
 Pour produire ou vérifier des constats fiables, appliquer [references/protocole-preuves.md](references/protocole-preuves.md). Pour un audit sécurité avancé ou une cible active, lire [references/securite-avancee.md](references/securite-avancee.md). Avant une livraison ou un audit applicatif, lire [references/qualite-livraison.md](references/qualite-livraison.md).
 
 Au premier usage de BougSkills, puis lorsque l'inventaire change, lire [references/audit-skills-installes.md](references/audit-skills-installes.md) et effectuer un audit statique en lecture seule des skills installés. Prévenir Bougli des lectures de credentials, télémétries, uploads, installations et appels externes détectés avant d'utiliser les skills concernés.
