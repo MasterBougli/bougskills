@@ -34,6 +34,7 @@ Skill Codex personnel de Bougli, conçu pour travailler en français avec un mé
 - nettoyage local et conservateur des marqueurs Unicode invisibles, avec copie de sortie et rapport ;
 - entretien adaptatif avant une fonctionnalité non triviale, couvrant la feature de A à Z ;
 - vérification des versions, tests et différences Git ;
+- version propre dans `VERSION` et mise à jour distante contrôlée, jamais silencieuse ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
 
@@ -46,6 +47,22 @@ Installer le dépôt depuis sa racine avec le gestionnaire de skills Codex, ou c
 Après l'installation ou la mise à jour, utiliser BougSkills au tour ou dans la session suivante. Avant de lui faire confiance, vérifier que le dossier installé contient `SKILL.md`, `agents/openai.yaml`, `references/` et `scripts/`, et que le frontmatter indique `name: bougskills`.
 
 Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
+
+### Vérifier ou mettre à jour BougSkills
+
+La version locale est conservée dans [`VERSION`](VERSION). Pour vérifier la version publique sans modifier le dossier :
+
+```powershell
+.\scripts\check-bougskills-update.ps1
+```
+
+Pour ne pas contacter GitHub :
+
+```powershell
+.\scripts\check-bougskills-update.ps1 -SkipRemote
+```
+
+Une mise à jour n'est jamais silencieuse. Après vérification et autorisation explicite, utiliser `-Apply` ; le script télécharge l'archive officielle, vérifie sa structure, crée une sauvegarde datée et restaure la copie en cas d'échec. Voir [`references/gestion-version-skill.md`](references/gestion-version-skill.md).
 
 ## Utilisation
 

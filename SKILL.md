@@ -55,6 +55,8 @@ Pour déterminer si une tâche est réellement terminée, appliquer [references/
 
 Pour vérifier une information actuelle, spécialisée, juridique, financière ou explicitement sourcée, appliquer [references/verification-sources.md](references/verification-sources.md).
 
+Pour vérifier ou mettre à jour BougSkills, lire [references/gestion-version-skill.md](references/gestion-version-skill.md). Vérifier la version au plus une fois par session ou à la demande, annoncer le préflight GitHub, ne jamais envoyer de secrets et ne jamais appliquer une mise à jour sans accord explicite. Utiliser `scripts/check-bougskills-update.ps1` ; l'option `-Apply` est obligatoire pour remplacer la copie locale.
+
 Pour utiliser une commande, un script, un navigateur, un scanner ou un service externe, appliquer [references/outils-externes.md](references/outils-externes.md).
 
 Pour inspecter ou nettoyer les marqueurs Unicode invisibles d'un texte local, lire [references/nettoyage-contenu.md](references/nettoyage-contenu.md) et utiliser uniquement le script local prévu. Ne pas présenter ce mode comme un contournement de détection ou une suppression garantie de provenance.

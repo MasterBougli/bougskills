@@ -16,6 +16,7 @@ function Assert-Path([string]$RelativePath) {
 
 @(
     'SKILL.md',
+    'VERSION',
     'README.md',
     'LICENCE.md',
     'DECISIONS.md',
@@ -49,6 +50,8 @@ function Assert-Path([string]$RelativePath) {
     'references/definition-terminaison.md',
     'references/verification-sources.md',
     'references/outils-externes.md',
+    'references/gestion-version-skill.md',
+    'scripts/check-bougskills-update.ps1',
     'tests/scenarios.md'
 ) | ForEach-Object { Assert-Path $_ }
 

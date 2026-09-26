@@ -634,6 +634,32 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
 
+## ADR-028 — Version et mise à jour contrôlée de BougSkills
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : versionnement et mise à jour du skill personnel
+
+### Contexte
+
+Une copie installée peut être ancienne ou partielle. Une mise à jour automatique à chaque message créerait des appels externes inutiles et pourrait modifier le comportement sans décision de Bougli.
+
+### Décision
+
+La version de référence est `VERSION`, initialisée à `1.0.0`. BougSkills vérifie la version publique au premier usage de la session si nécessaire ou à la demande, annonce les données et la destination, ne transmet aucun secret et propose toute mise à jour. Le remplacement exige `-Apply`, une archive GitHub officielle, une validation de structure, une sauvegarde et une restauration en cas d'échec. Un nouveau tour ou une nouvelle session est requis avant de considérer la copie active.
+
+### Conséquences
+
+- Positives : comportement traçable, mise à jour réversible et contrôle explicite des appels GitHub.
+- Négatives : une autorisation et une relance peuvent être nécessaires après une mise à jour.
+
+### Références
+
+- `VERSION`
+- `references/gestion-version-skill.md`
+- `scripts/check-bougskills-update.ps1`
+- `tests/scenarios.md`
+
 ## ADR-013 — Révocation explicite et détection des références orphelines
 
 - Statut : Acceptée
