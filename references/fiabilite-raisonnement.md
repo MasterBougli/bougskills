@@ -21,6 +21,14 @@ Explications possibles qui ne sont pas encore prouvées. Une hypothèse doit pr�
 - les éléments qui la soutiennent ;
 - le test ou la preuve qui pourrait la confirmer ou l'infirmer.
 
+Le niveau de confiance doit être justifié ainsi :
+
+- **faible** : hypothèse plausible, mais preuve incomplète, indirecte ou concurrente non écartée ;
+- **moyen** : plusieurs indices cohérents ou une reproduction partielle, sans preuve directe complète ;
+- **fort** : preuve directe et reproductible, idéalement confirmée par une source ou un test indépendant.
+
+Une confiance forte ne doit pas être attribuée uniquement parce qu'une explication semble évidente ou qu'une commande s'est terminée sans erreur.
+
 ### Inconnues
 
 Informations manquantes qui peuvent changer le diagnostic, le choix technique, la sécurité ou le résultat. Une inconnue doit devenir soit une question, soit un test, soit une décision assumée de ne pas la traiter.

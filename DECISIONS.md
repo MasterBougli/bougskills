@@ -345,6 +345,30 @@ Adapter la reconnaissance au niveau trivial, moyen ou important de la modificati
 - `references/modes.md`
 - `references/reconnaissance-projet.md`
 
+## ADR-019 — Grille de confiance fondée sur les preuves
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : diagnostics, audits, débogage et décisions techniques
+
+### Contexte
+
+Les niveaux de confiance sont utiles uniquement si leur usage est cohérent. Une confiance forte attribuée à une intuition peut donner une fausse impression de certitude.
+
+### Décision
+
+Utiliser une grille explicite : faible pour une preuve indirecte ou incomplète, moyenne pour plusieurs indices ou une reproduction partielle, forte pour une preuve directe et reproductible idéalement confirmée indépendamment.
+
+### Conséquences
+
+- Positives : conclusions plus honnêtes et tests mieux orientés.
+- Négatives : certaines réponses nécessitent de conserver plusieurs hypothèses plus longtemps.
+
+### Références
+
+- `references/fiabilite-raisonnement.md`
+- `references/protocole-preuves.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

@@ -340,6 +340,10 @@ Pour une correction triviale, BougSkills vérifie l'état Git, les instructions 
 
 Lorsqu'une session dérive, BougSkills prépare une synthèse et propose une passation, mais ne crée ni ne modifie `passation.md` avant l'accord de Bougli ou une demande directe.
 
+### 48. Confiance justifiée
+
+Pour une hypothèse, BougSkills indique une confiance faible, moyenne ou forte et fournit la preuve minimale correspondante ; il ne classe pas une intuition ou une commande réussie comme preuve forte.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
