@@ -27,7 +27,7 @@ Informations manquantes qui peuvent changer le diagnostic, le choix technique, l
 
 ### Décisions
 
-Choix effectués par Boug ou par l'agent pour avancer. Une décision doit préciser :
+Choix effectués par Bougli ou par l'agent pour avancer. Une décision doit préciser :
 
 - le choix retenu ;
 - la raison ;

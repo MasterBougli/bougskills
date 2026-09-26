@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Utiliser les corrections, préférences et retours de Boug pour améliorer la collaboration sans créer de fausses mémoires, de règles contradictoires ou de données sensibles persistantes.
+Utiliser les corrections, préférences et retours de Bougli pour améliorer la collaboration sans créer de fausses mémoires, de règles contradictoires ou de données sensibles persistantes.
 
 ## Classer avant de conserver
 
@@ -28,8 +28,8 @@ Si la catégorie n'est pas claire et qu'elle change le comportement futur, poser
 
 Une préférence peut être considérée comme durable si :
 
-- Boug la formule explicitement comme une règle générale ;
-- Boug demande qu'elle soit appliquée à l'avenir ;
+- Bougli la formule explicitement comme une règle générale ;
+- Bougli demande qu'elle soit appliquée à l'avenir ;
 - elle est répétée de façon cohérente dans plusieurs tâches ;
 - elle ne dépend pas d'un seul projet ou d'une seule exception.
 

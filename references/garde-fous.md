@@ -44,7 +44,7 @@ Quand l'arrêt est nécessaire, donner : le blocage, les faits vérifiés, les o
 
 ## Conditions de continuation autonome
 
-Continuer sans interrompre Boug lorsque :
+Continuer sans interrompre Bougli lorsque :
 
 - l'hypothèse est faible risque, réversible et explicitement signalée ;
 - la convention du projet donne déjà la réponse ;

@@ -36,4 +36,4 @@ Avant de clôturer un rapport :
 5. retirer les détails qui ne sont ni utiles ni vérifiables ;
 6. vérifier qu'aucun secret ou contenu sensible ne figure dans les preuves.
 
-Une conclusion sans preuve suffisante doit rester une hypothèse ou une question à vérifier avec Boug ou un professionnel.
+Une conclusion sans preuve suffisante doit rester une hypothèse ou une question à vérifier avec Bougli ou un professionnel.

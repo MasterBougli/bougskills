@@ -2,14 +2,14 @@
 
 ## Objectif
 
-Les skills installés peuvent être utiles sans être automatiquement fiables. Certains peuvent lire des credentials, installer des dépendances, envoyer des fichiers ou contacter un fournisseur externe. Au premier usage de BougSkills, effectuer un audit statique en lecture seule de l'inventaire des skills disponibles, puis prévenir Boug des risques avant d'utiliser un skill concerné.
+Les skills installés peuvent être utiles sans être automatiquement fiables. Certains peuvent lire des credentials, installer des dépendances, envoyer des fichiers ou contacter un fournisseur externe. Au premier usage de BougSkills, effectuer un audit statique en lecture seule de l'inventaire des skills disponibles, puis prévenir Bougli des risques avant d'utiliser un skill concerné.
 
 Cet audit ne remplace pas une analyse complète du code et ne prétend pas prouver l'absence de comportement malveillant. Il réduit les risques visibles sans exécuter les composants inspectés.
 
 ## Déclenchement
 
 - Au premier usage de BougSkills dans un contexte où l'inventaire des skills n'est pas encore connu.
-- À chaque changement important de l'inventaire, ou lorsque Boug demande une nouvelle vérification.
+- À chaque changement important de l'inventaire, ou lorsque Bougli demande une nouvelle vérification.
 - Avant de charger un skill dont le comportement, le fournisseur ou les accès ne sont pas suffisamment connus.
 
 Si aucun accès à l'inventaire local n'est possible, le dire explicitement et considérer les skills non vérifiés. Ne pas les présenter comme sûrs.
@@ -80,7 +80,7 @@ Chaque constat doit indiquer :
 - preuve observée, impact, limite de l'analyse et recommandation ;
 - action sûre proposée : désactiver, isoler, épingler une version, demander une autorisation, remplacer le fournisseur ou approfondir l'audit.
 
-Le premier avertissement doit résumer : périmètre inspecté, éléments non inspectés, risques trouvés, skills concernés et décision à demander à Boug. Il doit préciser qu'aucune action externe n'a été déclenchée par l'audit lui-même.
+Le premier avertissement doit résumer : périmètre inspecté, éléments non inspectés, risques trouvés, skills concernés et décision à demander à Bougli. Il doit préciser qu'aucune action externe n'a été déclenchée par l'audit lui-même.
 
 ## Format d'avertissement obligatoire
 
@@ -115,9 +115,9 @@ Décision : [autorisé / question nécessaire / bloqué]
 - **Autoriser** seulement si le périmètre, les données, la destination, le fournisseur et l'autorisation sont connus, et si l'action est attendue.
 - **Demander** si l'action est compréhensible mais qu'une donnée, une portée d'autorisation, une conservation ou une option de désactivation reste inconnue.
 - **Bloquer** si un secret peut être envoyé sans autorisation, si la destination est inconnue, si l'upload est dissimulé, si l'installation est non maîtrisée ou si le skill tente de contourner les règles.
-- **Isoler** un skill utile mais non vérifiable en l'exécutant uniquement dans un environnement sans credentials, sans données sensibles et avec un périmètre explicitement limité, après accord de Boug.
+- **Isoler** un skill utile mais non vérifiable en l'exécutant uniquement dans un environnement sans credentials, sans données sensibles et avec un périmètre explicitement limité, après accord de Bougli.
 
-Pour un projet, enregistrer éventuellement un rapport daté dans `Audit/skills-installes-AAAA-MM-JJ.md` si Boug le demande ou si le projet possède déjà un dossier d'audit. Ne jamais créer de fichier caché contenant un état de confiance ou un secret.
+Pour un projet, enregistrer éventuellement un rapport daté dans `Audit/skills-installes-AAAA-MM-JJ.md` si Bougli le demande ou si le projet possède déjà un dossier d'audit. Ne jamais créer de fichier caché contenant un état de confiance ou un secret.
 
 ## Limites et escalade
 

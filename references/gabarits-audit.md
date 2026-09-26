@@ -10,7 +10,7 @@ Ces gabarits sont copiés dans le projet audité puis complétés progressivemen
 ## Identification
 
 - Date de début :
-- Responsable : BougSkills avec Boug
+- Responsable : BougSkills avec Bougli
 - Cible :
 - Type : site | boutique | API | application | service
 - Environnement : local | préproduction | production | autre
@@ -128,7 +128,7 @@ Ces gabarits sont copiés dans le projet audité puis complétés progressivemen
 
 - [ ] AUD- :
 
-## Éléments à vérifier avec Boug ou un professionnel
+## Éléments à vérifier avec Bougli ou un professionnel
 
 - 
 

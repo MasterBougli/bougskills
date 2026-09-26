@@ -38,7 +38,7 @@ Utiliser des identifiants stables comme `REQ-001`, `SEC-001` ou `NFR-001`. Ne pa
 - `En cours` : implémentation commencée.
 - `Implémentée` : code ou configuration présent.
 - `Testée` : vérification réussie avec preuve.
-- `Validée` : Boug ou le responsable a confirmé le résultat.
+- `Validée` : Bougli ou le responsable a confirmé le résultat.
 - `Bloquée` : dépend d'une décision, d'un accès ou d'une correction.
 - `Hors périmètre` : explicitement exclue et justifiée.
 

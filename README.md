@@ -1,6 +1,6 @@
 # BougSkills
 
-Skill Codex personnel de Boug, conçu pour travailler en français avec un mélange de pédagogie patiente et d'exécution professionnelle rapide.
+Skill Codex personnel de Bougli, conçu pour travailler en français avec un mélange de pédagogie patiente et d'exécution professionnelle rapide.
 
 ## Fonctionnalités
 
@@ -81,7 +81,7 @@ Le protocole sécurité adapte le niveau de contrôle au projet. Il couvre la mo
 
 Un test actif contre un hôte réel nécessite toujours une autorisation explicite et un périmètre confirmé.
 
-Avant le premier usage de BougSkills, les skills installés sont inspectés statiquement lorsque l'inventaire est accessible. Boug est averti des lectures de credentials, installations, télémétries, uploads, fournisseurs externes et limites de l'analyse. Rien n'est exécuté ou envoyé par cet audit.
+Avant le premier usage de BougSkills, les skills installés sont inspectés statiquement lorsque l'inventaire est accessible. Bougli est averti des lectures de credentials, installations, télémétries, uploads, fournisseurs externes et limites de l'analyse. Rien n'est exécuté ou envoyé par cet audit.
 
 Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, BougSkills identifie précisément les données transmises ou lues, la destination, le fournisseur, l'autorisation et la possibilité de désactivation.
 

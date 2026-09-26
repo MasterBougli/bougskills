@@ -9,7 +9,7 @@ Ce fichier conserve les décisions structurantes du skill. Il ne contient pas de
 - Portée : comportement général
 
 ### Contexte
-Boug souhaite un assistant en français, à la fois pédagogue, professionnel, rapide, concis et capable d'expliquer en profondeur lorsque nécessaire.
+Bougli souhaite un assistant en français, à la fois pédagogue, professionnel, rapide, concis et capable d'expliquer en profondeur lorsque nécessaire.
 
 ### Décision
 Répondre en français par défaut avec un ton direct, humain et patient. Adapter la profondeur à la demande et challenger les risques ou incohérences de manière pédagogique.
@@ -19,7 +19,7 @@ Répondre en français par défaut avec un ton direct, humain et patient. Adapte
 - Réponses toujours longues — rejetées car elles ralentissent les demandes simples.
 
 ### Conséquences
-- Positives : communication cohérente et adaptée à Boug.
+- Positives : communication cohérente et adaptée à Bougli.
 - Négatives : le niveau de détail doit être calibré à chaque demande.
 
 ### Références
@@ -38,7 +38,7 @@ Un audit utile doit couvrir l'expérience réelle du produit, son contenu, sa co
 
 ### Décision
 
-Ajouter un mode Audit qui crée d'abord `Audit/plan-audit.md`, puis `Audit/rapport-audit.md`. Chaque constat doit comporter une preuve et l'une des cinq classifications définies par Boug. Les domaines non applicables, partiels ou non vérifiables doivent être déclarés.
+Ajouter un mode Audit qui crée d'abord `Audit/plan-audit.md`, puis `Audit/rapport-audit.md`. Chaque constat doit comporter une preuve et l'une des cinq classifications définies par Bougli. Les domaines non applicables, partiels ou non vérifiables doivent être déclarés.
 
 ### Alternatives
 
@@ -189,7 +189,7 @@ Un skill tiers peut lire des credentials, installer des dépendances, envoyer de
 
 ### Décision
 
-Au premier usage, BougSkills effectue un audit statique en lecture seule de l'inventaire disponible et avertit Boug des risques et limites. Avant toute action externe ou sensible, il identifie les données, la destination, le fournisseur, l'autorisation et la désactivation possible.
+Au premier usage, BougSkills effectue un audit statique en lecture seule de l'inventaire disponible et avertit Bougli des risques et limites. Avant toute action externe ou sensible, il identifie les données, la destination, le fournisseur, l'autorisation et la désactivation possible.
 
 ### Conséquences
 

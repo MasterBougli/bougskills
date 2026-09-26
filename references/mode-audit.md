@@ -111,7 +111,7 @@ Les classifications autorisées sont exactement :
 - `important` : risque ou défaut significatif à corriger rapidement ;
 - `amélioration recommandée` : amélioration utile sans blocage immédiat ;
 - `cosmétique` : détail visuel ou éditorial à faible impact ;
-- `à vérifier avec toi ou un professionnel` : décision nécessitant une validation de Boug, du propriétaire, d'un juriste, d'un expert sécurité ou d'un autre professionnel.
+- `à vérifier avec toi ou un professionnel` : décision nécessitant une validation de Bougli, du propriétaire, d'un juriste, d'un expert sécurité ou d'un autre professionnel.
 
 Ne pas confondre la classification avec le statut de vérification. Une obligation légale incertaine doit généralement être classée `à vérifier avec toi ou un professionnel`, avec la juridiction et la source indiquées, plutôt que présentée comme un avis juridique.
 
@@ -127,7 +127,7 @@ Ne pas confondre la classification avec le statut de vérification. Une obligati
 6. quick wins, plan priorisé et dépendances ;
 7. conditions avant mise en ligne ou livraison ;
 8. index des preuves et tests réalisés ;
-9. éléments non vérifiés et question à poser à Boug ou au professionnel concerné ;
+9. éléments non vérifiés et question à poser à Bougli ou au professionnel concerné ;
 10. statut de fin selon `references/definition-terminaison.md`.
 
 Ne jamais inclure de clé, token, mot de passe, donnée personnelle inutile ou contenu confidentiel dans le plan, le rapport, les preuves ou les logs. Masquer les valeurs sensibles et conserver uniquement le fait vérifiable nécessaire.

@@ -14,7 +14,7 @@ Comprendre suffisamment un projet existant avant de proposer une architecture, m
 6. **Tests** — repérer les commandes, frameworks, suites et contrôles déjà présents.
 7. **Dépendances** — vérifier les fichiers de verrouillage, scripts et dépendances directement concernés.
 8. **Configuration sensible** — repérer les noms de fichiers de configuration sans afficher le contenu des secrets ; ne pas lire ou recopier les valeurs sensibles sans nécessité.
-9. **Périmètre** — relier l'objectif de Boug aux fichiers réellement concernés et noter ce qui est explicitement hors périmètre.
+9. **Périmètre** — relier l'objectif de Bougli aux fichiers réellement concernés et noter ce qui est explicitement hors périmètre.
 
 ## Résumé de reconnaissance
 

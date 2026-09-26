@@ -4,7 +4,7 @@
 
 Avant d'agir, identifier un mode principal. Le mode principal détermine le niveau de questionnement, les actions autorisées, les vérifications et le format de sortie. Utiliser des modes secondaires uniquement lorsqu'ils sont nécessaires.
 
-Ne pas annoncer le nom du mode dans chaque réponse sauf si cela aide Boug à comprendre la démarche.
+Ne pas annoncer le nom du mode dans chaque réponse sauf si cela aide Bougli à comprendre la démarche.
 
 ## Priorité de sélection
 
@@ -13,16 +13,16 @@ En cas de chevauchement, appliquer cette priorité :
 1. **Sécurité** si la demande touche à une vulnérabilité, un secret, une donnée sensible ou une action à risque.
 2. **Passation** si l'objectif est de transférer ou reprendre un contexte.
 3. **Création de projet** si le projet n'a pas encore de structure.
-4. **Cadrage développement** si Boug demande une fonctionnalité non triviale à construire.
-5. **Audit** si Boug demande une analyse globale multi-domaines avec un plan et un rapport.
+4. **Cadrage développement** si Bougli demande une fonctionnalité non triviale à construire.
+5. **Audit** si Bougli demande une analyse globale multi-domaines avec un plan et un rapport.
 6. **Modification** si des fichiers doivent être changés.
-7. **Diagnostic** si Boug demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
+7. **Diagnostic** si Bougli demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
 8. **Débogage** si l'objectif est de trouver et corriger un problème reproductible.
 9. **Conception** si une solution, une architecture ou un plan doit être défini avant l'implémentation.
 10. **Exploration** si des choix importants restent ouverts.
-11. **Explication** si Boug veut comprendre un sujet.
-12. **Revue finale** si Boug demande une vérification globale avant livraison.
-13. **Résumé** si Boug demande de condenser une information ou une conversation.
+11. **Explication** si Bougli veut comprendre un sujet.
+12. **Revue finale** si Bougli demande une vérification globale avant livraison.
+13. **Résumé** si Bougli demande de condenser une information ou une conversation.
 14. **Réponse simple** pour les demandes directes sans travail de fond.
 
 Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièvement les modes secondaires utilisés lorsque cela clarifie la réponse.
@@ -37,7 +37,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 ## Mode explication pédagogique
 
-À utiliser lorsque Boug veut comprendre un concept, une erreur ou une décision.
+À utiliser lorsque Bougli veut comprendre un concept, une erreur ou une décision.
 
 - Partir de l'essentiel.
 - Expliquer les termes nécessaires.
@@ -137,7 +137,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 ## Mode revue finale
 
-À utiliser avant une livraison, un commit important, un déploiement ou lorsque Boug demande un contrôle global.
+À utiliser avant une livraison, un commit important, un déploiement ou lorsque Bougli demande un contrôle global.
 
 - Vérifier fonctionnalité, tests, sécurité, documentation, versions et diff Git.
 - Rechercher les fichiers temporaires, secrets, changements inattendus et sections incomplètes.

@@ -2,7 +2,7 @@
 
 ## But
 
-Avant de développer une fonctionnalité non triviale, vérifier la feature de bout en bout : besoin, utilisateurs, expérience, données, architecture, code, sécurité, performance, tests, exploitation et livraison. L'objectif est de faire émerger les décisions que Boug n'aurait pas forcément formulées, sans transformer chaque petite correction en questionnaire interminable.
+Avant de développer une fonctionnalité non triviale, vérifier la feature de bout en bout : besoin, utilisateurs, expérience, données, architecture, code, sécurité, performance, tests, exploitation et livraison. L'objectif est de faire émerger les décisions que Bougli n'aurait pas forcément formulées, sans transformer chaque petite correction en questionnaire interminable.
 
 ## Règles de conduite
 

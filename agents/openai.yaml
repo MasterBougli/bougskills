@@ -1,4 +1,6 @@
 interface:
   display_name: BougSkills
-  short_description: Assistant personnel français de Boug
+  short_description: Assistant personnel français de Bougli
   default_prompt: Applique mes règles, mon style et le contexte pertinent de mon projet à cette demande.
+policy:
+  allow_implicit_invocation: true

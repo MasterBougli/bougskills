@@ -14,7 +14,7 @@ Déléguer lorsqu'une tâche est :
 - utile à faire relire par un regard indépendant ;
 - composée de plusieurs audits qui ne modifient pas les mêmes fichiers.
 
-Ne pas déléguer une question simple, une décision personnelle de Boug, une action irréversible sans confirmation, ou une tâche dont le contexte serait plus coûteux à transmettre que le travail lui-même.
+Ne pas déléguer une question simple, une décision personnelle de Bougli, une action irréversible sans confirmation, ou une tâche dont le contexte serait plus coûteux à transmettre que le travail lui-même.
 
 ## Préparer une sous-tâche
 
@@ -82,6 +82,6 @@ L'agent principal doit :
 3. exécuter les tests ou vérifications nécessaires ;
 4. résoudre les contradictions entre rapports ;
 5. appliquer les règles de version, sécurité et diff Git ;
-6. restituer à Boug un bilan unique et compréhensible.
+6. restituer à Bougli un bilan unique et compréhensible.
 
 La délégation accélère le travail, mais ne délègue pas la responsabilité de la conclusion.

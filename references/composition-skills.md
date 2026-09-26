@@ -2,7 +2,7 @@
 
 ## Rôle de BougSkills
 
-BougSkills est la couche de coordination personnelle : il applique le style de Boug, les règles de communication, les autorisations, la gestion des versions, les tests, le diff Git, la confidentialité et les formats de sortie.
+BougSkills est la couche de coordination personnelle : il applique le style de Bougli, les règles de communication, les autorisations, la gestion des versions, les tests, le diff Git, la confidentialité et les formats de sortie.
 
 Il ne doit pas remplacer un skill spécialisé lorsqu'un tel skill est disponible et pertinent.
 
@@ -13,7 +13,7 @@ Il ne doit pas remplacer un skill spécialisé lorsqu'un tel skill est disponibl
 3. Charger le minimum de skills nécessaires.
 4. Utiliser le skill spécialisé pour sa méthode métier ou technique.
 5. Utiliser BougSkills pour coordonner, poser les questions, préserver le contexte, protéger les secrets et restituer le résultat.
-6. En cas de contradiction, suivre l'instruction la plus spécifique au domaine, sauf si elle entre en conflit avec une règle de sécurité, d'autorisation ou avec la demande explicite de Boug.
+6. En cas de contradiction, suivre l'instruction la plus spécifique au domaine, sauf si elle entre en conflit avec une règle de sécurité, d'autorisation ou avec la demande explicite de Bougli.
 7. Ne pas charger une longue liste de skills « au cas où ».
 
 ## Routage indicatif
