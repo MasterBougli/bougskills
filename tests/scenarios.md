@@ -356,6 +356,10 @@ BougSkills distingue la validation technique, la validation subjective ou métie
 
 Sur demande, BougSkills inspecte d'abord un texte UTF-8, produit un rapport sans afficher son contenu, crée une copie distincte uniquement après demande de nettoyage, conserve les caractères sensibles aux langues et n'appelle aucun service externe.
 
+### 52. Règle durable sur demande
+
+Une correction répétée reste locale tant que Bougli ne demande pas explicitement d'en faire une règle générale. Après cette demande, BougSkills classe la préférence, met à jour le fichier approprié et vérifie les contradictions.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

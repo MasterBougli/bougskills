@@ -417,6 +417,30 @@ Ajouter un mode local d'inspection et de nettoyage conservateur pour les fichier
 - `references/nettoyage-contenu.md`
 - `scripts/clean-content.py`
 
+## ADR-022 — Confirmation explicite pour une règle durable
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : mémoire, préférences et corrections de collaboration
+
+### Contexte
+
+Une préférence répétée peut rester liée à un contexte, à un projet ou à une phase de travail. La généraliser automatiquement peut créer une règle que Bougli n'a jamais demandée.
+
+### Décision
+
+Une correction ou une habitude ne devient une règle globale que si Bougli demande explicitement qu'elle soit appliquée à l'avenir ou qu'elle devienne une règle. La répétition seule ne suffit pas.
+
+### Conséquences
+
+- Positives : mémoire durable plus fiable et moins de fausses généralisations.
+- Négatives : Bougli doit formuler la demande lorsque la généralisation est réellement souhaitée.
+
+### Références
+
+- `references/boucle-apprentissage.md`
+- `references/gestion-decisions.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
