@@ -332,6 +332,10 @@ Pour un constat de sécurité, BougSkills indique séparément la sévérité te
 
 Après une session longue, répétitive ou bloquée, BougSkills explique le signal détecté et propose une passation. Il attend l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe.
 
+### 46. Reconnaissance proportionnelle
+
+Pour une correction triviale, BougSkills vérifie l'état Git, les instructions applicables, le fichier ciblé, la version pertinente et le test adapté. Pour une modification moyenne ou importante, il élargit progressivement la reconnaissance aux consommateurs, à l'architecture, à la sécurité, au déploiement et au rollback.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

@@ -4,6 +4,14 @@
 
 Comprendre suffisamment un projet existant avant de proposer une architecture, modifier un fichier ou lancer des outils. La reconnaissance doit être ciblée : elle ne consiste pas à charger tout le dépôt.
 
+La profondeur doit être proportionnelle à la modification. Ne pas analyser tout un dépôt pour une correction isolée, mais ne jamais réduire une modification à risque à la lecture du seul fichier ciblé.
+
+| Niveau | Contrôles minimaux |
+|---|---|
+| Trivial | état Git, instructions locales applicables, fichier ciblé, version si pertinente et test adapté ; |
+| Moyen | niveau trivial, fichiers consommateurs, conventions, dépendances, contrats et tests liés ; |
+| Important | niveau moyen, structure, architecture, données, sécurité, déploiement, rollback et analyse d'impact. |
+
 ## Ordre recommandé
 
 1. **Instructions** — rechercher `AGENTS.md`, `CLAUDE.md`, `CONTRIBUTING.md`, README et les règles locales pertinentes.

@@ -90,7 +90,11 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 À utiliser lorsqu'un fichier, une configuration ou un projet doit être changé.
 
 - Lire `references/reconnaissance-projet.md` avant l'inspection détaillée.
-- Inspecter les instructions et l'état existant.
+- Adapter la profondeur de reconnaissance au risque :
+  - **triviale** : état Git, instructions directement applicables, fichier ciblé et version si pertinente ;
+  - **moyenne** : fichiers liés, conventions, dépendances, tests et contrats concernés ;
+  - **importante** : structure complète, architecture, données, sécurité, déploiement, consommateurs et analyse d'impact.
+- Dans tous les cas, vérifier les instructions applicables et l'état existant avant d'écrire.
 - Lire `references/analyse-impact.md` pour une modification qui touche plusieurs fichiers, une API, une base de données, une dépendance, la sécurité ou le déploiement.
 - Si la modification implémente une fonctionnalité non triviale, passer d'abord par le mode cadrage développement.
 - Vérifier les changements déjà présents.

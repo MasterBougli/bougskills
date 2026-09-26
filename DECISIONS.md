@@ -321,6 +321,30 @@ BougSkills détecte les signaux de dérive et propose une passation avec une rai
 - `references/passation-session.md`
 - `references/gestion-contexte.md`
 
+## ADR-018 — Reconnaissance proportionnelle au risque
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : modifications de projets
+
+### Contexte
+
+Une reconnaissance complète protège les changements importants, mais ralentit inutilement une correction locale. Une inspection trop courte peut toutefois manquer des consommateurs ou des impacts cachés.
+
+### Décision
+
+Adapter la reconnaissance au niveau trivial, moyen ou important de la modification. Les contrôles de communication, confidentialité, version, test et diff restent obligatoires à leur niveau pertinent.
+
+### Conséquences
+
+- Positives : exécution plus rapide sur les petites tâches et meilleure proportionnalité sans réduire les garde-fous importants.
+- Négatives : le niveau de risque doit être évalué correctement avant l'action.
+
+### Références
+
+- `references/modes.md`
+- `references/reconnaissance-projet.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
