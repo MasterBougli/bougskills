@@ -634,6 +634,32 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
 
+## ADR-029 — Portes obligatoires pour la création guidée
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : création de projets depuis zéro
+
+### Contexte
+
+Un modèle peut lire le parcours documentaire sans respecter l'ordre des questions, remplir une décision non confirmée ou commencer le code trop tôt. Une instruction descriptive seule ne rend pas ces étapes vérifiables.
+
+### Décision
+
+La création depuis zéro active un mode verrouillé. BougSkills crée la structure avec `À définir`, initialise `docs/.bougskills/progression.md`, pose une seule question, attend la réponse, met à jour les documents et la progression, puis seulement passe à la suite. L'implémentation est interdite avant `implémentation autorisée`, sauf demande explicite avec risques signalés. `/nouveau-projet` est un raccourci conversationnel, pas une commande native enregistrée par le skill.
+
+### Conséquences
+
+- Positives : parcours observable, reprise fiable et moins de décisions inventées.
+- Négatives : la création demande davantage d'allers-retours et un fichier de progression supplémentaire.
+
+### Références
+
+- `references/creation-verrouillee.md`
+- `references/creation-projet.md`
+- `docs/.bougskills/progression.md` dans les projets créés
+- `tests/scenarios.md`
+
 ## ADR-028 — Version et mise à jour contrôlée de BougSkills
 
 - Statut : Acceptée

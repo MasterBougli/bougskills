@@ -22,6 +22,7 @@ function Assert-Path([string]$RelativePath) {
     'DECISIONS.md',
     'agents/openai.yaml',
     'references/creation-projet.md',
+    'references/creation-verrouillee.md',
     'references/protocole-securite.md',
     'references/passation-session.md',
     'references/modes.md',

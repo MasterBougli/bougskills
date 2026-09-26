@@ -36,6 +36,7 @@ Skill Codex personnel de Bougli, conçu pour travailler en français avec un mé
 - vérification des versions, tests et différences Git ;
 - version propre dans `VERSION` et mise à jour distante contrôlée, jamais silencieuse ;
 - création guidée de projets depuis zéro ;
+- mode verrouillé avec progression et raccourci conversationnel `/nouveau-projet` ;
 - génération progressive de la documentation projet.
 
 ## Installation
@@ -68,6 +69,8 @@ Une mise à jour n'est jamais silencieuse. Après vérification et autorisation 
 
 Mentionner explicitement `BougSkills` ou demander directement l'action souhaitée. Le skill sélectionne automatiquement un mode de travail :
 
+Pour démarrer explicitement une création guidée, écrire `/nouveau-projet` suivi de la demande. Cela active un raccourci conversationnel ; les skills ne peuvent pas créer de commandes natives dans l'interface Codex.
+
 - réponse simple ou explication pédagogique ;
 - exploration et questions une par une ;
 - conception et choix d'architecture ;
@@ -84,6 +87,8 @@ Mentionner explicitement `BougSkills` ou demander directement l'action souhaité
 ### Création d'un projet depuis zéro
 
 Lorsqu'un nouveau projet est demandé, BougSkills crée la structure documentaire, puis pose une seule question à la fois pour remplir les fichiers :
+
+Le mode verrouillé crée aussi `docs/.bougskills/progression.md`. Il bloque l'implémentation et les décisions structurantes tant que la question actuelle n'a pas reçu de réponse. Après chaque réponse, les documents concernés et la progression sont mis à jour avant de poser la question suivante.
 
 - `README.md` ;
 - `LICENCE.md` ;

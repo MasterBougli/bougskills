@@ -13,6 +13,8 @@ Si BougSkills vient d'être installé ou mis à jour, considérer l'installation
 
 Pour créer un projet depuis zéro, lire [references/creation-projet.md](references/creation-projet.md) et appliquer son parcours de démarrage guidé.
 
+Le raccourci `/nouveau-projet` active explicitement ce parcours. Lire aussi [references/creation-verrouillee.md](references/creation-verrouillee.md) : préparer la structure, créer `docs/.bougskills/progression.md`, poser une seule question, attendre, mettre à jour puis seulement continuer. Une commande `/` native ne peut pas être enregistrée par un skill ; ce raccourci est conversationnel.
+
 Pour concevoir, auditer ou renforcer la sécurité d'un projet, lire [references/protocole-securite.md](references/protocole-securite.md) et appliquer le niveau de sécurité adapté au risque.
 
 Pour reprendre un travail dans une session fraîche, après une session longue, une boucle de debug ou un changement d'agent, lire [references/passation-session.md](references/passation-session.md) et créer ou consulter `passation.md`.

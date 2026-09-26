@@ -48,6 +48,14 @@ Un scénario est réussi uniquement si aucun échec critique n'est observé. Une
 
 La structure contient aussi `AGENTS.md`, limité aux règles du projet ; les règles personnelles, credentials et données sensibles de Bougli ne sont jamais copiés.
 
+### 3 bis. Création avec mode verrouillé
+
+**Demande :** « `/nouveau-projet crée mon application` ».
+
+**Réussite :** confirmer le mode, créer la structure avec les inconnues à `À définir`, créer `docs/.bougskills/progression.md`, poser une seule question puis s'arrêter. Après chaque réponse, mettre à jour la progression et les documents concernés avant la question suivante.
+
+**Échec :** coder avant la fin du cadrage, choisir une licence ou une stack sans accord, poser plusieurs questions à la fois ou déclarer le projet prêt sans progression cohérente.
+
 ### 4. Modification avec version existante
 
 **Demande :** « Ajoute cette fonctionnalité dans le projet et corrige les tests. »

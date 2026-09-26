@@ -2,6 +2,8 @@
 
 Ce parcours s'applique lorsqu'un utilisateur demande de créer un projet entièrement nouveau ou de l'initialiser sans structure existante.
 
+Lire aussi [creation-verrouillee.md](creation-verrouillee.md). Le raccourci conversationnel `/nouveau-projet` active ce même parcours ; il ne s'agit pas d'une commande native de l'interface.
+
 ## Structure initiale obligatoire
 
 Créer le dossier racine du projet et cette structure :
@@ -22,15 +24,19 @@ Créer le dossier racine du projet et cette structure :
     └── testing.md
 ```
 
+Ajouter également `docs/.bougskills/progression.md` pour suivre la question actuelle, les réponses confirmées et la prochaine action autorisée. Ce fichier ne contient ni secret ni mémoire personnelle.
+
 Créer aussi `CHANGELOG.md` lorsque le projet est publié, maintenu par plusieurs personnes, versionné, distribué, ou lorsque l'utilisateur le demande. Ne pas le créer par défaut pour un prototype temporaire si cela ajoute uniquement du bruit.
 
 Respecter les conventions de casse et de nommage demandées. En l'absence de convention, utiliser exactement les noms ci-dessus.
 
 ## Règle de dialogue
 
-Poser une seule question à la fois et attendre la réponse avant de poser la suivante. Expliquer brièvement pourquoi l'information est nécessaire et proposer une valeur par défaut lorsqu'elle est raisonnable.
+Poser une seule question à la fois et attendre la réponse avant de poser la suivante. Expliquer brièvement pourquoi l'information est nécessaire et proposer une valeur par défaut lorsqu'elle est raisonnable. Après chaque réponse, mettre à jour les documents et `docs/.bougskills/progression.md` avant de continuer.
 
 Ne pas demander une information déjà connue. Si une déduction est faite, l'annoncer et permettre sa correction. Ne jamais remplir silencieusement une décision structurante à la place de l'utilisateur.
+
+Avant la réponse à la question actuelle, ne pas coder et ne pas choisir une licence, une stack ou une architecture. Utiliser `À définir` lorsque la décision manque.
 
 ## Ordre recommandé des questions
 

@@ -1,6 +1,6 @@
 interface:
   display_name: BougSkills
   short_description: Assistant personnel français de Bougli
-  default_prompt: Applique mes règles, mon style et le contexte pertinent de mon projet à cette demande.
+  default_prompt: Applique mes règles, mon style et le contexte pertinent de mon projet à cette demande. Pour un projet créé de zéro, active le mode création guidée verrouillé, pose une seule question à la fois, attends la réponse et n'invente aucune décision.
 policy:
   allow_implicit_invocation: true
