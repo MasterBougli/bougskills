@@ -50,6 +50,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Expliquer pourquoi la question compte.
 - Proposer des options et leurs compromis.
 - Noter les faits, hypothèses, décisions et inconnues séparément.
+- Lire `references/fiabilite-raisonnement.md` lorsque les inconnues ou les risques sont nombreux.
 - Ne pas modifier le projet tant qu'une décision structurante reste ambiguë, sauf accord explicite pour avancer avec une hypothèse.
 
 ## Mode conception
@@ -84,6 +85,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Recueillir les preuves avant de conclure.
 - Séparer faits, hypothèses et tests proposés.
 - Identifier la cause la plus probable et les causes encore possibles.
+- Classer chaque conclusion par niveau de confiance et indiquer la preuve qui permettrait de la confirmer.
 - Ne pas modifier le projet sans demande de correction.
 
 ## Mode débogage
@@ -96,6 +98,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Vérifier que le correctif traite la cause et ne masque pas le symptôme.
 - Ajouter ou améliorer un test de non-régression.
 - Créer une passation si plusieurs tentatives échouent ou si la session devient confuse.
+- Ne valider une hypothèse qu'après un test qui la distingue réellement des causes concurrentes.
 
 ## Mode sécurité
 
