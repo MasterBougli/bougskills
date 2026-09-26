@@ -634,6 +634,31 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
 
+## ADR-032 — Exception pour la vérification publique de version
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : vérification de version de BougSkills uniquement
+
+### Contexte
+
+La règle de confirmation avant chaque appel externe rendrait la vérification publique et minimale de BougSkills inutilement interactive, alors que cette vérification ne transmet aucun contenu local.
+
+### Décision
+
+La lecture du seul fichier `VERSION` public de BougSkills peut être effectuée une fois par session ou à la demande explicite sans confirmation interactive. Le préflight doit rester transparent, la requête ne doit contenir aucun secret ou contenu local, la vérification doit rester désactivable et toute autre lecture, archive, installation ou modification GitHub exige une confirmation distincte.
+
+### Conséquences
+
+- Positives : version vérifiable sans friction tout en gardant un périmètre minimal.
+- Négatives : une exception doit être surveillée pour éviter son élargissement abusif.
+
+### Références
+
+- `references/gestion-version-skill.md`
+- `references/outils-externes.md`
+- `tests/scenarios.md`
+
 ## ADR-029 — Portes obligatoires pour la création guidée
 
 - Statut : Acceptée

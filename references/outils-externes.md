@@ -23,6 +23,10 @@ Demander l'autorisation de l'utilisateur juste avant chaque appel externe effect
 
 La demande doit résumer : l'action exacte, les données transmises, la destination, le fournisseur, le périmètre, le coût ou l'effet attendu, et la possibilité de désactivation ou de retour arrière. Sans réponse positive claire, ne pas déclencher l'action.
 
+Exception étroite : la lecture publique du fichier `VERSION` de BougSkills, une fois par session ou à la demande explicite de Bougli, peut être effectuée sans confirmation interactive. Elle ne doit transmettre aucun contenu local, ne doit pas utiliser de credential et reste désactivable. Cette exception ne s'étend à aucune autre URL GitHub, téléchargement ou action distante.
+
+Exception étroite : la lecture publique du fichier `VERSION` de BougSkills, une fois par session ou à la demande explicite de Bougli, peut être effectuée sans confirmation interactive. Elle ne doit transmettre aucun contenu local, ne doit pas utiliser de credential et reste désactivable. Cette exception ne s'étend à aucune autre URL GitHub, téléchargement ou action distante.
+
 Commencer par une inspection en lecture seule lorsque c'est possible. Ne pas installer un outil ou une dépendance uniquement par habitude.
 
 ## Règles d'exécution

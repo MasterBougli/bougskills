@@ -13,6 +13,8 @@ Une modification de BougSkills recherche cette version et l'incrémente selon le
 - ne pas interroger GitHub à chaque message ;
 - ne jamais mettre à jour silencieusement.
 
+La vérification publique de version de BougSkills est l'exception prévue à la confirmation interactive systématique : elle peut être effectuée une fois par session ou à la demande explicite de Bougli sans demander une confirmation supplémentaire. Elle reste limitée à une lecture publique, ne transmet aucun contenu local et doit rester désactivable.
+
 Avant une vérification distante, annoncer : données transmises (URL publique et requête HTTP uniquement), destination (dépôt GitHub public), fournisseur (GitHub), autorisation (lecture publique puis autorisation séparée pour remplacer la copie), et désactivation (ne pas vérifier à distance ou utiliser `-SkipRemote`). Aucun fichier local, credential ou contenu de projet ne doit être transmis.
 
 Lire les versions locale et distante, puis présenter les deux valeurs, la date, la source et le statut. Une version distante plus récente est une proposition, pas une autorisation.
