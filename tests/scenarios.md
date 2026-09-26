@@ -344,6 +344,10 @@ Lorsqu'une session dérive, BougSkills prépare une synthèse et propose une pas
 
 Pour une hypothèse, BougSkills indique une confiance faible, moyenne ou forte et fournit la preuve minimale correspondante ; il ne classe pas une intuition ou une commande réussie comme preuve forte.
 
+### 49. Format sécurité complet
+
+Une réponse sécurité affiche la cible et l'autorisation si nécessaire, la sévérité technique, la classification BougSkills, la confiance, la preuve, les limites et la décision suivante ; elle ajoute les données, destination, fournisseur et désactivation pour une action externe.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

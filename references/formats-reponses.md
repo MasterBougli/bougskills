@@ -98,14 +98,19 @@ Si le bug n'est pas résolu, expliquer ce qui a été éliminé, ce qui reste pr
 Résumé : <état général>
 Périmètre : <ce qui a été contrôlé>
 Niveau appliqué : <A, B ou C>
+Autorisation et cible : <N/A ou cible, propriétaire, périmètre et autorisation confirmée>
 Constats :
-- [Critique/Élevé/Moyen/Faible] <titre> — <preuve> — <impact> — <correction>
+- Sévérité technique : <Critique/Élevé/Moyen/Faible/Non déterminée>
+  Classification BougSkills : <bloquant/important/amélioration recommandée/cosmétique/à vérifier avec toi ou un professionnel>
+  Confiance : <faible/moyenne/forte> — preuve : <élément vérifiable>
+  Constat : <titre> — impact : <impact> — correction : <correction>
 Contrôles effectués : <liste>
-Limites : <contrôles non réalisés>
+Limites : <contrôles non réalisés et raison>
+Décision ou action suivante : <autoriser, corriger, bloquer, approfondir ou demander une information>
 Priorité : <prochaines corrections>
 ```
 
-Ne jamais garantir la sécurité absolue d'un système.
+Pour une action externe, ajouter les données lues ou envoyées, la destination, le fournisseur, l'autorisation, la désactivation possible et le caractère lecture seule ou actif. Ne jamais garantir la sécurité absolue d'un système.
 
 ## Revue finale
 
