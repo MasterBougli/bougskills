@@ -74,6 +74,14 @@ Lis passation.md, vérifie l'état réel des fichiers et de Git, puis reprends e
 
 Les scénarios d'évaluation se trouvent dans [`tests/scenarios.md`](tests/scenarios.md). Ils couvrent les demandes simples, la création de projet, les modifications, le diagnostic, la sécurité, les secrets, la passation et la mise en ligne.
 
+Pour vérifier automatiquement la structure du skill, ses références, ses liens internes, son frontmatter et quelques motifs de secrets :
+
+```powershell
+.\scripts\verify-bougskills.ps1
+```
+
+Le script ne remplace pas les tests comportementaux : il vérifie l'intégrité du dépôt, tandis que les scénarios vérifient les décisions du skill.
+
 ## Création de projet
 
 Le workflow de création guidée se trouve dans [`references/creation-projet.md`](references/creation-projet.md). Il pose une question à la fois et documente progressivement le projet.
