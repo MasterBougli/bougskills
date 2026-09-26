@@ -296,3 +296,27 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
+
+## ADR-013 — Révocation explicite et détection des références orphelines
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : désinstallation et gestion des dépendances de skills
+
+### Contexte
+
+Supprimer un ensemble de skills peut laisser des configurations utiles, des dépendances encore installées ou des références cassées. Une suppression trop large peut aussi effacer des données utilisateur.
+
+### Décision
+
+BougSkills vérifie les chemins, supprime seulement le périmètre demandé, conserve les configurations par défaut, recherche les références résiduelles et demande confirmation avant de supprimer un skill dépendant non explicitement nommé.
+
+### Conséquences
+
+- Positives : révocation vérifiable et risque réduit de suppression excessive.
+- Négatives : certains skills peuvent rester installés mais incomplets jusqu'à décision de l'utilisateur.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `tests/scenarios.md`

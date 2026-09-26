@@ -40,6 +40,20 @@ Ajouter si pertinent : le caractère lecture seule ou actif, les fichiers concer
 8. **Décider** : autoriser, demander une précision, bloquer ou isoler selon les règles de décision ; conserver la portée de l'autorisation dans le contexte courant.
 9. **Réévaluer** : refaire l'audit après installation, mise à jour, changement de fournisseur ou modification du périmètre.
 
+## Révocation et désinstallation
+
+Lorsqu'un skill ou un ensemble de skills est désinstallé :
+
+1. confirmer les chemins exacts avant suppression ;
+2. supprimer uniquement les dossiers explicitement concernés ;
+3. conserver par défaut les credentials, configurations et données utilisateur, sauf demande séparée ;
+4. rechercher les références restantes dans les skills conservés ;
+5. signaler les dépendances orphelines ou désormais incomplètes ;
+6. ne pas supprimer automatiquement un skill dépendant qui n'a pas été nommé ;
+7. vérifier l'absence des cibles, puis documenter ce qui a été supprimé et ce qui a été conservé.
+
+Une référence résiduelle n'est pas une preuve de fuite : elle peut seulement indiquer qu'un autre skill devient inutilisable ou qu'une documentation doit être mise à jour. Toute suppression complémentaire doit être confirmée lorsque son périmètre n'est pas explicite.
+
 Inspecter sans exécuter :
 
 - `SKILL.md`, le frontmatter, les README, les scripts, templates, workflows et manifestes ;

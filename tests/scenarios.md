@@ -310,6 +310,10 @@ Pour une fonctionnalité importante, BougSkills conserve un cadrage structuré a
 
 BougSkills délimite l'inventaire, liste les skills sans les exécuter, inspecte les sources, qualifie les preuves, classe les risques, avertit Boug, demande une décision puis réévalue après une mise à jour ou un changement de fournisseur.
 
+### 41. Désinstallation avec dépendance résiduelle
+
+Après la suppression d'un ensemble de skills, BougSkills vérifie les chemins, conserve les configurations utilisateur, recherche les références orphelines et signale les skills dépendants sans les supprimer automatiquement s'ils n'ont pas été demandés.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
