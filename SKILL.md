@@ -21,6 +21,8 @@ Pour analyser une situation non triviale, lire [references/fiabilite-raisonnemen
 
 Pour structurer le résultat final selon le mode utilisé, lire [references/formats-reponses.md](references/formats-reponses.md).
 
+Pour évaluer le comportement du skill ou vérifier une évolution, utiliser les scénarios de [tests/scenarios.md](tests/scenarios.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

@@ -12,6 +12,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - sélection automatique d'un mode adapté à chaque type de demande ;
 - séparation entre faits, hypothèses, inconnues et décisions pour fiabiliser le raisonnement ;
 - formats de sortie adaptés à chaque mode de travail ;
+- scénarios de tests comportementaux pour vérifier le skill et prévenir les régressions ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -68,6 +69,10 @@ Dans une nouvelle session, utiliser :
 ```text
 Lis passation.md, vérifie l'état réel des fichiers et de Git, puis reprends exactement à partir de la prochaine action recommandée. Ne répète pas les tentatives marquées comme échouées. Signale toute contradiction entre passation.md et l'état réel avant de modifier quoi que ce soit.
 ```
+
+### Tests du skill
+
+Les scénarios d'évaluation se trouvent dans [`tests/scenarios.md`](tests/scenarios.md). Ils couvrent les demandes simples, la création de projet, les modifications, le diagnostic, la sécurité, les secrets, la passation et la mise en ligne.
 
 ## Création de projet
 
