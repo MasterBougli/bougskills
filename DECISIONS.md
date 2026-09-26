@@ -273,6 +273,30 @@ Imposer un résumé d'audit, un préflight par skill et trois décisions explici
 - `references/audit-skills-installes.md`
 - `references/garde-fous.md`
 
+## ADR-016 — Séparer sévérité technique et priorité de décision
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : audits et revues de sécurité
+
+### Contexte
+
+Les niveaux techniques de sécurité et les classifications de priorité de BougSkills répondent à deux questions différentes. Les mélanger rend les rapports ambigus et peut masquer l'urgence réelle d'un risque.
+
+### Décision
+
+Afficher les deux dimensions dans les constats de sécurité. Utiliser une table indicative, puis justifier toute différence selon la preuve, l'exposition, les données, l'environnement et l'autorisation.
+
+### Conséquences
+
+- Positives : rapports plus précis et décisions mieux adaptées au contexte.
+- Négatives : chaque constat de sécurité demande une justification légèrement plus détaillée.
+
+### Références
+
+- `references/protocole-securite.md`
+- `references/mode-audit.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

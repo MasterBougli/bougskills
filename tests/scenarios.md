@@ -324,6 +324,10 @@ Pour une fonctionnalité multi-fichiers, BougSkills passe par les phases sécuri
 
 Face à un bug, BougSkills reproduit le problème, remonte vers le déclencheur initial, ajoute un test discriminant puis corrige la cause au lieu d'empiler des patchs symptomatiques.
 
+### 44. Sévérité et priorité distinctes
+
+Pour un constat de sécurité, BougSkills indique séparément la sévérité technique et la classification BougSkills, justifie leur correspondance selon le contexte et ne minimise pas un risque faute de preuve complète.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

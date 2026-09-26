@@ -115,6 +115,8 @@ Les classifications autorisées sont exactement :
 
 Ne pas confondre la classification avec le statut de vérification. Une obligation légale incertaine doit généralement être classée `à vérifier avec toi ou un professionnel`, avec la juridiction et la source indiquées, plutôt que présentée comme un avis juridique.
 
+Pour les constats de sécurité, afficher en plus la sévérité technique (`Critique`, `Élevé`, `Moyen`, `Faible` ou `Non déterminée`) et expliquer sa traduction en classification BougSkills. Ne pas remplacer la classification de l'audit par la sévérité technique.
+
 ## Rapport final
 
 `Audit/rapport-audit.md` doit contenir :

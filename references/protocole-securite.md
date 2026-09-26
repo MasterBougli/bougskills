@@ -141,3 +141,17 @@ Contrôles effectués :
 Limites et éléments non vérifiés :
 Priorité de correction :
 ```
+
+## Sévérité technique et priorité BougSkills
+
+Ne pas confondre la sévérité technique avec la priorité de décision. La première décrit l'impact sécurité potentiel ; la seconde décrit l'urgence et la décision à prendre dans le contexte du projet.
+
+| Sévérité technique | Classification BougSkills indicative | Règle de décision |
+|---|---|---|
+| Critique | `bloquant` | Bloquer la livraison ou l'action si le risque est confirmé, exploitable ou touche une donnée réelle. |
+| Élevé | `important` ou `bloquant` | `bloquant` si production, secret, paiement, privilège ou exploitation active ; sinon `important` avec échéance. |
+| Moyen | `amélioration recommandée` ou `important` | Augmenter la priorité si l'exposition, la facilité d'exploitation ou le périmètre métier le justifie. |
+| Faible | `cosmétique` ou `amélioration recommandée` | Ne jamais réduire à cosmétique si le contrôle concerne une obligation, une donnée sensible ou une défense en profondeur utile. |
+| Non déterminée | `à vérifier avec toi ou un professionnel` | Utiliser lorsque la preuve, l'autorisation, l'impact ou l'interprétation juridique manque. |
+
+Chaque constat doit afficher les deux valeurs, la preuve, la confiance, le périmètre et la raison d'une éventuelle différence. Cette table est un point de départ, pas une permission de minimiser un risque.
