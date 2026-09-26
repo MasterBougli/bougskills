@@ -82,6 +82,8 @@ Pour vérifier automatiquement la structure du skill, ses références, ses lien
 
 Le script ne remplace pas les tests comportementaux : il vérifie l'intégrité du dépôt, tandis que les scénarios vérifient les décisions du skill.
 
+La même validation est exécutée automatiquement par GitHub Actions à chaque push sur `main` et chaque pull request.
+
 ## Création de projet
 
 Le workflow de création guidée se trouve dans [`references/creation-projet.md`](references/creation-projet.md). Il pose une question à la fois et documente progressivement le projet.
