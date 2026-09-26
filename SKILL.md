@@ -25,6 +25,8 @@ Pour évaluer le comportement du skill ou vérifier une évolution, utiliser les
 
 Pour noter une évaluation et décider si une évolution est acceptable, utiliser [tests/grille-evaluation.md](tests/grille-evaluation.md).
 
+Pour prendre ou modifier une décision structurante du skill, consulter et mettre à jour [DECISIONS.md](DECISIONS.md) selon le format défini dans [references/gestion-decisions.md](references/gestion-decisions.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

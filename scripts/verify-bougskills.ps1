@@ -18,6 +18,7 @@ function Assert-Path([string]$RelativePath) {
     'SKILL.md',
     'README.md',
     'LICENCE.md',
+    'DECISIONS.md',
     'agents/openai.yaml',
     'references/creation-projet.md',
     'references/protocole-securite.md',
@@ -25,6 +26,7 @@ function Assert-Path([string]$RelativePath) {
     'references/modes.md',
     'references/fiabilite-raisonnement.md',
     'references/formats-reponses.md',
+    'references/gestion-decisions.md',
     'tests/scenarios.md'
 ) | ForEach-Object { Assert-Path $_ }
 
