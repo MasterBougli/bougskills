@@ -85,6 +85,8 @@ Avant le premier usage de BougSkills, les skills installés sont inspectés stat
 
 Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, BougSkills identifie précisément les données transmises ou lues, la destination, le fournisseur, l'autorisation et la possibilité de désactivation.
 
+Le résumé d'audit et le préflight suivent un format stable avec une décision `autorisé`, `question nécessaire` ou `bloqué`. Voir [`references/audit-skills-installes.md`](references/audit-skills-installes.md).
+
 ### Développement d'une fonctionnalité
 
 Pour une fonctionnalité non triviale, BougSkills commence par un entretien adaptatif et pose une question à la fois. Il vérifie le besoin, les utilisateurs, les parcours et états d'erreur, les données et règles métier, l'architecture, les conventions de code, la sécurité, la performance, les tests, l'observabilité, le déploiement et le rollback. Il présente ensuite un cadrage court avant de modifier le projet. Une correction triviale reste proportionnée.

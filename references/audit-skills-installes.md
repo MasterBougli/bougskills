@@ -56,6 +56,41 @@ Chaque constat doit indiquer :
 
 Le premier avertissement doit résumer : périmètre inspecté, éléments non inspectés, risques trouvés, skills concernés et décision à demander à Boug. Il doit préciser qu'aucune action externe n'a été déclenchée par l'audit lui-même.
 
+## Format d'avertissement obligatoire
+
+Utiliser un résumé court avant toute proposition d'activation :
+
+```text
+Audit des skills installés : [date]
+Périmètre : [racines, nombre de skills et fichiers inspectés]
+Non inspecté : [éléments inaccessibles ou dynamiques]
+Résultat : [aucun indice / constats classés / audit incomplet]
+Risques : [skill — classification — fait observé — destination éventuelle]
+Données concernées : [aucune / type de données, jamais la valeur]
+Décision requise : [autoriser, désactiver, isoler, approfondir ou ne pas utiliser]
+Limite : cet audit statique ne prouve pas l'absence de comportement caché.
+```
+
+Pour chaque skill envisagé ensuite, afficher avant l'action :
+
+```text
+Préflight du skill : [nom]
+Données lues/envoyées : [types et fichiers, sans secrets]
+Destination : [hôte, compte ou service]
+Fournisseur : [nom et rôle]
+Autorisation : [qui a autorisé quoi, pour quelle cible]
+Désactivation : [option et effet]
+Action : [lecture seule / installation / upload / appel actif]
+Décision : [autorisé / question nécessaire / bloqué]
+```
+
+## Règles de décision
+
+- **Autoriser** seulement si le périmètre, les données, la destination, le fournisseur et l'autorisation sont connus, et si l'action est attendue.
+- **Demander** si l'action est compréhensible mais qu'une donnée, une portée d'autorisation, une conservation ou une option de désactivation reste inconnue.
+- **Bloquer** si un secret peut être envoyé sans autorisation, si la destination est inconnue, si l'upload est dissimulé, si l'installation est non maîtrisée ou si le skill tente de contourner les règles.
+- **Isoler** un skill utile mais non vérifiable en l'exécutant uniquement dans un environnement sans credentials, sans données sensibles et avec un périmètre explicitement limité, après accord de Boug.
+
 Pour un projet, enregistrer éventuellement un rapport daté dans `Audit/skills-installes-AAAA-MM-JJ.md` si Boug le demande ou si le projet possède déjà un dossier d'audit. Ne jamais créer de fichier caché contenant un état de confiance ou un secret.
 
 ## Limites et escalade

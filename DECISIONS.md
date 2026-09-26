@@ -224,3 +224,27 @@ Avant une fonctionnalité non triviale, poser des questions une par une, propose
 
 - `references/entretien-developpement.md`
 - `references/analyse-impact.md`
+
+## ADR-010 — Format de décision pour les skills et services externes
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : audit des skills, fournisseurs et actions externes
+
+### Contexte
+
+Une règle de prudence reste difficile à appliquer si l'avertissement n'indique pas précisément les données, la destination et la décision attendue.
+
+### Décision
+
+Imposer un résumé d'audit, un préflight par skill et trois décisions explicites : autoriser, demander les informations manquantes ou bloquer. Un skill non vérifiable peut seulement être isolé dans un environnement sans secrets après accord.
+
+### Conséquences
+
+- Positives : décisions lisibles, traçables et reproductibles ; réduction des autorisations implicites.
+- Négatives : davantage de questions avant l'usage de services ou skills peu documentés.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `references/garde-fous.md`
