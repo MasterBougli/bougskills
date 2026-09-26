@@ -27,6 +27,8 @@ Pour noter une évaluation et décider si une évolution est acceptable, utilise
 
 Pour prendre ou modifier une décision structurante du skill, consulter et mettre à jour [DECISIONS.md](DECISIONS.md) selon le format défini dans [references/gestion-decisions.md](references/gestion-decisions.md).
 
+Pour combiner BougSkills avec un skill spécialisé, lire [references/composition-skills.md](references/composition-skills.md) et ne charger que les compétences réellement nécessaires.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

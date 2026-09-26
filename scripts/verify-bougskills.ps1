@@ -27,6 +27,7 @@ function Assert-Path([string]$RelativePath) {
     'references/fiabilite-raisonnement.md',
     'references/formats-reponses.md',
     'references/gestion-decisions.md',
+    'references/composition-skills.md',
     'tests/scenarios.md'
 ) | ForEach-Object { Assert-Path $_ }
 

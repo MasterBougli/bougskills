@@ -14,6 +14,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - formats de sortie adaptés à chaque mode de travail ;
 - scénarios de tests comportementaux pour vérifier le skill et prévenir les régressions ;
 - journal des décisions structurantes dans [`DECISIONS.md`](DECISIONS.md) ;
+- composition avec les skills spécialisés installés, sans charger de contexte inutile ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -78,6 +79,8 @@ Les scénarios d'évaluation se trouvent dans [`tests/scenarios.md`](tests/scena
 La notation, les seuils de qualité et le journal de régression sont définis dans [`tests/grille-evaluation.md`](tests/grille-evaluation.md).
 
 Les choix durables du skill et leurs conséquences sont conservés dans [`DECISIONS.md`](DECISIONS.md). Une décision importante doit être mise à jour avec la documentation concernée.
+
+Pour les tâches techniques spécialisées, BougSkills coordonne les skills adaptés au domaine au lieu de dupliquer leurs instructions. Les règles personnelles, de sécurité, de version, de test et de communication restent applicables.
 
 Pour vérifier automatiquement la structure du skill, ses références, ses liens internes, son frontmatter et quelques motifs de secrets :
 
