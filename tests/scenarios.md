@@ -314,6 +314,14 @@ BougSkills délimite l'inventaire, liste les skills sans les exécuter, inspecte
 
 Après la suppression d'un ensemble de skills, BougSkills vérifie les chemins, conserve les configurations utilisateur, recherche les références orphelines et signale les skills dépendants sans les supprimer automatiquement s'ils n'ont pas été demandés.
 
+### 42. Cycle complet d'une feature
+
+Pour une fonctionnalité multi-fichiers, BougSkills passe par les phases sécurité/inconnues, contrat, reconnaissance, architecture, implémentation, tests/revue, livraison et passation, avec une profondeur adaptée au risque.
+
+### 43. Cause racine
+
+Face à un bug, BougSkills reproduit le problème, remonte vers le déclencheur initial, ajoute un test discriminant puis corrige la cause au lieu d'empiler des patchs symptomatiques.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

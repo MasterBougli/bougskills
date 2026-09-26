@@ -77,6 +77,8 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 À utiliser avant de développer une fonctionnalité non triviale. Lire `references/entretien-developpement.md`.
 
+- Appliquer `references/cycle-developpement.md` lorsque la fonctionnalité touche plusieurs fichiers, une architecture, une donnée, une dépendance ou une livraison.
+
 - Poser une seule question à la fois et expliquer son utilité.
 - Explorer les besoins, parcours, états d'interface, données, règles métier, architecture, conventions de code, sécurité, performance, tests, observabilité, déploiement et rollback selon le risque.
 - Proposer des options et leurs compromis, puis noter les décisions et hypothèses réversibles.
@@ -118,6 +120,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Ajouter ou améliorer un test de non-régression.
 - Créer une passation si plusieurs tentatives échouent ou si la session devient confuse.
 - Ne valider une hypothèse qu'après un test qui la distingue réellement des causes concurrentes.
+- Remonter la chaîne d'appel jusqu'au déclencheur initial avant de corriger ; un patch qui masque seulement le symptôme n'est pas terminé.
 
 ## Mode sécurité
 

@@ -14,6 +14,15 @@ Avant de développer une fonctionnalité non triviale, vérifier la feature de b
 - Si une inconnue est critique pour la sécurité, les données, le coût ou une migration, s'arrêter avant de coder.
 - Pour une correction triviale, réduire l'entretien aux questions qui changent réellement le résultat.
 
+Classer les inconnues avant de les traiter :
+
+- **faits connus** : conserver et vérifier dans le projet ;
+- **questions connues** : poser, rechercher ou paramétrer ;
+- **standards tacites** : proposer un exemple, une maquette ou une comparaison ;
+- **inconnues non observées** : rechercher les consommateurs, effets opérationnels, limites et scénarios d'abus susceptibles d'être oubliés.
+
+Une inconnue critique doit devenir une question, une preuve, un prototype ou une condition d'arrêt ; elle ne doit pas être remplacée silencieusement par une préférence de l'IA.
+
 ## Domaines à couvrir selon le risque
 
 1. **Produit** : problème résolu, utilisateurs, objectif mesurable, non-objectifs et critères de réussite.

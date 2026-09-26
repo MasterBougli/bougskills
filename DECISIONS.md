@@ -249,6 +249,31 @@ Imposer un résumé d'audit, un préflight par skill et trois décisions explici
 - `references/audit-skills-installes.md`
 - `references/garde-fous.md`
 
+## ADR-014 — Cycle de développement proportionné et recherche des inconnues
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : fonctionnalités, bugs, revue et livraison
+
+### Contexte
+
+Les pratiques installées les plus utiles séparent la découverte, l'architecture, l'implémentation, la revue et la livraison. Elles insistent aussi sur les angles morts et la cause racine, deux risques que des questions fonctionnelles seules ne couvrent pas.
+
+### Décision
+
+BougSkills applique un cycle en huit phases, de la sécurité et des inconnues à la passation. La profondeur est proportionnelle au risque ; les inconnues critiques doivent être traitées par question, preuve, prototype ou arrêt, et les bugs doivent être corrigés à leur cause.
+
+### Conséquences
+
+- Positives : moins d'oublis, moins de patchs symptomatiques et meilleure qualité de livraison.
+- Négatives : les features importantes commencent par davantage de cadrage.
+
+### Références
+
+- `references/cycle-developpement.md`
+- `references/entretien-developpement.md`
+- `references/definition-terminaison.md`
+
 ## ADR-011 — Cadrage de développement conservable
 
 - Statut : Acceptée
