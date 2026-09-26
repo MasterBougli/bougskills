@@ -336,6 +336,10 @@ Après une session longue, répétitive ou bloquée, BougSkills explique le sign
 
 Pour une correction triviale, BougSkills vérifie l'état Git, les instructions applicables, le fichier ciblé, la version pertinente et le test adapté. Pour une modification moyenne ou importante, il élargit progressivement la reconnaissance aux consommateurs, à l'architecture, à la sécurité, au déploiement et au rollback.
 
+### 47. Réduction de contexte sans écriture implicite
+
+Lorsqu'une session dérive, BougSkills prépare une synthèse et propose une passation, mais ne crée ni ne modifie `passation.md` avant l'accord de Bougli ou une demande directe.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

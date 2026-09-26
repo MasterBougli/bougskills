@@ -46,11 +46,12 @@ Après deux signaux ou une boucle de debug manifeste, recommander une session fr
 ## Procédure de réduction
 
 1. Arrêter les modifications non nécessaires.
-2. Résumer l'état dans `passation.md` selon le protocole de passation.
-3. Retirer du contexte les logs, essais et références devenus inutiles.
-4. Vérifier que la passation ne contient aucun secret.
-5. Ouvrir une nouvelle session ou utiliser un nouvel agent.
-6. Faire relire la passation et vérifier les fichiers réels avant de reprendre.
+2. Préparer une synthèse courte dans la réponse ou dans un état temporaire, puis proposer la passation à Bougli.
+3. Après accord ou demande directe, écrire ou mettre à jour `passation.md` selon le protocole de passation.
+4. Retirer du contexte les logs, essais et références devenus inutiles.
+5. Vérifier que la passation ne contient aucun secret.
+6. Ouvrir une nouvelle session ou utiliser un nouvel agent.
+7. Faire relire la passation et vérifier les fichiers réels avant de reprendre.
 
 ## Reprise ciblée
 
