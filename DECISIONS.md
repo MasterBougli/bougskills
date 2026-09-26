@@ -513,6 +513,30 @@ Avant toute action destructive, résoudre les cibles, présenter l'aperçu, vér
 - `references/garde-fous.md`
 - `references/definition-terminaison.md`
 
+## ADR-026 — Dossier de preuves de livraison proportionnel
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : revues finales, mises en ligne et projets importants
+
+### Contexte
+
+Un dossier de preuves améliore la traçabilité d'un projet important, mais devient du bruit pour une correction locale ou un petit prototype.
+
+### Décision
+
+Pour un projet important, public, sensible, distribué, durable ou explicitement déclaré gros, BougSkills propose `docs/preuves-livraison/`. Si le besoin est ambigu, il pose une question unique. Le dossier contient uniquement des preuves réellement produites et un index de décision.
+
+### Conséquences
+
+- Positives : livraison plus vérifiable et reprise facilitée.
+- Négatives : documentation supplémentaire lorsque le projet le justifie réellement.
+
+### Références
+
+- `references/qualite-livraison.md`
+- `references/gabarit-preuves-livraison.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

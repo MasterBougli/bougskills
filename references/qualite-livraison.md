@@ -2,6 +2,12 @@
 
 Utiliser cette référence lors d'une revue finale, d'un audit applicatif ou avant une mise en ligne.
 
+## Dossier de preuves adaptatif
+
+Pour un petit projet local ou une correction simple, un bilan dans la réponse suffit généralement. Pour un projet important, public, sensible, distribué, maintenu par plusieurs personnes ou explicitement déclaré « gros projet », proposer un dossier `docs/preuves-livraison/`.
+
+Si le besoin n'est pas évident, poser une question unique avant de le créer. Si Bougli accepte, initialiser le dossier avec `README.md` à partir de [gabarit-preuves-livraison.md](gabarit-preuves-livraison.md), puis ajouter seulement les rapports réellement produits. Ne jamais créer des preuves fictives ou des fichiers vides pour donner une impression de contrôle.
+
 ## Tests : qualité avant pourcentage
 
 Vérifier que les tests :

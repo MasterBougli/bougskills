@@ -43,6 +43,8 @@ Pour répartir une tâche entre plusieurs agents ou sous-tâches, appliquer [ref
 
 Pour une modification importante ou transversale, appliquer [references/analyse-impact.md](references/analyse-impact.md) avant de commencer les changements.
 
+Pour une livraison importante, publique, sensible ou durable, appliquer [references/qualite-livraison.md](references/qualite-livraison.md) et proposer un dossier de preuves seulement après avoir vérifié qu'il apporte une valeur réelle.
+
 Pour inspecter un projet existant avant d'agir, appliquer [references/reconnaissance-projet.md](references/reconnaissance-projet.md) et ne lire que les fichiers nécessaires.
 
 Pour relier les besoins, décisions, fichiers, tests et documentation d'un projet, appliquer [references/traceabilite.md](references/traceabilite.md).

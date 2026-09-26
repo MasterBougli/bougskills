@@ -49,6 +49,7 @@ Adapter ou sauter une question si la réponse est déjà connue. Après chaque r
 11. Quelles conventions de code, de nommage, de structure et de formatage faut-il suivre ? Remplir `docs/Code-Style.md`.
 12. Comment le projet doit-il être testé et validé ? Remplir `docs/testing.md`.
 13. Le projet doit-il avoir un changelog ? Si oui, créer et initialiser `CHANGELOG.md`.
+14. Le projet est-il important, public, sensible ou maintenu dans le temps au point de nécessiter un dossier `docs/preuves-livraison/` ? Si oui, le créer avec son index et le gabarit adapté.
 
 ## Contenu minimal des documents
 

@@ -95,6 +95,8 @@ Pour une fonctionnalité non triviale, BougSkills commence par un entretien adap
 
 Pour une fonctionnalité importante, le cadrage peut être conservé dans `docs/` à partir du [gabarit de cadrage](references/gabarit-cadrage-developpement.md), sans remplacer la documentation déjà utilisée par le projet.
 
+Pour un projet important, public, sensible ou durable, BougSkills propose un dossier `docs/preuves-livraison/` contenant les tests, scans, dépendances, décisions, diff, version, déploiement et limites réellement vérifiés. Pour un petit projet, le bilan reste directement dans la réponse.
+
 ### Nettoyage de contenu
 
 BougSkills peut inspecter et nettoyer localement certains marqueurs Unicode invisibles dans un fichier texte UTF-8. Le fichier source n'est jamais écrasé, aucun service externe n'est contacté et les caractères potentiellement utiles aux langues ou emojis sont conservés. Voir [`references/nettoyage-contenu.md`](references/nettoyage-contenu.md).
