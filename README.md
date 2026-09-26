@@ -17,6 +17,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - composition avec les skills spécialisés installés, sans charger de contexte inutile ;
 - gestion active du contexte pour limiter les répétitions et les dérives des sessions longues ;
 - boucle d'apprentissage contrôlée pour intégrer les corrections sans créer de fausses mémoires ;
+- garde-fous d'exécution pour maîtriser le périmètre, les autorisations et les arrêts ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -87,6 +88,8 @@ Pour les tâches techniques spécialisées, BougSkills coordonne les skills adap
 Pour les sessions longues, BougSkills conserve uniquement le contexte utile et déclenche une passation structurée lorsque les réponses deviennent répétitives, contradictoires ou bloquées.
 
 Les corrections et préférences sont classées avant d'être conservées. Une correction ponctuelle ne devient pas automatiquement une règle permanente ; les décisions structurantes sont documentées dans `DECISIONS.md`.
+
+Les tâches à risque disposent de conditions d'arrêt explicites : BougSkills s'arrête pour demander une décision lorsqu'une autorisation, une information ou un choix structurant manque.
 
 Pour vérifier automatiquement la structure du skill, ses références, ses liens internes, son frontmatter et quelques motifs de secrets :
 
