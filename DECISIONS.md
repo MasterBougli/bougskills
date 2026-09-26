@@ -297,6 +297,30 @@ Afficher les deux dimensions dans les constats de sécurité. Utiliser une table
 - `references/protocole-securite.md`
 - `references/mode-audit.md`
 
+## ADR-017 — Proposer la passation avant d'écrire le fichier
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : sessions longues, boucles de debug et changement d'agent
+
+### Contexte
+
+Une passation protège le raisonnement utile, mais un fichier créé automatiquement peut être inutile, périmé ou surprendre Bougli.
+
+### Décision
+
+BougSkills détecte les signaux de dérive et propose une passation avec une raison concise. Il attend l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe de passation ou de reprise.
+
+### Conséquences
+
+- Positives : moins de fichiers parasites et meilleur contrôle utilisateur.
+- Négatives : une confirmation peut retarder une passation urgente si Bougli ne répond pas.
+
+### Références
+
+- `references/passation-session.md`
+- `references/gestion-contexte.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

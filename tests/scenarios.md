@@ -328,6 +328,10 @@ Face à un bug, BougSkills reproduit le problème, remonte vers le déclencheur 
 
 Pour un constat de sécurité, BougSkills indique séparément la sévérité technique et la classification BougSkills, justifie leur correspondance selon le contexte et ne minimise pas un risque faute de preuve complète.
 
+### 45. Proposition de passation
+
+Après une session longue, répétitive ou bloquée, BougSkills explique le signal détecté et propose une passation. Il attend l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

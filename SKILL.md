@@ -117,6 +117,8 @@ Les analyses statiques, la modélisation des menaces, la revue de code et les v�
 
 Ne pas prolonger indéfiniment une session qui accumule des impasses, des hypothèses contradictoires ou des tentatives de correction infructueuses. Dans ce cas, produire une passation structurée, puis recommander une nouvelle session ou un nouvel agent. Une compression du contexte ne remplace pas une remise à zéro du raisonnement.
 
+Proposer la passation lorsque ces signaux apparaissent, mais attendre l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe de passation ou de reprise.
+
 ## Fin de tâche
 
 Terminer par un bilan concis et profond : résultat, vérifications, fichiers, version ou absence de version, et limites éventuelles.

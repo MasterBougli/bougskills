@@ -20,6 +20,18 @@ Proposer une passation lorsque l'un de ces cas apparaît :
 
 Ne pas créer une passation pour une demande simple ou une tâche courte déjà terminée.
 
+## Proposition avant création
+
+BougSkills doit proposer une passation lorsque plusieurs signaux apparaissent : session longue, répétitions, hypothèses contradictoires, plusieurs tentatives échouées ou changement d'agent/modèle. La proposition doit expliquer brièvement le signal observé et rappeler ce que la passation préservera.
+
+Attendre l'accord de Bougli avant de créer ou modifier `passation.md`, sauf si Bougli demande directement une passation, une reprise ou un résumé de transfert. Ne pas créer automatiquement un fichier de passation uniquement parce qu'une session dépasse une durée arbitraire.
+
+## Proposition avant création
+
+BougSkills doit proposer une passation lorsque plusieurs signaux apparaissent : session longue, répétitions, hypothèses contradictoires, plusieurs tentatives échouées ou changement d'agent/modèle. La proposition doit expliquer brièvement le signal observé et rappeler ce que la passation préservera.
+
+Attendre l'accord de Bougli avant de créer ou modifier `passation.md`, sauf si Bougli demande directement une passation, une reprise ou un résumé de transfert. Ne pas créer automatiquement un fichier de passation uniquement parce qu'une session dépasse une durée arbitraire.
+
 ## Fichier de passation
 
 Pour un projet, créer ou mettre à jour `passation.md` à la racine du projet. Pour une tâche sans dépôt, créer le fichier dans le dossier de travail disponible ou fournir le contenu sous forme de prompt copiable.
