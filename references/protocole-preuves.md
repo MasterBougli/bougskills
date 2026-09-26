@@ -11,7 +11,7 @@ Chaque constat ou conclusion importante doit préciser :
 - **Date** : date de l'observation ou de la vérification ;
 - **Méthode** : statique, navigation, test local, test actif autorisé ou source documentaire ;
 - **Impact** : conséquence plausible et population concernée ;
-- **Confiance** : élevée, moyenne ou faible ;
+- **Confiance** : forte, moyenne ou faible ;
 - **Limite** : ce qui n'a pas été vérifié ;
 - **Action** : correction, décision ou vérification suivante.
 

@@ -17,7 +17,7 @@ Un fait doit pouvoir répondre à la question : « comment le savons-nous ? »
 Explications possibles qui ne sont pas encore prouvées. Une hypothèse doit préciser :
 
 - sa formulation ;
-- son niveau de confiance : faible, moyen ou fort ;
+- son niveau de confiance : faible, moyenne ou forte ;
 - les éléments qui la soutiennent ;
 - le test ou la preuve qui pourrait la confirmer ou l'infirmer.
 

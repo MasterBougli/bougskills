@@ -262,7 +262,7 @@ La structure contient aussi `AGENTS.md`, limité aux règles du projet ; les rè
 
 **Mode attendu :** audit ou diagnostic avec protocole des preuves.
 
-**Réussite :** distinguer la baisse observée de la cause supposée, demander les dates et données manquantes, indiquer le niveau de confiance et proposer un test ou une source permettant de trancher.
+**Réussite :** distinguer la baisse observée de la cause supposée, demander les dates et données manquantes, indiquer une confiance faible, moyenne ou forte et proposer un test ou une source permettant de trancher.
 
 ### 31. Exception de sécurité
 
