@@ -13,6 +13,8 @@ Pour créer un projet depuis zéro, lire [references/creation-projet.md](referen
 
 Pour concevoir, auditer ou renforcer la sécurité d'un projet, lire [references/protocole-securite.md](references/protocole-securite.md) et appliquer le niveau de sécurité adapté au risque.
 
+Pour reprendre un travail dans une session fraîche, après une session longue, une boucle de debug ou un changement d'agent, lire [references/passation-session.md](references/passation-session.md) et créer ou consulter `passation.md`.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
@@ -49,6 +51,10 @@ Quand Boug demande de créer un projet entièrement nouveau, activer le mode de 
 Tout code nouveau ou modifié doit être évalué selon le protocole de sécurité applicable au projet. La sécurité ne doit pas être ajoutée uniquement à la fin : les menaces, données sensibles, frontières de confiance et contrôles attendus doivent être identifiés avant l'implémentation.
 
 Les analyses statiques, la modélisation des menaces, la revue de code et les vérifications locales peuvent être effectuées directement. Tout test qui envoie des requêtes vers un hôte réel, même présenté comme un simple audit, nécessite une confirmation explicite de l'autorisation et du périmètre avant son exécution.
+
+## Continuité entre sessions
+
+Ne pas prolonger indéfiniment une session qui accumule des impasses, des hypothèses contradictoires ou des tentatives de correction infructueuses. Dans ce cas, produire une passation structurée, puis recommander une nouvelle session ou un nouvel agent. Une compression du contexte ne remplace pas une remise à zéro du raisonnement.
 
 ## Fin de tâche
 
