@@ -18,6 +18,55 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 
 Copier le dossier `bougskills` dans le répertoire de skills Codex, puis utiliser le skill `bougskills`.
 
+Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
+
+## Utilisation
+
+Mentionner explicitement `BougSkills` ou demander directement l'action souhaitée. Le skill sélectionne automatiquement un mode de travail :
+
+- réponse simple ou explication pédagogique ;
+- exploration et questions une par une ;
+- conception et choix d'architecture ;
+- création guidée de projet ;
+- modification, diagnostic ou débogage ;
+- revue de sécurité ou revue finale ;
+- passation vers une nouvelle session ;
+- résumé copiable du contexte.
+
+## Fonctionnement important
+
+### Création d'un projet depuis zéro
+
+Lorsqu'un nouveau projet est demandé, BougSkills crée la structure documentaire, puis pose une seule question à la fois pour remplir les fichiers :
+
+- `README.md` ;
+- `LICENCE.md` ;
+- `CONTRIBUTING.md` ;
+- `docs/PRD.md` ;
+- `docs/design-style.md` ;
+- `docs/Architecture.md` ;
+- `docs/Agent.md` ;
+- `docs/Security.md` ;
+- `docs/Code-Style.md` ;
+- `docs/testing.md` ;
+- `CHANGELOG.md` si le projet le justifie.
+
+### Sécurité
+
+Le protocole sécurité adapte le niveau de contrôle au projet. Il couvre la modélisation des menaces, les secrets, les permissions, les entrées, les dépendances, les tests, les headers, les sauvegardes, le monitoring et la checklist avant mise en ligne.
+
+Un test actif contre un hôte réel nécessite toujours une autorisation explicite et un périmètre confirmé.
+
+### Passation entre sessions
+
+Lorsqu'une session devient longue, confuse ou bloquée, demander une passation. BougSkills crée ou met à jour `passation.md` avec l'objectif, le problème, les fichiers, les faits, les hypothèses, les tentatives échouées, l'état Git et la prochaine action.
+
+Dans une nouvelle session, utiliser :
+
+```text
+Lis passation.md, vérifie l'état réel des fichiers et de Git, puis reprends exactement à partir de la prochaine action recommandée. Ne répète pas les tentatives marquées comme échouées. Signale toute contradiction entre passation.md et l'état réel avant de modifier quoi que ce soit.
+```
+
 ## Création de projet
 
 Le workflow de création guidée se trouve dans [`references/creation-projet.md`](references/creation-projet.md). Il pose une question à la fois et documente progressivement le projet.
