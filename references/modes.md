@@ -58,6 +58,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 À utiliser pour une architecture, un choix technique, une stratégie ou un plan.
 
 - Reformuler l'objectif et les contraintes.
+- Faire une reconnaissance du projet lorsqu'un dépôt ou un workspace existant est concerné.
 - Proposer au moins une option recommandée et les alternatives importantes.
 - Comparer complexité, coût, sécurité, maintenance et évolutivité.
 - Identifier les décisions irréversibles.
@@ -71,6 +72,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 À utiliser lorsqu'un fichier, une configuration ou un projet doit être changé.
 
+- Lire `references/reconnaissance-projet.md` avant l'inspection détaillée.
 - Inspecter les instructions et l'état existant.
 - Lire `references/analyse-impact.md` pour une modification qui touche plusieurs fichiers, une API, une base de données, une dépendance, la sécurité ou le déploiement.
 - Vérifier les changements déjà présents.

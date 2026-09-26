@@ -39,6 +39,8 @@ Pour répartir une tâche entre plusieurs agents ou sous-tâches, appliquer [ref
 
 Pour une modification importante ou transversale, appliquer [references/analyse-impact.md](references/analyse-impact.md) avant de commencer les changements.
 
+Pour inspecter un projet existant avant d'agir, appliquer [references/reconnaissance-projet.md](references/reconnaissance-projet.md) et ne lire que les fichiers nécessaires.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

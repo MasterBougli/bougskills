@@ -20,6 +20,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - garde-fous d'exécution pour maîtriser le périmètre, les autorisations et les arrêts ;
 - délégation contrôlée pour paralléliser les tâches sans perdre la cohérence ni la responsabilité finale ;
 - analyse d'impact avant les changements importants ou transversaux ;
+- reconnaissance ciblée des projets existants avant conception ou modification ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -94,6 +95,8 @@ Les corrections et préférences sont classées avant d'être conservées. Une c
 Les tâches à risque disposent de conditions d'arrêt explicites : BougSkills s'arrête pour demander une décision lorsqu'une autorisation, une information ou un choix structurant manque.
 
 Les modifications importantes sont précédées d'une analyse d'impact couvrant les dépendances, données, contrats, sécurité, tests, documentation, déploiement et retour arrière.
+
+Avant d'agir dans un projet existant, BougSkills inspecte les instructions locales, l'état Git, la structure, la stack, les versions et les tests, sans afficher les secrets.
 
 Les tâches parallélisables peuvent être déléguées avec un périmètre et un format de retour explicites, mais la vérification finale reste toujours dans le contexte principal.
 
