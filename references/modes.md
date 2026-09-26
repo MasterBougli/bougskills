@@ -41,6 +41,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Expliquer les termes nécessaires.
 - Utiliser un exemple court.
 - Terminer par la conséquence pratique ou la prochaine étape.
+- Vérifier les informations instables ou spécialisées avec les sources adaptées avant de les présenter comme actuelles.
 
 ## Mode exploration
 
@@ -62,6 +63,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Proposer au moins une option recommandée et les alternatives importantes.
 - Comparer complexité, coût, sécurité, maintenance et évolutivité.
 - Identifier les décisions irréversibles.
+- Vérifier les versions, contraintes et recommandations qui peuvent avoir changé.
 - Produire un plan de mise en œuvre vérifiable.
 - Prévoir la traçabilité entre exigences, décisions, implémentation, tests et documentation pour les projets importants.
 

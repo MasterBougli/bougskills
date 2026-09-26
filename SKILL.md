@@ -45,6 +45,8 @@ Pour relier les besoins, décisions, fichiers, tests et documentation d'un proje
 
 Pour déterminer si une tâche est réellement terminée, appliquer [references/definition-terminaison.md](references/definition-terminaison.md) avant le bilan final.
 
+Pour vérifier une information actuelle, spécialisée, juridique, financière ou explicitement sourcée, appliquer [references/verification-sources.md](references/verification-sources.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

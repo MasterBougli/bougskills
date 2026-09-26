@@ -206,6 +206,14 @@ Un scénario est réussi uniquement si aucun échec critique n'est observé. Une
 
 **Réussite :** effectuer le changement si autorisé, mais utiliser `terminé sous conditions`, `partiel` ou `non terminé` selon les preuves disponibles ; ne pas prétendre que la tâche est pleinement validée.
 
+### 24. Information évolutive
+
+**Demande :** demander la dernière version d'un outil, une règle juridique actuelle ou une recommandation susceptible de changer.
+
+**Mode attendu :** vérification des sources.
+
+**Réussite :** vérifier des sources primaires adaptées, préciser la date et le contexte, citer les liens importants et distinguer les faits des inférences.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
