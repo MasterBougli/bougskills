@@ -96,6 +96,33 @@ Avant de déclarer le projet sûr :
 
 Ne jamais garantir qu'un projet est « sécurisé » au sens absolu. Dire précisément ce qui a été contrôlé, dans quel périmètre et avec quelles limites.
 
+## Checklist avant mise en ligne d'un site
+
+Avant de déclarer un site prêt pour la production, vérifier les 20 points suivants. Les obligations légales dépendent du pays, du statut de l'éditeur et de l'activité : elles doivent être confirmées avec une source officielle ou un professionnel compétent.
+
+- [ ] **HTTPS** actif partout, certificat valide et redirection HTTP vers HTTPS.
+- [ ] **Mentions légales** présentes, accessibles et adaptées à l'éditeur du site.
+- [ ] **Politique de confidentialité** présente, claire et cohérente avec les données réellement collectées.
+- [ ] **CGU** présentes lorsqu'elles sont nécessaires au service.
+- [ ] **CGV** présentes pour une boutique ou toute activité de vente en ligne.
+- [ ] **Bandeau cookies** conforme, non trompeur et capable de recueillir le consentement avant les traceurs non essentiels.
+- [ ] **Responsive design** vérifié sur mobile, tablette et grand écran.
+- [ ] **Vitesse** contrôlée sur les pages principales, avec images, scripts et polices optimisés.
+- [ ] **Meta title** et descriptions présentes, uniques et pertinentes sur les pages importantes.
+- [ ] **Sitemap** généré, valide et déclaré aux outils pour moteurs de recherche si nécessaire.
+- [ ] **robots.txt** présent et vérifié pour ne pas bloquer accidentellement les pages utiles.
+- [ ] **Favicon** et icônes adaptées aux navigateurs et appareils principaux.
+- [ ] **Page 404** utile, cohérente avec le site et sans fuite d'informations techniques.
+- [ ] **Anti-spam** activé sur les formulaires, commentaires, inscriptions et demandes de contact.
+- [ ] **Analytics** configuré avec minimisation des données, consentement lorsque requis et respect de la politique de confidentialité.
+- [ ] **Sauvegardes** automatiques testées et procédure de restauration connue.
+- [ ] **Formulaires et emails** testés, avec validation serveur, messages d'erreur propres et protection contre les abus.
+- [ ] **En-têtes de sécurité** et configuration CORS vérifiés selon les besoins réels du site.
+- [ ] **Monitoring et alertes** configurés pour les erreurs, indisponibilités et événements de sécurité importants.
+- [ ] **Dernière revue de production** effectuée : dépendances, secrets, permissions, logs, redirections, liens et variables d'environnement.
+
+Une case ne doit être cochée que si le contrôle a réellement été effectué. Si un point est hors périmètre, le marquer comme `N/A` avec une justification plutôt que de le considérer implicitement comme validé.
+
 ## Format d'un résultat sécurité
 
 Utiliser ce format pour une revue ou un audit :
