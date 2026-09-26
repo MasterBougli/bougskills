@@ -14,6 +14,27 @@ Faire une analyse d'impact avant une modification qui :
 
 Pour une correction locale et réversible, une analyse complète n'est pas nécessaire : signaler simplement les fichiers et risques concernés.
 
+## Score d'impact proportionnel
+
+Attribuer `0`, `1` ou `2` à chaque dimension :
+
+| Dimension | 0 | 1 | 2 |
+|---|---|---|---|
+| Impact utilisateur ou métier | local et faible | parcours ou groupe limité | fonction critique, revenus ou nombreux utilisateurs |
+| Probabilité d'effet inattendu | faible et bien couvert | incertaine ou partiellement couverte | forte, changement nouveau ou peu testé |
+| Retour arrière | immédiat et réversible | possible avec précaution | difficile, migration ou données déjà transformées |
+| Données et sécurité | aucune donnée sensible | données internes ou permission limitée | secrets, données personnelles, paiement ou privilège |
+| Consommateurs et contrats | aucun consommateur externe | quelques consommateurs connus | API publique, intégration ou contrat partagé |
+| Exposition externe | local isolé | préproduction ou accès restreint | production, service externe ou action réelle |
+
+Interpréter le total avec discernement :
+
+- `0–3` : analyse légère ;
+- `4–7` : analyse moyenne ;
+- `8–12` : analyse complète et validation des décisions critiques.
+
+Un seul facteur critique — migration destructive, secret, paiement, production, autorisation inconnue ou cible réelle — suffit à imposer l'analyse complète, même si le total est bas. Le score est une aide de proportionnalité, pas une autorisation.
+
 ## Questions à vérifier
 
 Identifier :
@@ -33,6 +54,8 @@ Identifier :
 
 ```text
 Changement : <objectif>
+Score d'impact : <total et dimensions>
+Profondeur choisie : <légère / moyenne / complète, avec justification>
 Impact direct : <fichiers et modules>
 Impact indirect : <consommateurs, données, APIs ou déploiement>
 Risques : <risques principaux>

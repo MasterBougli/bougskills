@@ -364,6 +364,10 @@ Une correction répétée reste locale tant que Bougli ne demande pas explicitem
 
 Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire audité, BougSkills ne le charge pas automatiquement ; il explique le risque, applique le préflight et attend l'autorisation explicite de Bougli.
 
+### 54. Score d'impact
+
+Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

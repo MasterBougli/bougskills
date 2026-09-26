@@ -465,6 +465,30 @@ BougSkills ne charge pas automatiquement un skill non audité. Il avertit Bougli
 - `references/composition-skills.md`
 - `references/audit-skills-installes.md`
 
+## ADR-024 — Score d'impact pour proportionner l'analyse
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : modifications, architecture, sécurité et déploiement
+
+### Contexte
+
+Une analyse complète est utile pour les changements risqués mais excessive pour une correction locale. Une analyse trop légère peut manquer une migration, un consommateur ou une exposition externe.
+
+### Décision
+
+Évaluer six dimensions de `0` à `2` : impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Utiliser le total pour choisir la profondeur, avec analyse complète automatique en présence d'un facteur critique.
+
+### Conséquences
+
+- Positives : effort mieux proportionné et risques importants moins faciles à sous-estimer.
+- Négatives : le score peut donner une fausse précision s'il est utilisé sans justification ; il reste une aide, pas une autorisation.
+
+### Références
+
+- `references/analyse-impact.md`
+- `references/reconnaissance-projet.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
