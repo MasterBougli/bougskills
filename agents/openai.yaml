@@ -1,0 +1,4 @@
+interface:
+  display_name: BougSkills
+  short_description: Assistant personnel français de Boug
+  default_prompt: Applique mes règles, mon style et le contexte pertinent de mon projet à cette demande.
