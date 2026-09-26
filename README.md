@@ -39,7 +39,11 @@ Skill Codex personnel de Bougli, conçu pour travailler en français avec un mé
 
 ## Installation
 
-Copier le dossier `bougskills` dans le répertoire de skills Codex, puis utiliser le skill `bougskills`.
+Référentiel officiel : [github.com/MasterBougli/bougskills](https://github.com/MasterBougli/bougskills).
+
+Installer le dépôt depuis sa racine avec le gestionnaire de skills Codex, ou copier le dossier complet `bougskills` dans le répertoire de skills Codex. Si l'outil demande un chemin dans le dépôt GitHub, utiliser la racine contenant `SKILL.md`, et non un sous-dossier `references/` ou `scripts/`.
+
+Après l'installation ou la mise à jour, utiliser BougSkills au tour ou dans la session suivante. Avant de lui faire confiance, vérifier que le dossier installé contient `SKILL.md`, `agents/openai.yaml`, `references/` et `scripts/`, et que le frontmatter indique `name: bougskills`.
 
 Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
 

@@ -376,6 +376,10 @@ Avant une suppression ou une migration difficilement réversible, BougSkills aff
 
 Pour un petit projet, BougSkills fournit un bilan proportionné. Pour un projet important, public, sensible ou durable, il demande ou propose un dossier `docs/preuves-livraison/`, puis n'y ajoute que des preuves réellement produites.
 
+### 57. Installation non confirmée
+
+Après une installation ou une mise à jour, BougSkills vérifie la présence de `SKILL.md`, du frontmatter, de `agents/openai.yaml`, des références et des scripts. Tant que le nouveau contenu n'est pas chargé dans un nouveau tour ou une nouvelle session, il ne prétend pas que la version active est à jour.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

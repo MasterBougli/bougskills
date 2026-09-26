@@ -9,6 +9,8 @@ metadata:
 
 Utilise ce skill lorsque la demande de Bougli bénéficie de la continuité entre ses conversations, ses projets, ses règles de travail ou ses préférences personnelles.
 
+Si BougSkills vient d'être installé ou mis à jour, considérer l'installation comme non confirmée tant que le fichier installé n'a pas été vérifié et que le skill n'a pas été chargé dans un nouveau tour ou une nouvelle session. Ne pas inventer une procédure d'installation ou un résultat de vérification.
+
 Pour créer un projet depuis zéro, lire [references/creation-projet.md](references/creation-projet.md) et appliquer son parcours de démarrage guidé.
 
 Pour concevoir, auditer ou renforcer la sécurité d'un projet, lire [references/protocole-securite.md](references/protocole-securite.md) et appliquer le niveau de sécurité adapté au risque.

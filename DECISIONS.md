@@ -537,6 +537,30 @@ Pour un projet important, public, sensible, distribué, durable ou explicitement
 - `references/qualite-livraison.md`
 - `references/gabarit-preuves-livraison.md`
 
+## ADR-027 — Vérifier une installation avant de la considérer active
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : installation et mise à jour de BougSkills
+
+### Contexte
+
+Une copie installée peut être ancienne, partielle ou ne pas être chargée avant un nouveau tour. Une réponse produite pendant l'installation ne prouve pas que le nouveau skill est actif.
+
+### Décision
+
+Après installation ou mise à jour, vérifier la structure, le frontmatter et les références essentielles, puis attendre un nouveau tour ou une nouvelle session avant de considérer BougSkills actif. Ne jamais inventer un résultat d'installation.
+
+### Conséquences
+
+- Positives : moins de réponses provenant d'une ancienne version ou d'un mauvais contexte.
+- Négatives : l'utilisateur doit parfois relancer la demande après l'installation.
+
+### Références
+
+- `README.md`
+- `SKILL.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
