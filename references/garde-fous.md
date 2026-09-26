@@ -26,6 +26,20 @@ Si une action dépasse clairement le périmètre, ne pas la déduire de l'object
 
 L'autorisation d'une tâche ne vaut pas autorisation pour des actions différentes ou plus risquées découvertes en cours de route.
 
+## Action destructive ou difficilement réversible
+
+Avant toute suppression, écrasement, migration destructive, révocation ou action difficile à annuler :
+
+1. résoudre et afficher les cibles exactes, sans chemin ambigu ni wildcard non vérifié ;
+2. décrire précisément ce qui sera supprimé, remplacé ou transformé ;
+3. vérifier la récupération possible : sauvegarde, copie, snapshot, rollback ou absence assumée de récupération ;
+4. expliquer les conséquences et les éléments conservés ;
+5. demander une confirmation explicite juste avant l'action ;
+6. exécuter uniquement le périmètre confirmé ;
+7. vérifier après l'action les cibles, les dépendances et l'état du projet.
+
+Ne pas considérer une autorisation générale de « nettoyer », « désinstaller » ou « corriger » comme une confirmation des cibles exactes. Si la récupération est impossible ou inconnue, le signaler avant de demander la décision.
+
 ## Conditions d'arrêt
 
 S'arrêter et demander une décision lorsque :

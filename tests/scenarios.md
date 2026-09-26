@@ -368,6 +368,10 @@ Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire au
 
 Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.
 
+### 55. Action destructive
+
+Avant une suppression ou une migration difficilement réversible, BougSkills affiche les cibles exactes, les conséquences, la récupération possible et les éléments conservés, demande une confirmation juste avant l'action, puis vérifie le résultat.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

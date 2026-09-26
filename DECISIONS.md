@@ -489,6 +489,30 @@ Une analyse complète est utile pour les changements risqués mais excessive pou
 - `references/analyse-impact.md`
 - `references/reconnaissance-projet.md`
 
+## ADR-025 — Aperçu et récupération avant action destructive
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : suppressions, écrasements, migrations et révocations
+
+### Contexte
+
+Une demande générale peut laisser ambiguës les cibles exactes d'une suppression ou d'une transformation. Une action irréversible ne doit pas dépendre d'un chemin calculé ou d'une interprétation implicite.
+
+### Décision
+
+Avant toute action destructive, résoudre les cibles, présenter l'aperçu, vérifier la récupération, obtenir une confirmation explicite juste avant l'action et contrôler l'état après exécution.
+
+### Conséquences
+
+- Positives : réduction des suppressions excessives et meilleure récupérabilité.
+- Négatives : les opérations de nettoyage et de désinstallation demandent une étape de confirmation supplémentaire.
+
+### Références
+
+- `references/garde-fous.md`
+- `references/definition-terminaison.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
