@@ -146,3 +146,33 @@ Sélectionner un mode principal et utiliser un format de sortie adapté, avec de
 ### Références
 - `references/modes.md`
 - `references/formats-reponses.md`
+
+## ADR-007 — Preuves, autorisation par cible et qualité de livraison
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : audits, sécurité et livraisons
+
+### Contexte
+
+Les audits peuvent produire des conclusions trop fortes, des actions actives mal cadrées ou des validations fondées uniquement sur un pourcentage de couverture.
+
+### Décision
+
+Imposer un protocole commun de preuves et de confiance, conserver l'autorisation active par cible dans le contexte principal, documenter les exceptions de sécurité avec une échéance, et évaluer la qualité réelle des tests, dépendances et workflows CI/CD avant une livraison.
+
+### Alternatives
+
+- Faire confiance au rapport du skill spécialisé — rejeté car BougSkills doit vérifier la cohérence finale.
+- Utiliser uniquement la couverture de tests — rejeté car elle ne mesure pas la pertinence des assertions.
+
+### Conséquences
+
+- Positives : conclusions plus fiables, actions externes mieux limitées et livraisons plus vérifiables.
+- Négatives : les audits et revues finales demandent davantage de preuves et de documentation.
+
+### Références
+
+- `references/protocole-preuves.md`
+- `references/securite-avancee.md`
+- `references/qualite-livraison.md`

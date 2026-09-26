@@ -116,6 +116,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Distinguer les contrôles statiques des tests actifs.
 - Demander l'autorisation et le périmètre avant tout test contre un hôte réel.
 - Produire les constats avec preuve, impact, sévérité et correction.
+- Pour un audit large ou une cible réelle, lire `references/securite-avancee.md` et conserver l'autorisation par cible dans le contexte principal.
 
 ## Mode revue finale
 
@@ -126,6 +127,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Classer les problèmes par priorité.
 - Dire clairement ce qui est validé, non validé ou hors périmètre.
 - Vérifier qu'aucune exigence validée ne reste sans implémentation, test ou documentation appropriée.
+- Lire `references/qualite-livraison.md` pour contrôler la qualité réelle des tests, des dépendances et de la CI/CD.
 
 ## Mode Audit
 

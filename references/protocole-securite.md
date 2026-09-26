@@ -1,5 +1,7 @@
 # Protocole de sécurité de BougSkills
 
+Pour un audit large, une cible réelle, une application IA ou des exceptions de sécurité, compléter ce protocole avec [securite-avancee.md](securite-avancee.md). Pour les preuves, utiliser [protocole-preuves.md](protocole-preuves.md).
+
 Ce protocole s'applique à tout projet qui manipule du code, des données, des utilisateurs, des identités, des paiements, des fichiers, des intégrations externes, une interface web, une API ou un agent.
 
 ## Niveau de sécurité à choisir

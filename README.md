@@ -26,6 +26,9 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - vérification des informations évolutives avec des sources adaptées et datées ;
 - utilisation encadrée des commandes, scripts, navigateurs et services externes ;
 - mode Audit transversal pour les sites, boutiques, applications, API et services ;
+- protocole universel de preuves, confiance, dates, limites et relecture contradictoire ;
+- sécurité avancée avec autorisation par cible, exceptions datées et contrôle des applications IA ;
+- qualité de livraison couvrant tests utiles, dépendances, secrets, CI/CD et retour arrière ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -81,6 +84,8 @@ Pour demander un audit complet, préciser la cible et le périmètre. BougSkills
 Chaque constat est classé `bloquant`, `important`, `amélioration recommandée`, `cosmétique` ou `à vérifier avec toi ou un professionnel`, avec une preuve, un impact, une recommandation et un statut de vérification. Voir [`references/mode-audit.md`](references/mode-audit.md).
 
 Des gabarits prêts à copier pour le plan et le rapport sont disponibles dans [`references/gabarits-audit.md`](references/gabarits-audit.md).
+
+Les preuves et niveaux de confiance suivent [`references/protocole-preuves.md`](references/protocole-preuves.md). Les audits sécurité avancés suivent [`references/securite-avancee.md`](references/securite-avancee.md), et les contrôles avant livraison suivent [`references/qualite-livraison.md`](references/qualite-livraison.md).
 
 ### Passation entre sessions
 

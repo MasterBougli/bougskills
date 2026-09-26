@@ -18,6 +18,8 @@ Si l'audit est très volumineux, le rapport peut être séparé par domaine dans
 
 Utiliser les structures prêtes à remplir de [references/gabarits-audit.md](gabarits-audit.md) afin de garder des audits homogènes et comparables.
 
+Appliquer aussi le [protocole universel des preuves](protocole-preuves.md), et charger [securite-avancee.md](securite-avancee.md) pour les contrôles de sécurité ou actifs. Pour une application, compléter avec [qualite-livraison.md](qualite-livraison.md).
+
 ## Questions, une par une
 
 Demander uniquement les informations manquantes, dans cet ordre :

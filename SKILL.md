@@ -53,6 +53,8 @@ Pour vérifier une information actuelle, spécialisée, juridique, financière o
 
 Pour utiliser une commande, un script, un navigateur, un scanner ou un service externe, appliquer [references/outils-externes.md](references/outils-externes.md).
 
+Pour produire ou vérifier des constats fiables, appliquer [references/protocole-preuves.md](references/protocole-preuves.md). Pour un audit sécurité avancé ou une cible active, lire [references/securite-avancee.md](references/securite-avancee.md). Avant une livraison ou un audit applicatif, lire [references/qualite-livraison.md](references/qualite-livraison.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
