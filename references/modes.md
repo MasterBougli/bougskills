@@ -63,6 +63,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Comparer complexité, coût, sécurité, maintenance et évolutivité.
 - Identifier les décisions irréversibles.
 - Produire un plan de mise en œuvre vérifiable.
+- Prévoir la traçabilité entre exigences, décisions, implémentation, tests et documentation pour les projets importants.
 
 ## Mode création de projet
 
@@ -121,6 +122,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Rechercher les fichiers temporaires, secrets, changements inattendus et sections incomplètes.
 - Classer les problèmes par priorité.
 - Dire clairement ce qui est validé, non validé ou hors périmètre.
+- Vérifier qu'aucune exigence validée ne reste sans implémentation, test ou documentation appropriée.
 
 ## Mode passation
 

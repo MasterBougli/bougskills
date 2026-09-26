@@ -41,6 +41,8 @@ Pour une modification importante ou transversale, appliquer [references/analyse-
 
 Pour inspecter un projet existant avant d'agir, appliquer [references/reconnaissance-projet.md](references/reconnaissance-projet.md) et ne lire que les fichiers nécessaires.
 
+Pour relier les besoins, décisions, fichiers, tests et documentation d'un projet, appliquer [references/traceabilite.md](references/traceabilite.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

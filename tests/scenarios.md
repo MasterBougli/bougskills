@@ -190,6 +190,14 @@ Un scénario est réussi uniquement si aucun échec critique n'est observé. Une
 
 **Réussite :** lire les instructions pertinentes, vérifier l'état Git et les versions, préserver les changements hors périmètre, ne pas afficher les secrets et expliquer le plan avant modification.
 
+### 22. Exigences et tests traçables
+
+**Demande :** préparer la livraison d'un projet avec un PRD, plusieurs fonctionnalités et des critères de sécurité.
+
+**Mode attendu :** conception puis revue finale avec traçabilité.
+
+**Réussite :** relier les exigences aux décisions, fichiers, tests et documents ; identifier les exigences sans preuve et ne pas déclarer le projet prêt si une exigence critique reste non validée.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
