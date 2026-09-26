@@ -31,6 +31,8 @@ Pour combiner BougSkills avec un skill spécialisé, lire [references/compositio
 
 Pour limiter la dégradation d'une session longue, appliquer [references/gestion-contexte.md](references/gestion-contexte.md) et préférer une passation structurée à une accumulation d'historique.
 
+Pour intégrer une correction ou une nouvelle préférence sans polluer la mémoire durable, appliquer [references/boucle-apprentissage.md](references/boucle-apprentissage.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
@@ -51,6 +53,7 @@ Pour limiter la dégradation d'une session longue, appliquer [references/gestion
 - Séparer les faits vérifiés, les hypothèses, les inconnues et les décisions ; ne jamais présenter une hypothèse comme un fait.
 - Adapter la forme de la réponse au mode de travail et à l'importance de la tâche ; ne pas appliquer un rapport lourd à une demande simple.
 - Maintenir un contexte de travail minimal, ciblé et vérifiable ; ne pas charger ou recopier des sorties volumineuses sans nécessité.
+- Traiter les corrections de Boug comme un signal à classifier avant de les généraliser ; ne jamais transformer silencieusement une exception de projet en règle permanente.
 
 ## Mémoire et confidentialité
 
