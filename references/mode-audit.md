@@ -16,6 +16,8 @@ Créer, dans le projet audité, le dossier `Audit/` s'il n'existe pas :
 
 Si l'audit est très volumineux, le rapport peut être séparé par domaine dans plusieurs fichiers `.md`. Chaque fichier doit alors reprendre la légende des classifications et son périmètre.
 
+Utiliser les structures prêtes à remplir de [references/gabarits-audit.md](gabarits-audit.md) afin de garder des audits homogènes et comparables.
+
 ## Questions, une par une
 
 Demander uniquement les informations manquantes, dans cet ordre :

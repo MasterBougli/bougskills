@@ -25,6 +25,7 @@ function Assert-Path([string]$RelativePath) {
     'references/passation-session.md',
     'references/modes.md',
     'references/mode-audit.md',
+    'references/gabarits-audit.md',
     'references/fiabilite-raisonnement.md',
     'references/formats-reponses.md',
     'references/gestion-decisions.md',

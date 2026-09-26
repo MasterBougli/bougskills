@@ -80,6 +80,8 @@ Pour demander un audit complet, préciser la cible et le périmètre. BougSkills
 
 Chaque constat est classé `bloquant`, `important`, `amélioration recommandée`, `cosmétique` ou `à vérifier avec toi ou un professionnel`, avec une preuve, un impact, une recommandation et un statut de vérification. Voir [`references/mode-audit.md`](references/mode-audit.md).
 
+Des gabarits prêts à copier pour le plan et le rapport sont disponibles dans [`references/gabarits-audit.md`](references/gabarits-audit.md).
+
 ### Passation entre sessions
 
 Lorsqu'une session devient longue, confuse ou bloquée, demander une passation. BougSkills crée ou met à jour `passation.md` avec l'objectif, le problème, les fichiers, les faits, les hypothèses, les tentatives échouées, l'état Git et la prochaine action.
