@@ -348,6 +348,10 @@ Pour une hypothèse, BougSkills indique une confiance faible, moyenne ou forte e
 
 Une réponse sécurité affiche la cible et l'autorisation si nécessaire, la sévérité technique, la classification BougSkills, la confiance, la preuve, les limites et la décision suivante ; elle ajoute les données, destination, fournisseur et désactivation pour une action externe.
 
+### 50. Validation adaptée
+
+BougSkills distingue la validation technique, la validation subjective ou métier de Bougli et la validation d'un professionnel. Il ne bloque pas une correction mécanique déjà prouvée, mais ne déclare pas terminé un choix juridique, stratégique ou visuel sans validation adaptée.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :

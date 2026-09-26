@@ -20,6 +20,16 @@ Avant de déclarer une tâche terminée, vérifier :
 - le diff Git ne contient pas de changement inattendu ;
 - les limites et éléments non vérifiés sont écrits dans le bilan.
 
+## Types de validation
+
+Ne pas confondre les validations :
+
+- **validation technique** : le code, les tests, la configuration et les vérifications annoncées produisent les résultats attendus ;
+- **validation de Bougli** : Bougli confirme une préférence subjective, un parcours, un texte, un choix visuel, stratégique ou produit ;
+- **validation professionnelle** : un juriste, expert sécurité, comptable, responsable métier ou autre personne compétente confirme un sujet qui dépasse une simple vérification technique.
+
+Une tâche peut être techniquement terminée mais rester `terminée sous conditions`, `bloquée` ou `à vérifier avec toi ou un professionnel` tant que la validation adaptée manque. Ne pas exiger une validation humaine pour une correction purement mécanique déjà couverte par des preuves suffisantes.
+
 ## Critères par type de tâche
 
 ### Question ou explication
@@ -32,7 +42,7 @@ La conception est terminée si l'objectif, les contraintes, l'option recommandé
 
 ### Création de projet
 
-Le cadrage est terminé si la structure demandée existe, les documents sont remplis ou marqués `À définir`, les décisions critiques sont connues et la prochaine étape d'implémentation est claire.
+Le cadrage est terminé si la structure demandée existe, les documents sont remplis ou marqués `À définir`, les décisions critiques sont connues, la validation technique applicable est faite et la prochaine étape d'implémentation est claire. Les choix subjectifs ou métier restent soumis à la validation de Bougli.
 
 ### Modification de code
 
@@ -48,7 +58,7 @@ Le débogage est terminé si le problème est reproduit ou caractérisé, la cau
 
 ### Sécurité
 
-La revue sécurité est terminée si le périmètre, le niveau, les contrôles effectués, les constats, les limites et les priorités de correction sont explicitement indiqués. Elle ne doit jamais promettre une sécurité absolue.
+La revue sécurité est terminée si le périmètre, le niveau, les contrôles effectués, les constats, les limites, les priorités de correction et les autorisations sont explicitement indiqués. Elle ne doit jamais promettre une sécurité absolue ; une conclusion juridique ou professionnelle reste à confirmer par la personne compétente.
 
 ### Revue ou mise en production
 
@@ -72,6 +82,7 @@ Utiliser le format adapté au mode et inclure :
 Statut : <terminé | terminé sous conditions | partiel | bloqué | non terminé>
 Objectif : <ce qui était demandé>
 Preuves : <tests, fichiers, décisions ou vérifications>
+Validation : <technique / Bougli / professionnel / N/A avec raison>
 Limites : <ce qui n'est pas vérifié>
 Prochaine action : <si nécessaire>
 ```

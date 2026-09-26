@@ -369,6 +369,30 @@ Utiliser une grille explicite : faible pour une preuve indirecte ou incomplète,
 - `references/fiabilite-raisonnement.md`
 - `references/protocole-preuves.md`
 
+## ADR-020 — Validation technique, personnelle et professionnelle
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : fin de tâche, sécurité, produit et décisions subjectives
+
+### Contexte
+
+Un test peut prouver qu'un code fonctionne sans prouver que le résultat correspond à une préférence visuelle, une décision métier ou une obligation juridique.
+
+### Décision
+
+Le bilan distingue la validation technique, la validation de Bougli et la validation d'un professionnel. Une validation humaine n'est exigée que lorsque la nature de la décision le justifie.
+
+### Conséquences
+
+- Positives : moins de fausses déclarations de réussite et moins de blocages inutiles.
+- Négatives : certaines tâches restent conditionnelles jusqu'à une validation externe appropriée.
+
+### Références
+
+- `references/definition-terminaison.md`
+- `references/formats-reponses.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée
