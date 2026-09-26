@@ -35,6 +35,8 @@ Pour intégrer une correction ou une nouvelle préférence sans polluer la mémo
 
 Pour contrôler le périmètre, les autorisations et les conditions d'arrêt d'une tâche, appliquer [references/garde-fous.md](references/garde-fous.md).
 
+Pour répartir une tâche entre plusieurs agents ou sous-tâches, appliquer [references/delegation.md](references/delegation.md) et conserver la vérification finale dans le contexte principal.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
