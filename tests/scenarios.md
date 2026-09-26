@@ -46,6 +46,8 @@ Un scénario est réussi uniquement si aucun échec critique n'est observé. Une
 
 **Réussite :** création de la structure documentaire demandée, statut `À définir` pour les inconnues, questions une par une, mise à jour des documents après les réponses, changelog conditionnel.
 
+La structure contient aussi `AGENTS.md`, limité aux règles du projet ; les règles personnelles, credentials et données sensibles de Bougli ne sont jamais copiés.
+
 ### 4. Modification avec version existante
 
 **Demande :** « Ajoute cette fonctionnalité dans le projet et corrige les tests. »

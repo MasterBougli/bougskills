@@ -11,6 +11,7 @@ Créer le dossier racine du projet et cette structure :
 ├── README.md
 ├── LICENCE.md
 ├── CONTRIBUTING.md
+├── AGENTS.md
 └── docs/
     ├── PRD.md
     ├── design-style.md
@@ -53,6 +54,7 @@ Adapter ou sauter une question si la réponse est déjà connue. Après chaque r
 
 Chaque document doit contenir un titre, un statut (`À définir`, `Brouillon` ou `Validé`), la date de dernière mise à jour et uniquement les décisions connues. Utiliser `À définir` pour les sections nécessaires mais non décidées ; ne pas inventer de contenu.
 
+- `AGENTS.md` : règles propres au projet, commandes autorisées, conventions locales, tests obligatoires, limites de sécurité et règles de livraison. Ne jamais y copier la mémoire personnelle de Bougli, ses credentials, ses règles globales ou des données sensibles.
 - `README.md` : objectif, public, fonctionnalités, installation prévue, utilisation et liens vers `docs/`.
 - `LICENCE.md` : licence choisie et texte légal complet si disponible.
 - `CONTRIBUTING.md` : prérequis, installation locale, workflow, qualité, tests et revue.

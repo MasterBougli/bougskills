@@ -78,6 +78,30 @@ Créer la structure de base du projet et poser une seule question à la fois pou
 ### Références
 - `references/creation-projet.md`
 
+## ADR-015 — Instructions locales séparées de la mémoire personnelle
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : création de nouveaux projets
+
+### Contexte
+
+Un projet a besoin de règles locales pour être repris par un agent, mais la mémoire personnelle de Bougli et ses règles globales ne doivent pas être copiées dans un dépôt.
+
+### Décision
+
+Créer `AGENTS.md` dans chaque nouveau projet. Il contient uniquement les commandes, conventions, tests, limites de sécurité et règles de livraison propres au projet. Les secrets, données personnelles, préférences globales et mémoire de Bougli en sont exclus.
+
+### Conséquences
+
+- Positives : meilleure continuité du projet et séparation claire des contextes.
+- Négatives : le fichier doit être relu pour éviter qu'une règle locale contredise une règle de sécurité globale.
+
+### Références
+
+- `references/creation-projet.md`
+- `references/composition-skills.md`
+
 ## ADR-003 — Sécurité par défaut
 
 - Statut : Acceptée

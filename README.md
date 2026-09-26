@@ -66,6 +66,7 @@ Lorsqu'un nouveau projet est demandé, BougSkills crée la structure documentair
 - `README.md` ;
 - `LICENCE.md` ;
 - `CONTRIBUTING.md` ;
+- `AGENTS.md` avec les instructions propres au projet, sans mémoire personnelle ni secrets ;
 - `docs/PRD.md` ;
 - `docs/design-style.md` ;
 - `docs/Architecture.md` ;
