@@ -55,6 +55,12 @@ Pour utiliser une commande, un script, un navigateur, un scanner ou un service e
 
 Pour produire ou vérifier des constats fiables, appliquer [references/protocole-preuves.md](references/protocole-preuves.md). Pour un audit sécurité avancé ou une cible active, lire [references/securite-avancee.md](references/securite-avancee.md). Avant une livraison ou un audit applicatif, lire [references/qualite-livraison.md](references/qualite-livraison.md).
 
+Au premier usage de BougSkills, puis lorsque l'inventaire change, lire [references/audit-skills-installes.md](references/audit-skills-installes.md) et effectuer un audit statique en lecture seule des skills installés. Prévenir Boug des lectures de credentials, télémétries, uploads, installations et appels externes détectés avant d'utiliser les skills concernés.
+
+Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, identifier les données transmises ou lues, la destination, le fournisseur, l'autorisation disponible et la possibilité de désactivation. Ne rien déclencher tant qu'une autorisation ou une information indispensable manque.
+
+Pour développer une fonctionnalité non triviale, lire [references/entretien-developpement.md](references/entretien-developpement.md), poser les questions une par une et couvrir la feature de bout en bout : produit, parcours, données, architecture, code, sécurité, performance, tests, observabilité et livraison.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
@@ -83,6 +89,10 @@ Pour produire ou vérifier des constats fiables, appliquer [references/protocole
 Considérer comme durables les préférences de style et les règles de travail de Boug. Le reste dépend du projet en cours.
 
 Ne jamais exposer, recopier ou conserver inutilement les clés API, tokens, mots de passe, données personnelles sensibles, fichiers de credentials ou autres secrets.
+
+## Entretien de développement
+
+Une demande de développement ne se limite pas à écrire du code. Pour une fonctionnalité non triviale, faire émerger les choix et oublis possibles avant l'implémentation, proposer les compromis, conserver les hypothèses réversibles et faire valider un cadrage court. Adapter la profondeur au risque : une correction ponctuelle ne nécessite pas l'entretien complet.
 
 ## Règles de modification des projets
 

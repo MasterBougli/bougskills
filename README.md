@@ -29,6 +29,9 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - protocole universel de preuves, confiance, dates, limites et relecture contradictoire ;
 - sécurité avancée avec autorisation par cible, exceptions datées et contrôle des applications IA ;
 - qualité de livraison couvrant tests utiles, dépendances, secrets, CI/CD et retour arrière ;
+- audit statique des skills installés au premier usage, avec avertissement sur les credentials, uploads, télémétries et appels externes ;
+- pré-vérification obligatoire des données, destinations, fournisseurs, autorisations et options de désactivation avant une action externe ;
+- entretien adaptatif avant une fonctionnalité non triviale, couvrant la feature de A à Z ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -46,6 +49,7 @@ Mentionner explicitement `BougSkills` ou demander directement l'action souhaité
 - réponse simple ou explication pédagogique ;
 - exploration et questions une par une ;
 - conception et choix d'architecture ;
+- cadrage de développement avec questions une par une avant une feature non triviale ;
 - création guidée de projet ;
 - modification, diagnostic ou débogage ;
 - revue de sécurité ou revue finale ;
@@ -76,6 +80,14 @@ Lorsqu'un nouveau projet est demandé, BougSkills crée la structure documentair
 Le protocole sécurité adapte le niveau de contrôle au projet. Il couvre la modélisation des menaces, les secrets, les permissions, les entrées, les dépendances, les tests, les headers, les sauvegardes, le monitoring et la checklist avant mise en ligne.
 
 Un test actif contre un hôte réel nécessite toujours une autorisation explicite et un périmètre confirmé.
+
+Avant le premier usage de BougSkills, les skills installés sont inspectés statiquement lorsque l'inventaire est accessible. Boug est averti des lectures de credentials, installations, télémétries, uploads, fournisseurs externes et limites de l'analyse. Rien n'est exécuté ou envoyé par cet audit.
+
+Avant d'utiliser un skill qui peut envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, BougSkills identifie précisément les données transmises ou lues, la destination, le fournisseur, l'autorisation et la possibilité de désactivation.
+
+### Développement d'une fonctionnalité
+
+Pour une fonctionnalité non triviale, BougSkills commence par un entretien adaptatif et pose une question à la fois. Il vérifie le besoin, les utilisateurs, les parcours et états d'erreur, les données et règles métier, l'architecture, les conventions de code, la sécurité, la performance, les tests, l'observabilité, le déploiement et le rollback. Il présente ensuite un cadrage court avant de modifier le projet. Une correction triviale reste proportionnée.
 
 ### Audit transversal
 

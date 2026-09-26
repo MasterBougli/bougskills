@@ -176,3 +176,51 @@ Imposer un protocole commun de preuves et de confiance, conserver l'autorisation
 - `references/protocole-preuves.md`
 - `references/securite-avancee.md`
 - `references/qualite-livraison.md`
+
+## ADR-008 — Audit de confiance des skills et préflight des actions externes
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : premier usage, composition de skills et outils externes
+
+### Contexte
+
+Un skill tiers peut lire des credentials, installer des dépendances, envoyer des données ou contacter un fournisseur sans que la demande initiale l'ait rendu évident.
+
+### Décision
+
+Au premier usage, BougSkills effectue un audit statique en lecture seule de l'inventaire disponible et avertit Boug des risques et limites. Avant toute action externe ou sensible, il identifie les données, la destination, le fournisseur, l'autorisation et la désactivation possible.
+
+### Conséquences
+
+- Positives : moins de confiance implicite, meilleure visibilité sur les fuites et les fournisseurs.
+- Négatives : un contrôle initial ajoute du temps et peut rester limité par l'accès aux sources.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `references/outils-externes.md`
+
+## ADR-009 — Entretien adaptatif avant une fonctionnalité non triviale
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : conception et développement
+
+### Contexte
+
+Une demande de code peut laisser de côté des états d'interface, règles métier, contraintes de sécurité, impacts opérationnels ou critères de réussite.
+
+### Décision
+
+Avant une fonctionnalité non triviale, poser des questions une par une, proposer les compromis et couvrir le besoin de bout en bout avant l'implémentation. Le niveau de détail reste proportionné au risque et les hypothèses sont explicites et réversibles.
+
+### Conséquences
+
+- Positives : moins d'oublis, décisions plus traçables et code mieux aligné avec le besoin réel.
+- Négatives : le démarrage d'une feature peut être plus lent, surtout lorsque le périmètre est encore flou.
+
+### Références
+
+- `references/entretien-developpement.md`
+- `references/analyse-impact.md`

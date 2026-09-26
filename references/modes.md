@@ -13,16 +13,17 @@ En cas de chevauchement, appliquer cette priorité :
 1. **Sécurité** si la demande touche à une vulnérabilité, un secret, une donnée sensible ou une action à risque.
 2. **Passation** si l'objectif est de transférer ou reprendre un contexte.
 3. **Création de projet** si le projet n'a pas encore de structure.
-4. **Audit** si Boug demande une analyse globale multi-domaines avec un plan et un rapport.
-5. **Modification** si des fichiers doivent être changés.
-6. **Diagnostic** si Boug demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
-7. **Débogage** si l'objectif est de trouver et corriger un problème reproductible.
-8. **Conception** si une solution, une architecture ou un plan doit être défini avant l'implémentation.
-9. **Exploration** si des choix importants restent ouverts.
-10. **Explication** si Boug veut comprendre un sujet.
-11. **Revue finale** si Boug demande une vérification globale avant livraison.
-12. **Résumé** si Boug demande de condenser une information ou une conversation.
-13. **Réponse simple** pour les demandes directes sans travail de fond.
+4. **Cadrage développement** si Boug demande une fonctionnalité non triviale à construire.
+5. **Audit** si Boug demande une analyse globale multi-domaines avec un plan et un rapport.
+6. **Modification** si des fichiers doivent être changés.
+7. **Diagnostic** si Boug demande pourquoi quelque chose ne fonctionne pas sans demander de correction.
+8. **Débogage** si l'objectif est de trouver et corriger un problème reproductible.
+9. **Conception** si une solution, une architecture ou un plan doit être défini avant l'implémentation.
+10. **Exploration** si des choix importants restent ouverts.
+11. **Explication** si Boug veut comprendre un sujet.
+12. **Revue finale** si Boug demande une vérification globale avant livraison.
+13. **Résumé** si Boug demande de condenser une information ou une conversation.
+14. **Réponse simple** pour les demandes directes sans travail de fond.
 
 Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièvement les modes secondaires utilisés lorsque cela clarifie la réponse.
 
@@ -72,6 +73,16 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 À utiliser pour un projet sans structure existante. Lire `references/creation-projet.md`, créer la structure documentaire demandée, puis poser les questions une par une avant l'implémentation.
 
+## Mode cadrage développement
+
+À utiliser avant de développer une fonctionnalité non triviale. Lire `references/entretien-developpement.md`.
+
+- Poser une seule question à la fois et expliquer son utilité.
+- Explorer les besoins, parcours, états d'interface, données, règles métier, architecture, conventions de code, sécurité, performance, tests, observabilité, déploiement et rollback selon le risque.
+- Proposer des options et leurs compromis, puis noter les décisions et hypothèses réversibles.
+- Produire un cadrage court et faire valider les décisions critiques avant de modifier le projet.
+- Pour une correction triviale, appliquer seulement les questions proportionnées.
+
 ## Mode modification
 
 À utiliser lorsqu'un fichier, une configuration ou un projet doit être changé.
@@ -79,6 +90,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Lire `references/reconnaissance-projet.md` avant l'inspection détaillée.
 - Inspecter les instructions et l'état existant.
 - Lire `references/analyse-impact.md` pour une modification qui touche plusieurs fichiers, une API, une base de données, une dépendance, la sécurité ou le déploiement.
+- Si la modification implémente une fonctionnalité non triviale, passer d'abord par le mode cadrage développement.
 - Vérifier les changements déjà présents.
 - Expliquer brièvement ce qui va changer avant de modifier.
 - Préserver les changements hors périmètre.
@@ -117,6 +129,8 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Demander l'autorisation et le périmètre avant tout test contre un hôte réel.
 - Produire les constats avec preuve, impact, sévérité et correction.
 - Pour un audit large ou une cible réelle, lire `references/securite-avancee.md` et conserver l'autorisation par cible dans le contexte principal.
+- Au premier usage, ou avant un skill tiers non vérifié, appliquer `references/audit-skills-installes.md` sans exécuter ni installer ce qui est inspecté.
+- Avant tout skill capable d'envoyer des données, lire des credentials, installer une dépendance ou contacter un service externe, documenter données, destination, fournisseur, autorisation et désactivation.
 
 ## Mode revue finale
 
