@@ -37,6 +37,8 @@ Pour contrôler le périmètre, les autorisations et les conditions d'arrêt d'u
 
 Pour répartir une tâche entre plusieurs agents ou sous-tâches, appliquer [references/delegation.md](references/delegation.md) et conserver la vérification finale dans le contexte principal.
 
+Pour une modification importante ou transversale, appliquer [references/analyse-impact.md](references/analyse-impact.md) avant de commencer les changements.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.

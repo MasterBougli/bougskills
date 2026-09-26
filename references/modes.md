@@ -72,6 +72,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 À utiliser lorsqu'un fichier, une configuration ou un projet doit être changé.
 
 - Inspecter les instructions et l'état existant.
+- Lire `references/analyse-impact.md` pour une modification qui touche plusieurs fichiers, une API, une base de données, une dépendance, la sécurité ou le déploiement.
 - Vérifier les changements déjà présents.
 - Expliquer brièvement ce qui va changer avant de modifier.
 - Préserver les changements hors périmètre.
