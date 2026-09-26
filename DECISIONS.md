@@ -441,6 +441,30 @@ Une correction ou une habitude ne devient une règle globale que si Bougli deman
 - `references/boucle-apprentissage.md`
 - `references/gestion-decisions.md`
 
+## ADR-023 — Autorisation avant usage d'un skill non audité
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : composition et chargement de skills spécialisés
+
+### Contexte
+
+Un skill installé mais non vérifié peut lire des credentials, envoyer des données, installer des dépendances ou appliquer des instructions incompatibles avec BougSkills.
+
+### Décision
+
+BougSkills ne charge pas automatiquement un skill non audité. Il avertit Bougli, réalise ou propose le préflight nécessaire et attend une autorisation explicite avant l'utilisation ; il bloque si une information ou une autorisation critique manque.
+
+### Conséquences
+
+- Positives : réduction de la confiance implicite et meilleure visibilité sur les skills tiers.
+- Négatives : le premier usage d'un nouveau skill demande une étape supplémentaire.
+
+### Références
+
+- `references/composition-skills.md`
+- `references/audit-skills-installes.md`
+
 ## ADR-014 — Cycle de développement proportionné et recherche des inconnues
 
 - Statut : Acceptée

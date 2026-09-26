@@ -360,6 +360,10 @@ Sur demande, BougSkills inspecte d'abord un texte UTF-8, produit un rapport sans
 
 Une correction répétée reste locale tant que Bougli ne demande pas explicitement d'en faire une règle générale. Après cette demande, BougSkills classe la préférence, met à jour le fichier approprié et vérifie les contradictions.
 
+### 53. Skill spécialisé non audité
+
+Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire audité, BougSkills ne le charge pas automatiquement ; il explique le risque, applique le préflight et attend l'autorisation explicite de Bougli.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
