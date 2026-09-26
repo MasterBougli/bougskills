@@ -24,6 +24,7 @@ Skill Codex personnel de Boug, conçu pour travailler en français avec un méla
 - traçabilité des exigences vers les décisions, fichiers, tests et documentation ;
 - définition explicite des critères qui permettent de déclarer une tâche terminée ;
 - vérification des informations évolutives avec des sources adaptées et datées ;
+- utilisation encadrée des commandes, scripts, navigateurs et services externes ;
 - vérification des versions, tests et différences Git ;
 - création guidée de projets depuis zéro ;
 - génération progressive de la documentation projet.
@@ -106,6 +107,8 @@ Pour les projets importants, il peut maintenir une matrice `docs/traceability.md
 Une tâche n'est déclarée terminée que lorsque son objectif et ses preuves sont vérifiés ; sinon le statut est `partiel`, `bloqué` ou `terminé sous conditions`.
 
 Les informations susceptibles d'évoluer — versions, lois, prix, recommandations ou services — sont vérifiées avec des sources primaires et datées lorsque c'est nécessaire.
+
+Les outils externes sont utilisés avec un périmètre minimal, en lecture seule lorsque possible, sans secrets dans les commandes ou les logs.
 
 Les tâches parallélisables peuvent être déléguées avec un périmètre et un format de retour explicites, mais la vérification finale reste toujours dans le contexte principal.
 

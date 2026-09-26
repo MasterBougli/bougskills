@@ -47,6 +47,8 @@ Pour déterminer si une tâche est réellement terminée, appliquer [references/
 
 Pour vérifier une information actuelle, spécialisée, juridique, financière ou explicitement sourcée, appliquer [references/verification-sources.md](references/verification-sources.md).
 
+Pour utiliser une commande, un script, un navigateur, un scanner ou un service externe, appliquer [references/outils-externes.md](references/outils-externes.md).
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
