@@ -272,3 +272,27 @@ Pour une fonctionnalité importante, BougSkills peut conserver un cadrage struct
 
 - `references/entretien-developpement.md`
 - `references/gabarit-cadrage-developpement.md`
+
+## ADR-012 — Workflow reproductible du premier usage
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : vérification initiale des skills installés
+
+### Contexte
+
+Une règle d'audit peut être appliquée de façon inégale si elle ne précise pas l'ordre entre inventaire, inspection, preuve, avertissement et autorisation.
+
+### Décision
+
+Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qualifier, classer, avertir, décider et réévaluer. L'audit reste statique et ne donne pas de confiance permanente à un skill qui change.
+
+### Conséquences
+
+- Positives : comportement reproductible, décisions mieux justifiées et réévaluation déclenchée par les changements.
+- Négatives : le premier usage peut demander plus de temps lorsque l'inventaire est volumineux.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `tests/scenarios.md`

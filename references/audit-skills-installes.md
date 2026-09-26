@@ -28,6 +28,18 @@ Ajouter si pertinent : le caractère lecture seule ou actif, les fichiers concer
 
 ## Audit statique à effectuer
 
+## Workflow reproductible du premier usage
+
+1. **Délimiter** : identifier les racines locales réellement accessibles, la date de l'inventaire et les skills qui pourraient être nécessaires à la demande.
+2. **Inventorier** : lister les skills, leur source apparente, leur documentation, leurs scripts, leurs manifestes et leurs dépendances visibles, sans lancer de code.
+3. **Lire** : inspecter d'abord les instructions et métadonnées, puis seulement les fichiers nécessaires à l'évaluation du comportement.
+4. **Repérer** : rechercher les accès aux secrets, fichiers privés, variables d'environnement, commandes réseau, installations, exécutions dynamiques, uploads, télémétries et formulations de contournement.
+5. **Qualifier** : distinguer le comportement documenté, le comportement observé dans les sources, l'intention supposée et les éléments impossibles à vérifier.
+6. **Classer** : appliquer les niveaux de gravité, le statut de confiance et les limites décrits ci-dessous ; ne jamais transformer une absence d'indice en preuve d'innocuité.
+7. **Avertir** : présenter le résumé obligatoire avant de charger ou d'utiliser un skill à risque, en masquant toute valeur sensible.
+8. **Décider** : autoriser, demander une précision, bloquer ou isoler selon les règles de décision ; conserver la portée de l'autorisation dans le contexte courant.
+9. **Réévaluer** : refaire l'audit après installation, mise à jour, changement de fournisseur ou modification du périmètre.
+
 Inspecter sans exécuter :
 
 - `SKILL.md`, le frontmatter, les README, les scripts, templates, workflows et manifestes ;

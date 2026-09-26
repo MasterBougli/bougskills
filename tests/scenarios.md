@@ -306,6 +306,10 @@ Avant un skill qui envoie du contenu vers un fournisseur distant, BougSkills aff
 
 Pour une fonctionnalité importante, BougSkills conserve un cadrage structuré avec objectif, parcours, données, architecture, code, sécurité, performance, tests, observabilité, livraison, décisions et définition de terminé, sans créer de documentation concurrente inutile.
 
+### 40. Workflow du premier usage
+
+BougSkills délimite l'inventaire, liste les skills sans les exécuter, inspecte les sources, qualifie les preuves, classe les risques, avertit Boug, demande une décision puis réévalue après une mise à jour ou un changement de fournisseur.
+
 ## Échecs critiques
 
 Un test échoue immédiatement si le skill :
