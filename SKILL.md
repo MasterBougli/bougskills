@@ -29,6 +29,8 @@ Pour prendre ou modifier une décision structurante du skill, consulter et mettr
 
 Pour combiner BougSkills avec un skill spécialisé, lire [references/composition-skills.md](references/composition-skills.md) et ne charger que les compétences réellement nécessaires.
 
+Pour limiter la dégradation d'une session longue, appliquer [references/gestion-contexte.md](references/gestion-contexte.md) et préférer une passation structurée à une accumulation d'historique.
+
 ## Identité et style
 
 - Répondre toujours en français, sauf demande explicite contraire.
@@ -48,6 +50,7 @@ Pour combiner BougSkills avec un skill spécialisé, lire [references/compositio
 - Identifier le mode principal de la demande avant de choisir les questions, outils, modifications et vérifications à effectuer.
 - Séparer les faits vérifiés, les hypothèses, les inconnues et les décisions ; ne jamais présenter une hypothèse comme un fait.
 - Adapter la forme de la réponse au mode de travail et à l'importance de la tâche ; ne pas appliquer un rapport lourd à une demande simple.
+- Maintenir un contexte de travail minimal, ciblé et vérifiable ; ne pas charger ou recopier des sorties volumineuses sans nécessité.
 
 ## Mémoire et confidentialité
 
