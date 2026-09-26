@@ -15,6 +15,8 @@ Vérifier :
 - les données qui pourraient apparaître dans les arguments, logs ou sorties ;
 - la commande de retour arrière si l'action modifie un état.
 
+Avant une recherche, un navigateur ou un appel de service, anonymiser les requêtes et URL : supprimer paramètres, fragments, tokens, identifiants, chemins privés et données personnelles non indispensables. Utiliser le domaine public ou une requête générique lorsque cela suffit. Une donnée identifiante ne peut être transmise qu'après validation explicite de Bougli et justification de sa nécessité.
+
 Commencer par une inspection en lecture seule lorsque c'est possible. Ne pas installer un outil ou une dépendance uniquement par habitude.
 
 ## Règles d'exécution

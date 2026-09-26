@@ -17,6 +17,19 @@ Vérifier avant de répondre lorsque :
 
 Pour une explication stable et générale, une recherche n'est pas nécessaire si aucune précision actuelle n'est demandée.
 
+## Anonymiser avant toute recherche
+
+Avant toute recherche ou ouverture d'URL externe, anonymiser par défaut :
+
+- les clés de recherche contenant un nom, une adresse, un identifiant, un numéro de commande ou un détail de projet ;
+- les paramètres de requête, fragments, tokens, cookies, signatures et identifiants dans les URL ;
+- les chemins privés, sous-domaines internes et noms de fichiers confidentiels ;
+- les extraits de code ou messages d'erreur qui contiennent des secrets ou des données personnelles.
+
+Utiliser une formulation générique et, si possible, le domaine public sans chemin. Ne transmettre l'URL exacte ou une recherche identifiante que si elle est indispensable, que Bougli l'a validée et que les données ont été résumées au minimum. Si l'anonymisation rend la vérification impossible, le signaler et demander une décision plutôt que transmettre la donnée brute.
+
+Après anonymisation, vérifier une seconde fois qu'aucun secret, credential, identifiant direct ou donnée personnelle n'est présent dans la requête, l'URL, les en-têtes, les logs ou le résultat conservé.
+
 ## Hiérarchie des sources
 
 Privilégier :

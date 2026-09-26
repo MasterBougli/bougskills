@@ -660,6 +660,31 @@ La création depuis zéro active un mode verrouillé. BougSkills crée la struct
 - `docs/.bougskills/progression.md` dans les projets créés
 - `tests/scenarios.md`
 
+## ADR-030 — Anonymisation avant vérification externe
+
+- Statut : Acceptée
+- Date : 2026-09-26
+- Portée : recherches, navigateurs et services externes
+
+### Contexte
+
+Une URL publique peut contenir des paramètres privés, des identifiants, des tokens ou des informations de contexte. Une recherche apparemment anodine peut aussi révéler un nom, un projet ou une donnée personnelle au fournisseur externe.
+
+### Décision
+
+BougSkills anonymise par défaut les requêtes et URL avant toute vérification externe : il retire paramètres, fragments, tokens, identifiants, chemins privés et données personnelles, puis utilise une requête générique ou le domaine public. Une donnée identifiante ne peut être transmise que si elle est indispensable, minimisée et validée explicitement par Bougli. Si elle ne peut pas être supprimée, BougSkills s'arrête et explique la limite.
+
+### Conséquences
+
+- Positives : exposition réduite des données et préflight plus explicite.
+- Négatives : certaines vérifications nécessitent une question supplémentaire ou deviennent partielles.
+
+### Références
+
+- `references/verification-sources.md`
+- `references/outils-externes.md`
+- `tests/scenarios.md`
+
 ## ADR-028 — Version et mise à jour contrôlée de BougSkills
 
 - Statut : Acceptée
