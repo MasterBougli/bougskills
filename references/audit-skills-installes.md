@@ -9,7 +9,7 @@ Cet audit ne remplace pas une analyse complète du code et ne prétend pas prouv
 ## Déclenchement
 
 - Au premier usage de BougSkills dans un contexte où l'inventaire des skills n'est pas encore connu.
-- À chaque changement important de l'inventaire, ou lorsque Bougli demande une nouvelle vérification.
+- À chaque changement important de l'inventaire, lorsque Bougli demande une nouvelle vérification, ou lorsqu'un skill déjà autorisé a changé.
 - Avant de charger un skill dont le comportement, le fournisseur ou les accès ne sont pas suffisamment connus.
 
 Si aucun accès à l'inventaire local n'est possible, le dire explicitement et considérer les skills non vérifiés. Ne pas les présenter comme sûrs.
@@ -38,7 +38,14 @@ Ajouter si pertinent : le caractère lecture seule ou actif, les fichiers concer
 6. **Classer** : appliquer les niveaux de gravité, le statut de confiance et les limites décrits ci-dessous ; ne jamais transformer une absence d'indice en preuve d'innocuité.
 7. **Avertir** : présenter le résumé obligatoire avant de charger ou d'utiliser un skill à risque, en masquant toute valeur sensible.
 8. **Décider** : autoriser, demander une précision, bloquer ou isoler selon les règles de décision ; conserver la portée de l'autorisation dans le contexte courant.
-9. **Réévaluer** : refaire l'audit après installation, mise à jour, changement de fournisseur ou modification du périmètre.
+9. **Empreinte** : relever la version déclarée si elle existe et une empreinte cryptographique des fichiers inspectés ; ne jamais considérer une autorisation comme durable si ces éléments changent.
+10. **Réévaluer** : refaire l'audit après installation, mise à jour, changement de fournisseur, modification du périmètre ou changement d'empreinte.
+
+## Invalidation d'une autorisation
+
+Une autorisation précédente devient invalide dès qu'un des éléments suivants change : version déclarée, hash d'un fichier, contenu des instructions, script, dépendance visible, fournisseur ou périmètre. Comparer au minimum `SKILL.md`, les manifestes, les scripts et les fichiers qui avaient motivé l'autorisation. Si aucune version n'est déclarée, utiliser l'empreinte des fichiers accessibles et signaler que la provenance n'est pas versionnée.
+
+Un changement d'empreinte déclenche un nouvel audit statique en lecture seule. Tant que l'audit et l'autorisation ne sont pas renouvelés, le skill reste bloqué, même si son nom, son emplacement ou sa fonction semblent identiques.
 
 ## Révocation et désinstallation
 

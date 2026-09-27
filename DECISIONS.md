@@ -659,6 +659,31 @@ Un skill non audité est bloqué. BougSkills réalise d'abord un audit statique 
 - `references/composition-skills.md`
 - `tests/scenarios.md`
 
+## ADR-034 — Réaudit après changement d'un skill
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : autorisations et mises à jour des skills spécialisés
+
+### Contexte
+
+Une autorisation accordée à une version d'un skill ne prouve pas que la version suivante, son contenu ou ses dépendances ont le même comportement. Le nom et le chemin d'un skill peuvent rester identiques malgré une modification importante.
+
+### Décision
+
+BougSkills relève la version déclarée et l'empreinte des fichiers inspectés. Tout changement de version, hash, contenu, fournisseur ou périmètre invalide l'autorisation précédente. Un nouvel audit statique, un nouveau préflight et une nouvelle autorisation sont obligatoires avant toute utilisation.
+
+### Conséquences
+
+- Positives : les mises à jour ne bénéficient pas d'une confiance héritée sans vérification.
+- Négatives : les skills modifiés demandent une réévaluation, même pour une correction apparemment mineure.
+
+### Références
+
+- `references/audit-skills-installes.md`
+- `references/composition-skills.md`
+- `tests/scenarios.md`
+
 ## ADR-032 — Exception pour la vérification publique de version
 
 - Statut : Acceptée

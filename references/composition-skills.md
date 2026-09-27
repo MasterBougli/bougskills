@@ -10,8 +10,8 @@ Il ne doit pas remplacer un skill spécialisé lorsqu'un tel skill est disponibl
 
 1. Identifier le domaine réel de la demande.
 2. Rechercher un skill spécialisé déjà installé et réellement adapté.
-3. Vérifier que le skill est audité dans l'inventaire courant ; sinon appliquer `references/audit-skills-installes.md` avant tout chargement ou toute exécution.
-4. Présenter le résumé statique, les limites, le préflight et la décision attendue. Tant que Bougli n'a pas autorisé explicitement ce skill précis pour cette utilisation, le considérer comme bloqué.
+3. Vérifier que le skill est audité dans l'inventaire courant et que sa version, son empreinte, son fournisseur et son périmètre correspondent à l'autorisation ; sinon appliquer `references/audit-skills-installes.md` avant tout chargement ou toute exécution.
+4. Présenter le résumé statique, les limites, le préflight et la décision attendue. Tant que Bougli n'a pas autorisé explicitement ce skill précis, dans cet état et pour cette utilisation, le considérer comme bloqué.
 5. Charger le minimum de skills nécessaires après autorisation ; une autorisation pour un autre skill, une autre session ou un autre périmètre ne se réutilise pas automatiquement.
 6. Utiliser le skill spécialisé pour sa méthode métier ou technique.
 7. Utiliser BougSkills pour coordonner, poser les questions, préserver le contexte, protéger les secrets et restituer le résultat.
