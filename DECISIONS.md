@@ -760,6 +760,34 @@ Ajouter un jeu de tests PowerShell autonome qui couvre les seuils exacts de 55 %
 
 - `tests/test-score-bougskills.ps1`
 - `scripts/score-bougskills.ps1`
+
+## ADR-040 — Outils de maintenance multiplateformes en Node.js
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : scripts de validation, mise à jour, notation et nettoyage de BougSkills
+
+### Contexte
+
+Les scripts PowerShell empêchaient l'utilisation uniforme de BougSkills sur Windows, macOS et Linux. Les outils Python nécessitaient un second runtime, et aucun paquet externe n'est requis par la logique de ces scripts.
+
+### Décision
+
+Convertir les outils de maintenance en modules Node.js utilisant les API intégrées, les exposer par des commandes npm, et exécuter validation et tests sur Windows, macOS et Linux. Déclarer Node.js 18+ et ne pas ajouter de dépendance npm à installer. Conserver une seule version de référence dans `VERSION`, vérifiée comme identique à `package.json`.
+
+### Conséquences
+
+- Positives : commandes identiques sur les trois systèmes, un runtime commun et aucune dépendance tierce.
+- Négatives : Node.js et npm deviennent nécessaires pour les tâches de maintenance du dépôt.
+
+### Références
+
+- `package.json`
+- `scripts/verify_bougskills.mjs`
+- `scripts/score_bougskills.mjs`
+- `scripts/check_bougskills_update.mjs`
+- `scripts/clean_content.mjs`
+- `.github/workflows/validate.yml`
 - `.github/workflows/validate.yml`
 - `README.md`
 

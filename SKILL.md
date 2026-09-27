@@ -59,7 +59,7 @@ Pour vérifier une information actuelle, spécialisée, juridique, financière o
 
 Avant toute recherche ou vérification externe, appliquer l'anonymisation de [references/verification-sources.md](references/verification-sources.md) : retirer paramètres, fragments, tokens, identifiants, chemins privés et données personnelles ; demander une validation explicite si une URL ou requête identifiante est indispensable.
 
-Pour vérifier ou mettre à jour BougSkills, lire [references/gestion-version-skill.md](references/gestion-version-skill.md). Vérifier la version au plus une fois par session ou à la demande, annoncer le préflight GitHub, ne jamais envoyer de secrets et ne jamais appliquer une mise à jour sans accord explicite. Utiliser `scripts/check-bougskills-update.ps1` ; l'option `-Apply` est obligatoire pour remplacer la copie locale.
+Pour vérifier ou mettre à jour BougSkills, lire [references/gestion-version-skill.md](references/gestion-version-skill.md). Vérifier la version au plus une fois par session ou à la demande, annoncer le préflight GitHub, ne jamais envoyer de secrets et ne jamais appliquer une mise à jour sans accord explicite. Utiliser `npm run update` ; l'option `-- --apply` est obligatoire pour remplacer la copie locale.
 
 Pour utiliser une commande, un script, un navigateur, un scanner ou un service externe, appliquer [references/outils-externes.md](references/outils-externes.md).
 

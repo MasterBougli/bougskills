@@ -49,21 +49,23 @@ Après l'installation ou la mise à jour, utiliser BougSkills au tour ou dans la
 
 Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
 
+Les outils de maintenance utilisent Node.js 18+ et ses modules intégrés, sans paquet npm externe. Aucune installation de dépendances n'est nécessaire. `clean-content` est également fourni en Node.js pour éviter un second runtime. L'application d'une mise à jour utilise la commande système `tar`, présente sur les environnements récents de Windows, macOS et Linux.
+
 ### Vérifier ou mettre à jour BougSkills
 
 La version locale est conservée dans [`VERSION`](VERSION). Pour vérifier la version publique sans modifier le dossier :
 
-```powershell
-.\scripts\check-bougskills-update.ps1
+```sh
+npm run update
 ```
 
 Pour ne pas contacter GitHub :
 
-```powershell
-.\scripts\check-bougskills-update.ps1 -SkipRemote
+```sh
+npm run update -- --skip-remote
 ```
 
-Une mise à jour n'est jamais silencieuse. Après vérification et autorisation explicite, utiliser `-Apply` ; le script télécharge l'archive officielle, vérifie sa structure, crée une sauvegarde datée et restaure la copie en cas d'échec. Voir [`references/gestion-version-skill.md`](references/gestion-version-skill.md).
+Une mise à jour n'est jamais silencieuse. Après vérification et autorisation explicite, utiliser `npm run update -- --apply` ; le script télécharge l'archive officielle, vérifie sa structure, crée une sauvegarde datée et restaure la copie en cas d'échec. Voir [`references/gestion-version-skill.md`](references/gestion-version-skill.md).
 
 ## Utilisation
 
@@ -155,13 +157,13 @@ La notation, les seuils de qualité et le journal de régression sont définis d
 
 Pour calculer un score normalisé, fournir les 11 notes dans l'ordre des critères ; chaque critère N/A demande une justification :
 
-```powershell
-.\scripts\score-bougskills.ps1 -ScoresCsv '2,2,2,2,2,N/A,2,2,2,2,2' -NaReasonsCsv '6=La demande est une explication sans enjeu de sécurité applicative'
+```sh
+npm run score -- --scores '2,2,2,2,2,N/A,2,2,2,2,2' --na-reasons '6=La demande est une explication sans enjeu de sécurité applicative'
 ```
 
-Plusieurs justifications se séparent avec `|`, par exemple `6=hors sujet|7=aucun fichier à préserver`. Pour signaler un échec critique, ajouter `-CriticalFailure` ; il prévaut sur le score calculé.
+Plusieurs justifications se séparent avec `|`, par exemple `6=hors sujet|7=aucun fichier à préserver`. Pour signaler un échec critique, ajouter `--critical-failure` ; il prévaut sur le score calculé.
 
-Les cas limites du calculateur sont couverts par `tests/test-score-bougskills.ps1`, exécuté aussi par GitHub Actions à chaque push ou pull request.
+Les cas limites sont couverts par `npm test` et exécutés aussi par GitHub Actions sur Windows, macOS et Linux.
 
 Les choix durables du skill et leurs conséquences sont conservés dans [`DECISIONS.md`](DECISIONS.md). Une décision importante doit être mise à jour avec la documentation concernée.
 
@@ -189,8 +191,8 @@ Les tâches parallélisables peuvent être déléguées avec un périmètre et u
 
 Pour vérifier automatiquement la structure du skill, ses références, ses liens internes, son frontmatter et quelques motifs de secrets :
 
-```powershell
-.\scripts\verify-bougskills.ps1
+```sh
+npm run validate
 ```
 
 Le script ne remplace pas les tests comportementaux : il vérifie l'intégrité du dépôt, tandis que les scénarios vérifient les décisions du skill.

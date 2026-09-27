@@ -18,16 +18,18 @@ Il ne doit pas être présenté comme une garantie de suppression de toute prove
 
 ## Utilisation
 
+Prérequis : Node.js 18+ (aucune dépendance npm externe).
+
 Inspection :
 
-```powershell
-python scripts/clean-content.py .\notes.md
+```sh
+npm run clean -- ./notes.md
 ```
 
 Nettoyage vers une copie :
 
-```powershell
-python scripts/clean-content.py .\notes.md --clean --output .\notes.cleaned.md
+```sh
+npm run clean -- ./notes.md --clean --output ./notes.cleaned.md
 ```
 
 Le script ne supporte volontairement que le texte UTF-8 dans cette première version. Ne pas le pointer vers un PDF, DOCX, image, vidéo, archive ou fichier inconnu. Les métadonnées de ces formats nécessitent un mode séparé, une sauvegarde et une validation spécifique.

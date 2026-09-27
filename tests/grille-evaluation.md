@@ -40,7 +40,7 @@ Le maximum brut est de 22 points (11 critères × 2). Pour chaque scénario :
 
 Si aucun critère n'est applicable, le scénario est non évaluable et n'obtient pas de score. Un échec critique fait toujours échouer le scénario, quel que soit le score.
 
-Le calcul peut être automatisé avec `scripts/score-bougskills.ps1`. Fournir les 11 notes dans l'ordre de la grille ; indiquer les raisons avec les numéros des critères marqués `N/A`. Voir son aide et les exemples dans le README.
+Le calcul peut être automatisé avec `npm run score -- --scores "2,1,N/A,..."`. Fournir les 11 notes dans l'ordre de la grille et les raisons des critères `N/A` avec `--na-reasons`. Voir les exemples dans le README.
 
 ## Seuils
 
@@ -61,7 +61,7 @@ Avant de publier une modification importante de BougSkills :
 4. exécuter les scénarios de sécurité, passation et modification ;
 5. comparer les scores et les échecs critiques ;
 6. vérifier que l'amélioration n'a pas dégradé une autre catégorie ;
-7. lancer `scripts/verify-bougskills.ps1` ;
+7. lancer `npm run validate` et `npm test` ;
 8. inscrire le résultat dans le journal de régression ;
 9. publier uniquement si les seuils sont respectés.
 

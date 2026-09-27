@@ -1,0 +1,17 @@
+{
+  "name": "bougskills",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Outils portables sans dépendance pour valider et maintenir BougSkills",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "validate": "node scripts/verify_bougskills.mjs",
+    "test": "node --test",
+    "score": "node scripts/score_bougskills.mjs",
+    "clean": "node scripts/clean_content.mjs",
+    "update": "node scripts/check_bougskills_update.mjs",
+    "update:offline": "node scripts/check_bougskills_update.mjs --skip-remote"
+  }
+}

@@ -32,4 +32,4 @@ Après accord de Bougli et seulement si nécessaire :
 7. restaurer la sauvegarde si la validation échoue ;
 8. demander un nouveau tour ou une nouvelle session avant de considérer la version active.
 
-Le script `scripts/check-bougskills-update.ps1` réalise la vérification. Il ne remplace rien sans `-Apply`, ne touche ni les autres skills, ni les projets, ni les credentials. Si GitHub devient privé, si une authentification est demandée ou si l'URL change, arrêter et demander une décision.
+Le script portable `scripts/check_bougskills_update.mjs` réalise la vérification avec Node.js 18+ et les modules intégrés. L'application d'une mise à jour nécessite aussi la commande système `tar`. Il ne remplace rien sans `--apply`, ne touche ni les autres skills, ni les projets, ni les credentials. Si GitHub devient privé, si une authentification est demandée ou si l'URL change, arrêter et demander une décision. Utiliser `npm run update -- --skip-remote` pour le mode hors ligne.
