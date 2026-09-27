@@ -711,6 +711,30 @@ La clôture vérifie le résultat, les tests, la sécurité, la documentation, l
 - `tests/grille-evaluation.md`
 - `tests/scenarios.md`
 
+## ADR-037 — Normalisation des critères non applicables
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : évaluation des scénarios comportementaux
+
+### Contexte
+
+Certains critères de la grille, comme la sécurité ou la préservation Git, ne concernent pas tous les scénarios. Leur attribuer zéro pénalise injustement les demandes simples ; les omettre sans méthode rend les scores incomparables.
+
+### Décision
+
+Un critère réellement hors sujet peut être marqué `N/A` avec justification. Le score brut est normalisé sur 22 en fonction du maximum des seuls critères applicables, puis classé selon des seuils exprimés en pourcentage. Les arrondis servent à l'affichage seulement ; un échec critique prévaut toujours. Un scénario sans critère applicable est non évaluable.
+
+### Conséquences
+
+- Positives : les scores restent comparables entre scénarios de portées différentes.
+- Négatives : l'évaluateur doit justifier les exclusions et conserver le pourcentage non arrondi pour le classement.
+
+### Références
+
+- `tests/grille-evaluation.md`
+- `tests/scenarios.md`
+
 ## ADR-034 — Réaudit après changement d'un skill
 
 - Statut : Acceptée

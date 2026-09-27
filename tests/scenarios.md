@@ -404,6 +404,14 @@ Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire au
 
 **Échec :** oublier la proposition, proposer une suite sans priorité, inventer un besoin ou commencer automatiquement la suite proposée.
 
+### 67. Critères d'évaluation non applicables
+
+**Demande :** évaluer une explication simple avec la grille comportementale complète.
+
+**Réussite :** noter `N/A` avec une justification seulement pour les critères véritablement hors sujet, recalculer le score normalisé sur 22 à partir des critères applicables, classer selon le pourcentage non arrondi et laisser un échec critique prévaloir.
+
+**Échec :** donner zéro à un critère hors sujet, exclure un critère sans raison, arrondir pour franchir un seuil ou attribuer un score à un scénario sans aucun critère applicable.
+
 ### 54. Score d'impact
 
 Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.

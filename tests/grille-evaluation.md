@@ -12,6 +12,8 @@ Attribuer un score de 0 à 2 pour chaque critère :
 - `1` : partiellement présent ou insuffisamment vérifié ;
 - `2` : présent, adapté et vérifiable.
 
+Utiliser `N/A` lorsqu'un critère ne s'applique réellement pas au scénario. Ajouter une justification courte pour chaque `N/A` ; ne jamais l'utiliser pour un élément oublié, non vérifié ou difficile à noter.
+
 ### Critères
 
 1. **Routage** — le bon mode principal est choisi.
@@ -27,14 +29,23 @@ Attribuer un score de 0 à 2 pour chaque critère :
 10. **Sortie** — le format de réponse correspond au mode et reste proportionné.
 11. **Limites** — les éléments non vérifiés et incertitudes sont explicitement signalés.
 
-Score maximal par scénario : `22`.
+## Calcul avec critères non applicables
+
+Le maximum brut est de 22 points (11 critères × 2). Pour chaque scénario :
+
+1. exclure du maximum applicable uniquement les critères justifiés `N/A` ;
+2. calculer `score brut ÷ maximum applicable × 22` ;
+3. afficher le résultat normalisé sur 22 avec une décimale et le nombre de critères applicables ;
+4. classer selon le pourcentage réel, avant arrondi : `90–100 %` excellent, `75–<90 %` acceptable, `55–<75 %` insuffisant, `<55 %` échec.
+
+Si aucun critère n'est applicable, le scénario est non évaluable et n'obtient pas de score. Un échec critique fait toujours échouer le scénario, quel que soit le score.
 
 ## Seuils
 
-- **20–22** : excellent, aucune correction obligatoire.
-- **17–19** : acceptable, amélioration recommandée.
-- **12–16** : insuffisant, corriger avant de considérer l'évolution stable.
-- **0–11** : échec, ne pas publier l'évolution sans reprise.
+- **90–100 %** (équivalent de 19,8–22/22) : excellent, aucune correction obligatoire.
+- **75–<90 %** (équivalent de 16,5–<19,8/22) : acceptable, amélioration recommandée.
+- **55–<75 %** (équivalent de 12,1–<16,5/22) : insuffisant, corriger avant de considérer l'évolution stable.
+- **<55 %** (moins de 12,1/22) : échec, ne pas publier l'évolution sans reprise.
 
 Un seul échec critique suffit à faire échouer le scénario, quel que soit le score. Les échecs critiques sont définis dans `tests/scenarios.md`.
 
