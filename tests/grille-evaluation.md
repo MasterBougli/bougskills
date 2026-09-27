@@ -40,6 +40,8 @@ Le maximum brut est de 22 points (11 critères × 2). Pour chaque scénario :
 
 Si aucun critère n'est applicable, le scénario est non évaluable et n'obtient pas de score. Un échec critique fait toujours échouer le scénario, quel que soit le score.
 
+Le calcul peut être automatisé avec `scripts/score-bougskills.ps1`. Fournir les 11 notes dans l'ordre de la grille ; indiquer les raisons avec les numéros des critères marqués `N/A`. Voir son aide et les exemples dans le README.
+
 ## Seuils
 
 - **90–100 %** (équivalent de 19,8–22/22) : excellent, aucune correction obligatoire.

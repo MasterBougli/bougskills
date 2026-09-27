@@ -412,6 +412,14 @@ Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire au
 
 **Échec :** donner zéro à un critère hors sujet, exclure un critère sans raison, arrondir pour franchir un seuil ou attribuer un score à un scénario sans aucun critère applicable.
 
+### 68. Calculateur de score
+
+**Entrée :** onze notes valides, avec des raisons pour chaque `N/A`.
+
+**Réussite :** le script calcule le maximum applicable, le score normalisé sur 22 et la catégorie selon le pourcentage non arrondi ; il rejette les mauvaises entrées et laisse un échec critique prévaloir.
+
+**Échec :** accepter un `N/A` sans raison, une note hors de 0 à 2, un nombre incorrect de critères, une raison surnuméraire ou classer selon le score arrondi.
+
 ### 54. Score d'impact
 
 Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.

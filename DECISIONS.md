@@ -711,6 +711,32 @@ La clôture vérifie le résultat, les tests, la sécurité, la documentation, l
 - `tests/grille-evaluation.md`
 - `tests/scenarios.md`
 
+## ADR-038 — Calcul automatique des évaluations
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : notation des scénarios comportementaux
+
+### Contexte
+
+La normalisation manuelle des critères `N/A` peut produire des erreurs de calcul ou de seuil, notamment si le classement utilise un score déjà arrondi.
+
+### Décision
+
+Fournir `scripts/score-bougskills.ps1` pour valider les onze notes, exiger une justification par critère `N/A`, normaliser sur 22 et classer selon le pourcentage non arrondi. Le calculateur traite zéro critère applicable comme non évaluable et fait toujours prévaloir un échec critique.
+
+### Conséquences
+
+- Positives : calcul reproductible et validation des entrées.
+- Négatives : les notes et justifications doivent respecter le format du script.
+
+### Références
+
+- `scripts/score-bougskills.ps1`
+- `tests/grille-evaluation.md`
+- `README.md`
+- `tests/scenarios.md`
+
 ## ADR-037 — Normalisation des critères non applicables
 
 - Statut : Acceptée

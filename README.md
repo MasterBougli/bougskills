@@ -153,6 +153,14 @@ Les scénarios d'évaluation se trouvent dans [`tests/scenarios.md`](tests/scena
 
 La notation, les seuils de qualité et le journal de régression sont définis dans [`tests/grille-evaluation.md`](tests/grille-evaluation.md).
 
+Pour calculer un score normalisé, fournir les 11 notes dans l'ordre des critères ; chaque critère N/A demande une justification :
+
+```powershell
+.\scripts\score-bougskills.ps1 -ScoresCsv '2,2,2,2,2,N/A,2,2,2,2,2' -NaReasonsCsv '6=La demande est une explication sans enjeu de sécurité applicative'
+```
+
+Plusieurs justifications se séparent avec `|`, par exemple `6=hors sujet|7=aucun fichier à préserver`. Pour signaler un échec critique, ajouter `-CriticalFailure` ; il prévaut sur le score calculé.
+
 Les choix durables du skill et leurs conséquences sont conservés dans [`DECISIONS.md`](DECISIONS.md). Une décision importante doit être mise à jour avec la documentation concernée.
 
 Pour les tâches techniques spécialisées, BougSkills coordonne les skills adaptés au domaine au lieu de dupliquer leurs instructions. Les règles personnelles, de sécurité, de version, de test et de communication restent applicables.
