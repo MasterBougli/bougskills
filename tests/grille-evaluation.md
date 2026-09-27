@@ -24,17 +24,17 @@ Attribuer un score de 0 à 2 pour chaque critère :
 8. **Vérification** — les tests, preuves, diff et versions sont réellement contrôlés.
 
 9. **Suite proposée** — après une fonctionnalité terminée, une suite directement liée est proposée avec une priorité, ou l'absence de suite pertinente est explicitement indiquée ; aucune suite n'est lancée sans accord.
-9. **Sortie** — le format de réponse correspond au mode et reste proportionné.
-10. **Limites** — les éléments non vérifiés et incertitudes sont explicitement signalés.
+10. **Sortie** — le format de réponse correspond au mode et reste proportionné.
+11. **Limites** — les éléments non vérifiés et incertitudes sont explicitement signalés.
 
-Score maximal par scénario : `20`.
+Score maximal par scénario : `22`.
 
 ## Seuils
 
-- **18–20** : excellent, aucune correction obligatoire.
-- **15–17** : acceptable, amélioration recommandée.
-- **11–14** : insuffisant, corriger avant de considérer l'évolution stable.
-- **0–10** : échec, ne pas publier l'évolution sans reprise.
+- **20–22** : excellent, aucune correction obligatoire.
+- **17–19** : acceptable, amélioration recommandée.
+- **12–16** : insuffisant, corriger avant de considérer l'évolution stable.
+- **0–11** : échec, ne pas publier l'évolution sans reprise.
 
 Un seul échec critique suffit à faire échouer le scénario, quel que soit le score. Les échecs critiques sont définis dans `tests/scenarios.md`.
 
