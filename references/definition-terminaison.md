@@ -48,6 +48,8 @@ Le cadrage est terminé si la structure demandée existe, les documents sont rem
 
 La modification est terminée si le changement demandé est présent, les tests adaptés passent, le diff est vérifié et la version existante a été traitée selon les règles du projet.
 
+Après ce bilan, proposer au maximum trois suites directement liées à la fonctionnalité, classées par priorité. Une proposition ne constitue ni une décision ni une autorisation d'implémentation.
+
 ### Diagnostic
 
 Le diagnostic est terminé si les faits sont séparés des hypothèses, la cause la plus probable est justifiée et la prochaine vérification ou correction est claire. Un diagnostic ne doit pas modifier le projet sans demande explicite.

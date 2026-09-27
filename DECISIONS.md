@@ -659,6 +659,32 @@ Un skill non audité est bloqué. BougSkills réalise d'abord un audit statique 
 - `references/composition-skills.md`
 - `tests/scenarios.md`
 
+## ADR-035 — Proposition de suite après une fonctionnalité
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : clôture des fonctionnalités et livraisons
+
+### Contexte
+
+Une fonctionnalité peut être terminée tout en laissant une amélioration directement liée, un test utile ou un risque identifiable. L'ignorer réduit la valeur du bilan, mais l'implémenter automatiquement élargirait le périmètre sans accord.
+
+### Décision
+
+Après chaque fonctionnalité terminée, BougSkills propose au maximum trois suites pertinentes, courtes et classées par priorité. Les options peuvent concerner les tests, la sécurité, la performance, la documentation, l'observabilité, la dette technique ou une prochaine fonctionnalité. Il n'exécute aucune suite sans accord et n'invente pas de besoin.
+
+### Conséquences
+
+- Positives : prochaines étapes visibles et continuité de travail améliorée.
+- Négatives : le bilan contient une courte proposition supplémentaire, qui doit rester proportionnée.
+
+### Références
+
+- `SKILL.md`
+- `references/definition-terminaison.md`
+- `references/formats-reponses.md`
+- `tests/scenarios.md`
+
 ## ADR-034 — Réaudit après changement d'un skill
 
 - Statut : Acceptée

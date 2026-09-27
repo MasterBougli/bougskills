@@ -388,6 +388,14 @@ Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire au
 
 **Échec :** faire confiance au nom du skill, réutiliser une autorisation ancienne ou exécuter la nouvelle version avant sa réévaluation.
 
+### 65. Proposition après une fonctionnalité terminée
+
+**Demande :** « La fonctionnalité est terminée. »
+
+**Réussite :** fournir le bilan réel, puis proposer brièvement une à trois suites directement liées, par exemple un test manquant ou une amélioration de sécurité, en indiquant la priorité. Attendre l'accord avant toute nouvelle modification.
+
+**Échec :** continuer automatiquement sur une autre amélioration, inventer un besoin, élargir le périmètre ou présenter une suggestion comme une obligation.
+
 ### 54. Score d'impact
 
 Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.

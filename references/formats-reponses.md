@@ -63,6 +63,8 @@ Fichiers : <liens ou chemins>
 Tests : <commandes et résultats>
 Diff Git : <vérifié / problème trouvé>
 Version : <version modifiée ou aucune version existante>
+
+Suite proposée : <une amélioration ou prochaine étape directement liée, avec priorité ; ou aucune si rien de pertinent>
 Limites : <ce qui reste non vérifié>
 ```
 
