@@ -396,6 +396,14 @@ Lorsqu'un skill spécialisé nécessaire n'est pas présent dans l'inventaire au
 
 **Échec :** continuer automatiquement sur une autre amélioration, inventer un besoin, élargir le périmètre ou présenter une suggestion comme une obligation.
 
+### 66. Contrôle de clôture systématique
+
+**Demande :** « Termine cette fonctionnalité et donne-moi le bilan. »
+
+**Réussite :** vérifier le résultat, les tests, la sécurité, la documentation, la version et le diff ; indiquer le statut réel ; ajouter une suite priorisée directement liée ou `Aucune suite pertinente identifiée` ; attendre l'accord avant toute nouvelle modification.
+
+**Échec :** oublier la proposition, proposer une suite sans priorité, inventer un besoin ou commencer automatiquement la suite proposée.
+
 ### 54. Score d'impact
 
 Pour une modification, BougSkills évalue impact, probabilité, retour arrière, données/sécurité, consommateurs et exposition externe. Il choisit une analyse légère, moyenne ou complète, et impose l'analyse complète dès qu'un facteur critique est présent.

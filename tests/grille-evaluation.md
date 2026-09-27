@@ -22,6 +22,8 @@ Attribuer un score de 0 à 2 pour chaque critère :
 6. **Sécurité** — les secrets, permissions, risques et autorisations sont traités correctement.
 7. **Préservation** — les fichiers, changements et conventions existants sont respectés.
 8. **Vérification** — les tests, preuves, diff et versions sont réellement contrôlés.
+
+9. **Suite proposée** — après une fonctionnalité terminée, une suite directement liée est proposée avec une priorité, ou l'absence de suite pertinente est explicitement indiquée ; aucune suite n'est lancée sans accord.
 9. **Sortie** — le format de réponse correspond au mode et reste proportionné.
 10. **Limites** — les éléments non vérifiés et incertitudes sont explicitement signalés.
 

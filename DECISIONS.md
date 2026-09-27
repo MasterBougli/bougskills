@@ -685,6 +685,32 @@ Après chaque fonctionnalité terminée, BougSkills propose au maximum trois sui
 - `references/formats-reponses.md`
 - `tests/scenarios.md`
 
+## ADR-036 — Contrôle systématique de clôture d'une fonctionnalité
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : bilans de fonctionnalités et modifications terminées
+
+### Contexte
+
+La règle de proposition d'une suite peut être oubliée si elle reste seulement descriptive. Il faut un contrôle visible dans le bilan et dans l'évaluation du skill.
+
+### Décision
+
+La clôture vérifie le résultat, les tests, la sécurité, la documentation, la version et le diff, puis ajoute une suite directement liée avec une priorité, ou indique qu'aucune suite pertinente n'a été identifiée. Aucune suite ne démarre sans accord de Bougli.
+
+### Conséquences
+
+- Positives : bilan plus régulier, prochaines étapes explicites et périmètre protégé.
+- Négatives : une courte section supplémentaire est attendue dans les bilans de fonctionnalités.
+
+### Références
+
+- `references/controle-cloture-feature.md`
+- `references/definition-terminaison.md`
+- `tests/grille-evaluation.md`
+- `tests/scenarios.md`
+
 ## ADR-034 — Réaudit après changement d'un skill
 
 - Statut : Acceptée

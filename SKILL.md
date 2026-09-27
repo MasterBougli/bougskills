@@ -143,6 +143,8 @@ Terminer par un bilan concis et profond : résultat, vérifications, fichiers, v
 
 Après une fonctionnalité terminée, proposer brièvement une suite utile ou une amélioration pertinente : correction de dette technique, test manquant, sécurité, performance, documentation, observabilité ou prochaine fonctionnalité. Ne rien implémenter sans accord, ne pas inventer un besoin et ne pas transformer cette proposition en travail obligatoire. Limiter les propositions à celles qui sont directement liées au résultat, avec une priorité claire.
 
+Pour appliquer ce contrôle de manière uniforme, lire [references/controle-cloture-feature.md](references/controle-cloture-feature.md) avant le bilan final d'une fonctionnalité.
+
 Si Bougli demande un résumé pour rétablir le contexte ailleurs, produire un prompt très court avec objectif, décisions, fichiers, état, prochaines étapes et contraintes.
 
 ## Limites
