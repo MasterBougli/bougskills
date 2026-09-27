@@ -646,18 +646,43 @@ Une limite sur la taille compressée ne protège pas contre une archive fortemen
 
 ### Décision
 
-Inspecter l’en-tête tar dans Node.js avant extraction. Refuser les liens et types spéciaux, limiter l’archive compressée à 30 Mio, le flux décompressé et la charge utile cumulée à 128 Mio, chaque membre à 64 Mio et le nombre d’entrées à 20 000. Couvrir ces décisions par des tests de régression.
+Inspecter l’en-tête tar dans Node.js avant extraction. Refuser les liens et types spéciaux, limiter l’archive compressée à 30 Mio, le flux décompressé et la charge utile cumulée à 128 Mio, chaque membre à 64 Mio et le nombre d’entrées à 20 000. Autoriser uniquement l’en-tête PAX global fourni par GitHub avec un attribut `comment` égal au SHA Git. Couvrir ces décisions par des tests de régression.
 
 ### Conséquences
 
 - Positives : réduit l’exposition aux archives démesurées et aux entrées de type lien sans ajouter de dépendance npm.
-- Négatives : les formats tar spéciaux qui ne sont pas nécessaires au dépôt (par exemple les extensions ou liens) sont refusés.
+- Négatives : les formats tar spéciaux qui ne sont pas nécessaires au dépôt (par exemple les extensions locales ou liens) sont refusés.
 
 ### Références
 
 - `scripts/check_bougskills_update.mjs`
 - `tests/test_update_archive.test.mjs`
 - `references/gestion-version-skill.md`
+
+## ADR-042 — Test d’intégration optionnel de l’archive publique
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : compatibilité entre l’archive GitHub, le prévalidateur et tar
+
+### Contexte
+
+Les tests unitaires couvrent des archives contrôlées, mais une variation de format de l’archive publique peut survenir. Faire contacter GitHub à chaque `npm test` ou à chaque CI ajouterait un appel externe implicite et une dépendance réseau aux tests usuels.
+
+### Décision
+
+Fournir `npm run test:archive` comme vérification explicitement lancée. Elle envoie une requête GET sans authentification à GitHub, suit uniquement les redirections HTTPS vers GitHub/codeload, limite la taille, inspecte puis extrait l’archive dans un dossier temporaire, valide sa structure et supprime les fichiers temporaires. Elle ne transmet aucun contenu local et ne modifie pas le skill installé. Ne pas l’inclure dans les tests ordinaires ou la CI.
+
+### Conséquences
+
+- Positives : la vraie archive et l’outil tar du système peuvent être vérifiés à la demande sans rendre le réseau implicite.
+- Négatives : le résultat décrit l’archive publique au moment du test et la commande échoue hors ligne.
+
+### Références
+
+- `tests/check_public_archive.mjs`
+- `scripts/check_bougskills_update.mjs`
+- `README.md`
 
 ## ADR-033 — Porte obligatoire pour un skill non audité
 

@@ -49,7 +49,7 @@ Après l'installation ou la mise à jour, utiliser BougSkills au tour ou dans la
 
 Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
 
-Les outils de maintenance utilisent Node.js 18+ et ses modules intégrés, sans paquet npm externe. Aucune installation de dépendances n'est nécessaire. `clean-content` est également fourni en Node.js pour éviter un second runtime. L'application d'une mise à jour utilise la commande système `tar`, présente sur les environnements récents de Windows, macOS et Linux. Avant extraction, l'outil refuse les liens et types tar spéciaux, limite l'archive à 30 Mio, son contenu décompressé à 128 Mio et le nombre d'entrées à 20 000.
+Les outils de maintenance utilisent Node.js 18+ et ses modules intégrés, sans paquet npm externe. Aucune installation de dépendances n'est nécessaire. `clean-content` est également fourni en Node.js pour éviter un second runtime. L'application d'une mise à jour utilise la commande système `tar`, présente sur les environnements récents de Windows, macOS et Linux. Avant extraction, l'outil refuse les liens et types tar spéciaux, limite l'archive compressée à 30 Mio, son contenu décompressé à 128 Mio, un fichier à 64 Mio et le nombre d'entrées à 20 000. Seul l'attribut PAX global `comment` contenant le SHA Git est accepté.
 
 ### Vérifier ou mettre à jour BougSkills
 
@@ -66,6 +66,14 @@ npm run update -- --skip-remote
 ```
 
 Une mise à jour n'est jamais silencieuse. Après vérification et autorisation explicite, utiliser `npm run update -- --apply` ; le script télécharge l'archive officielle, vérifie sa structure, crée une sauvegarde datée et restaure la copie en cas d'échec. Voir [`references/gestion-version-skill.md`](references/gestion-version-skill.md).
+
+Pour vérifier à la demande que la véritable archive publique GitHub reste compatible avec le prévalidateur et `tar` :
+
+```sh
+npm run test:archive
+```
+
+Cette commande optionnelle envoie une requête GET à GitHub (redirection possible vers `codeload.github.com`) avec un User-Agent générique. Elle ne transmet aucun fichier local, secret ou credential, extrait seulement dans un dossier temporaire puis le supprime ; elle ne modifie pas le skill installé. Elle n'est pas incluse dans `npm test` ni exécutée automatiquement en CI. Pour ne contacter aucun service externe, ne pas lancer cette commande.
 
 ## Utilisation
 

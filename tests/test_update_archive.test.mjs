@@ -27,6 +27,15 @@ function tarGz(entries) {
   return gzipSync(Buffer.concat(blocks));
 }
 
+function paxRecord(key, value) {
+  let record = `${key}=${value}\n`;
+  let length = Buffer.byteLength(record) + 2;
+  while (String(length).length + 1 + Buffer.byteLength(record) !== length) {
+    length = String(length).length + 1 + Buffer.byteLength(record);
+  }
+  return `${length} ${record}`;
+}
+
 test('accepte une archive ordinaire, enregistre son chemin et sa taille', () => {
   const result = inspectTarGz(tarGz([{ name: 'bougskills-main/SKILL.md', body: Buffer.from('ok') }]));
   assert.equal(result[0].member, 'bougskills-main/SKILL.md');
@@ -39,6 +48,21 @@ test('rejette les chemins qui sortent du dossier racine', () => {
 
 test('rejette les liens tar avant extraction', () => {
   assert.throws(() => inspectTarGz(tarGz([{ name: 'bougskills-main/link', type: '2' }])), /Type d’entrée tar non pris en charge/);
+});
+
+test('accepte uniquement le commentaire PAX global SHA utilisé par GitHub', () => {
+  const result = inspectTarGz(tarGz([
+    { name: 'pax_global_header', type: 'g', body: Buffer.from(paxRecord('comment', '625ba236c39ae6c1678d16f6307476c4c80faf50')) },
+    { name: 'bougskills-main/SKILL.md', body: Buffer.from('ok') },
+  ]));
+  assert.equal(result.length, 1);
+  assert.equal(result[0].member, 'bougskills-main/SKILL.md');
+});
+
+test('refuse les attributs PAX globaux capables de changer les chemins', () => {
+  assert.throws(() => inspectTarGz(tarGz([
+    { name: 'pax_global_header', type: 'g', body: Buffer.from(paxRecord('path', '../../outside')) },
+  ])), /commentaire PAX contenant le SHA Git/);
 });
 
 test('rejette une entrée déclarant un volume individuel supérieur à 64 Mio', () => {

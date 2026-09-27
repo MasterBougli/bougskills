@@ -41,9 +41,12 @@ export function inspectTarGz(archive) {
   const members = [];
   let offset = 0;
   let totalPayload = 0;
+  let headerCount = 0;
   while (offset + 512 <= tar.length) {
     const header = tar.subarray(offset, offset + 512);
     if (header.every((byte) => byte === 0)) break;
+    headerCount += 1;
+    if (headerCount > MAX_ARCHIVE_MEMBERS + 100) throw new Error('L’archive contient trop d’entrées ou d’en-têtes.');
     const readString = (start, end) => header.subarray(start, end).toString('utf8').replace(/\0.*$/s, '');
     const name = readString(0, 100);
     const prefix = readString(345, 500);
@@ -53,6 +56,29 @@ export function inspectTarGz(archive) {
     if (!/^[0-7]+$/.test(sizeText || '0')) throw new Error(`Taille tar invalide pour ${member || '(sans nom)'}.`);
     const size = Number.parseInt(sizeText || '0', 8);
     if (!Number.isSafeInteger(size) || size > MAX_MEMBER_BYTES) throw new Error(`Entrée trop volumineuse dans l’archive : ${member}`);
+    if (type === 'g') {
+      const payloadBytes = tar.subarray(offset + 512, offset + 512 + size);
+      if ([...payloadBytes].some((byte) => byte > 0x7f)) throw new Error('En-tête PAX global non ASCII refusé.');
+      const payload = payloadBytes.toString('ascii');
+      let position = 0;
+      while (position < payload.length) {
+        const separator = payload.indexOf(' ', position);
+        const recordLength = Number(payload.slice(position, separator));
+        if (separator < 0 || !Number.isSafeInteger(recordLength) || recordLength <= separator - position + 2 || position + recordLength > payload.length) {
+          throw new Error('En-tête PAX global mal formé.');
+        }
+        const record = payload.slice(separator + 1, position + recordLength - 1);
+        const equals = record.indexOf('=');
+        if (payload[position + recordLength - 1] !== '\n' || equals <= 0 || !/^comment=[0-9a-f]{40}$/.test(record)) {
+          throw new Error('Seul un commentaire PAX contenant le SHA Git est autorisé.');
+        }
+        position += recordLength;
+      }
+      if (position !== payload.length) throw new Error('En-tête PAX global tronqué.');
+      totalPayload += size;
+      offset += 512 + Math.ceil(size / 512) * 512;
+      continue;
+    }
     if (!['0', '\0', '5'].includes(type)) throw new Error(`Type d’entrée tar non pris en charge : ${member}`);
     const normalized = member.replaceAll('\\', '/');
     const parts = normalized.split('/').filter((part) => part && part !== '.');
@@ -69,7 +95,7 @@ export function inspectTarGz(archive) {
   return members;
 }
 
-async function extractArchive(archivePath, extractPath) {
+export async function extractArchive(archivePath, extractPath) {
   const archive = await readFile(archivePath);
   if (archive.byteLength > MAX_ARCHIVE_BYTES) throw new Error('L’archive dépasse la taille maximale autorisée de 30 Mio.');
   const inspected = inspectTarGz(archive);
