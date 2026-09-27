@@ -21,3 +21,7 @@ jobs:
       - name: Run validation
         shell: pwsh
         run: .\scripts\verify-bougskills.ps1
+
+      - name: Test score calculator
+        shell: pwsh
+        run: .\tests\test-score-bougskills.ps1

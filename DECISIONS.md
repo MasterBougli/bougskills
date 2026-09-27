@@ -737,6 +737,32 @@ Fournir `scripts/score-bougskills.ps1` pour valider les onze notes, exiger une j
 - `README.md`
 - `tests/scenarios.md`
 
+## ADR-039 — Tests de régression du calculateur de score
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : calculateur et validation continue
+
+### Contexte
+
+Les seuils, le traitement de `N/A` et la priorité des échecs critiques sont sensibles aux erreurs de comparaison et de normalisation. Des vérifications manuelles isolées ne protègent pas les modifications futures.
+
+### Décision
+
+Ajouter un jeu de tests PowerShell autonome qui couvre les seuils exacts de 55 % et 90 %, les cas voisins, l'absence de critères applicables, les justifications manquantes et la priorité des échecs critiques. L'exécuter localement et dans GitHub Actions.
+
+### Conséquences
+
+- Positives : régressions détectées avant publication, sans dépendance tierce.
+- Négatives : le workflow CI inclut une étape de test dédiée.
+
+### Références
+
+- `tests/test-score-bougskills.ps1`
+- `scripts/score-bougskills.ps1`
+- `.github/workflows/validate.yml`
+- `README.md`
+
 ## ADR-037 — Normalisation des critères non applicables
 
 - Statut : Acceptée

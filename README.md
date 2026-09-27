@@ -161,6 +161,8 @@ Pour calculer un score normalisé, fournir les 11 notes dans l'ordre des critèr
 
 Plusieurs justifications se séparent avec `|`, par exemple `6=hors sujet|7=aucun fichier à préserver`. Pour signaler un échec critique, ajouter `-CriticalFailure` ; il prévaut sur le score calculé.
 
+Les cas limites du calculateur sont couverts par `tests/test-score-bougskills.ps1`, exécuté aussi par GitHub Actions à chaque push ou pull request.
+
 Les choix durables du skill et leurs conséquences sont conservés dans [`DECISIONS.md`](DECISIONS.md). Une décision importante doit être mise à jour avec la documentation concernée.
 
 Pour les tâches techniques spécialisées, BougSkills coordonne les skills adaptés au domaine au lieu de dupliquer leurs instructions. Les règles personnelles, de sécurité, de version, de test et de communication restent applicables.

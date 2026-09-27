@@ -68,7 +68,7 @@ foreach ($reasonIndex in $naReasons.Keys) {
 
 if ($applicableCount -eq 0) {
     Write-Output 'Statut : non évaluable (aucun critère applicable)'
-    exit 0
+    return
 }
 
 $applicableMaximum = $applicableCount * 2
