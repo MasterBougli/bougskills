@@ -4,11 +4,16 @@ import { cp, lstat, mkdir, mkdtemp, readFile, readdir, realpath, rename, rm, sta
 import os from 'node:os';
 import path from 'node:path';
 import { randomUUID } from 'node:crypto';
+import { gunzipSync } from 'node:zlib';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { validateRoot } from './verify_bougskills.mjs';
 
 const repository = 'https://github.com/MasterBougli/bougskills';
 const defaultRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const MAX_ARCHIVE_BYTES = 30 * 1024 * 1024;
+const MAX_EXPANDED_BYTES = 128 * 1024 * 1024;
+const MAX_ARCHIVE_MEMBERS = 20000;
+const MAX_MEMBER_BYTES = 64 * 1024 * 1024;
 
 function parseVersion(value, source) {
   const trimmed = value.trim();
@@ -29,10 +34,49 @@ async function fetchText(url) {
   return response.text();
 }
 
+export function inspectTarGz(archive) {
+  let tar;
+  try { tar = gunzipSync(archive, { maxOutputLength: MAX_EXPANDED_BYTES }); }
+  catch { throw new Error('Archive gzip invalide ou volume décompressé supérieur à 128 Mio.'); }
+  const members = [];
+  let offset = 0;
+  let totalPayload = 0;
+  while (offset + 512 <= tar.length) {
+    const header = tar.subarray(offset, offset + 512);
+    if (header.every((byte) => byte === 0)) break;
+    const readString = (start, end) => header.subarray(start, end).toString('utf8').replace(/\0.*$/s, '');
+    const name = readString(0, 100);
+    const prefix = readString(345, 500);
+    const member = prefix ? `${prefix}/${name}` : name;
+    const type = String.fromCharCode(header[156] || 48);
+    const sizeText = readString(124, 136).trim();
+    if (!/^[0-7]+$/.test(sizeText || '0')) throw new Error(`Taille tar invalide pour ${member || '(sans nom)'}.`);
+    const size = Number.parseInt(sizeText || '0', 8);
+    if (!Number.isSafeInteger(size) || size > MAX_MEMBER_BYTES) throw new Error(`Entrée trop volumineuse dans l’archive : ${member}`);
+    if (!['0', '\0', '5'].includes(type)) throw new Error(`Type d’entrée tar non pris en charge : ${member}`);
+    const normalized = member.replaceAll('\\', '/');
+    const parts = normalized.split('/').filter((part) => part && part !== '.');
+    if (!parts.length || normalized.startsWith('/') || parts.includes('..') || parts[0].includes(':')) {
+      throw new Error(`Chemin dangereux détecté dans l'archive : ${member}`);
+    }
+    members.push({ member, parts, size, type });
+    if (members.length > MAX_ARCHIVE_MEMBERS) throw new Error('L’archive contient plus de 20 000 entrées.');
+    totalPayload += size;
+    if (totalPayload > MAX_EXPANDED_BYTES) throw new Error('Le volume des fichiers de l’archive dépasse 128 Mio.');
+    offset += 512 + Math.ceil(size / 512) * 512;
+  }
+  if (!members.length || offset > tar.length) throw new Error('Archive tar tronquée ou vide.');
+  return members;
+}
+
 async function extractArchive(archivePath, extractPath) {
+  const archive = await readFile(archivePath);
+  if (archive.byteLength > MAX_ARCHIVE_BYTES) throw new Error('L’archive dépasse la taille maximale autorisée de 30 Mio.');
+  const inspected = inspectTarGz(archive);
   const list = spawnSync('tar', ['-tf', archivePath], { encoding: 'utf8' });
   if (list.status !== 0) throw new Error(`Impossible de lire l'archive avec tar : ${(list.stderr || '').trim()}`);
   const members = list.stdout.split(/\r?\n/).filter(Boolean);
+  if (members.length !== inspected.length) throw new Error('Le contenu tar ne correspond pas à sa liste de membres pré-vérifiée.');
   const verbose = spawnSync('tar', ['-tvf', archivePath], { encoding: 'utf8' });
   if (verbose.status !== 0) throw new Error(`Impossible d’inspecter les types de fichiers de l’archive : ${(verbose.stderr || '').trim()}`);
   if (verbose.stdout.split(/\r?\n/).some((line) => /^[lh]/.test(line))) throw new Error('Les liens symboliques ou physiques sont refusés dans l’archive.');
@@ -40,9 +84,6 @@ async function extractArchive(archivePath, extractPath) {
   for (const member of members) {
     const normalized = member.replaceAll('\\', '/');
     const parts = normalized.split('/').filter((part) => part && part !== '.');
-    if (!parts.length || normalized.startsWith('/') || parts.includes('..') || parts[0].includes(':')) {
-      throw new Error(`Chemin dangereux détecté dans l'archive : ${member}`);
-    }
     roots.add(parts[0]);
   }
   if (roots.size !== 1) throw new Error('Structure inattendue : l’archive doit contenir un seul dossier racine.');
@@ -84,9 +125,8 @@ async function applyUpdate(root, expectedVersion) {
       headers: { 'User-Agent': 'BougSkills-updater' },
     });
     if (!response.ok) throw new Error(`Téléchargement GitHub échoué : HTTP ${response.status}`);
-    const maximumArchiveBytes = 30 * 1024 * 1024;
     const contentLength = Number(response.headers.get('content-length') || 0);
-    if (contentLength > maximumArchiveBytes) throw new Error('L’archive dépasse la taille maximale autorisée de 30 Mio.');
+    if (contentLength > MAX_ARCHIVE_BYTES) throw new Error('L’archive dépasse la taille maximale autorisée de 30 Mio.');
     const reader = response.body.getReader();
     const chunks = [];
     let received = 0;
@@ -94,7 +134,7 @@ async function applyUpdate(root, expectedVersion) {
       const { done, value } = await reader.read();
       if (done) break;
       received += value.byteLength;
-      if (received > maximumArchiveBytes) {
+      if (received > MAX_ARCHIVE_BYTES) {
         await reader.cancel();
         throw new Error('L’archive dépasse la taille maximale autorisée de 30 Mio.');
       }

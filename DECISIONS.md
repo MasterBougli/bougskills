@@ -634,6 +634,31 @@ Le premier usage suit neuf étapes : délimiter, inventorier, lire, repérer, qu
 - `references/audit-skills-installes.md`
 - `tests/scenarios.md`
 
+## ADR-041 — Prévalidation bornée des archives de mise à jour
+
+- Statut : Acceptée
+- Date : 2026-09-27
+- Portée : téléchargement et extraction des mises à jour BougSkills
+
+### Contexte
+
+Une limite sur la taille compressée ne protège pas contre une archive fortement compressée, contenant un très grand nombre de fichiers, un membre disproportionné ou des types spéciaux.
+
+### Décision
+
+Inspecter l’en-tête tar dans Node.js avant extraction. Refuser les liens et types spéciaux, limiter l’archive compressée à 30 Mio, le flux décompressé et la charge utile cumulée à 128 Mio, chaque membre à 64 Mio et le nombre d’entrées à 20 000. Couvrir ces décisions par des tests de régression.
+
+### Conséquences
+
+- Positives : réduit l’exposition aux archives démesurées et aux entrées de type lien sans ajouter de dépendance npm.
+- Négatives : les formats tar spéciaux qui ne sont pas nécessaires au dépôt (par exemple les extensions ou liens) sont refusés.
+
+### Références
+
+- `scripts/check_bougskills_update.mjs`
+- `tests/test_update_archive.test.mjs`
+- `references/gestion-version-skill.md`
+
 ## ADR-033 — Porte obligatoire pour un skill non audité
 
 - Statut : Acceptée

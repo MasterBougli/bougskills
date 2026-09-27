@@ -49,7 +49,7 @@ Après l'installation ou la mise à jour, utiliser BougSkills au tour ou dans la
 
 Il n'y a pas de commande obligatoire propre à ce skill. BougSkills fonctionne à partir de la demande formulée et charge les références adaptées au besoin.
 
-Les outils de maintenance utilisent Node.js 18+ et ses modules intégrés, sans paquet npm externe. Aucune installation de dépendances n'est nécessaire. `clean-content` est également fourni en Node.js pour éviter un second runtime. L'application d'une mise à jour utilise la commande système `tar`, présente sur les environnements récents de Windows, macOS et Linux.
+Les outils de maintenance utilisent Node.js 18+ et ses modules intégrés, sans paquet npm externe. Aucune installation de dépendances n'est nécessaire. `clean-content` est également fourni en Node.js pour éviter un second runtime. L'application d'une mise à jour utilise la commande système `tar`, présente sur les environnements récents de Windows, macOS et Linux. Avant extraction, l'outil refuse les liens et types tar spéciaux, limite l'archive à 30 Mio, son contenu décompressé à 128 Mio et le nombre d'entrées à 20 000.
 
 ### Vérifier ou mettre à jour BougSkills
 
