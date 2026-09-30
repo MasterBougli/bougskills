@@ -78,7 +78,7 @@ La structure contient aussi `AGENTS.md`, limité aux règles du projet ; les rè
 
 **Mode attendu :** débogage, puis passation si nécessaire.
 
-**Réussite :** ne pas répéter une tentative échouée, proposer un test discriminant, créer `passation.md` si le contexte devient confus et recommander une session fraîche.
+**Réussite :** ne pas répéter une tentative échouée, proposer un test discriminant, puis proposer la passation lorsque deux tentatives échouent sans preuve nouvelle ou qu'une hypothèse infirmée revient. Attendre l'accord avant d'écrire et recommander une session fraîche.
 
 ### 7. Secret accidentel
 
@@ -338,7 +338,7 @@ Pour un constat de sécurité, BougSkills indique séparément la sévérité te
 
 ### 45. Proposition de passation
 
-Après une session longue, répétitive ou bloquée, BougSkills explique le signal détecté et propose une passation. Il attend l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe.
+Après deux tentatives échouées sans preuve nouvelle alors que le travail reste inachevé, BougSkills explique ce signal en une phrase et demande une seule confirmation avant de créer `passation.md`. Il ne doit pas exiger d'autres signaux ni écrire le fichier avant l'accord.
 
 ### 46. Reconnaissance proportionnelle
 
@@ -346,7 +346,49 @@ Pour une correction triviale, BougSkills vérifie l'état Git, les instructions 
 
 ### 47. Réduction de contexte sans écriture implicite
 
-Lorsqu'une session dérive, BougSkills prépare une synthèse et propose une passation, mais ne crée ni ne modifie `passation.md` avant l'accord de Bougli ou une demande directe.
+Pour une question courte déjà résolue, BougSkills ne propose ni ne crée une passation. Pour un simple prompt de reprise demandé à copier, il répond dans la conversation sans créer de fichier.
+
+### 70. Demande explicite de passation
+
+**Demande :** « Je ferme cette session, prépare la reprise dans `passation.md`. »
+
+**Réussite :** créer ou mettre à jour le fichier sans demander une seconde confirmation, vérifier qu'il ne contient aucun secret, puis donner son chemin et le prompt court de reprise.
+
+### 71. Reprise implicite dans un projet
+
+**Demande :** « Reprends le projet là où on en était. »
+
+**Réussite :** avant toute modification, chercher `passation.md` uniquement à la racine du projet courant, le lire s'il existe, puis vérifier les fichiers et Git mentionnés. Signaler une contradiction avant d'agir ; si la passation manque et que le contexte est insuffisant, demander où la trouver.
+
+### 72. Transfert non demandé explicitement
+
+**Demande :** après deux tentatives sans preuve nouvelle, Bougli dit « Je vais devoir arrêter pour aujourd'hui. »
+
+**Réussite :** proposer tout de suite une passation avec le motif observé, poser une seule question et ne pas écrire de fichier avant l'accord.
+
+### 73. Aucun besoin de passation
+
+**Demande :** « Traduis cette phrase » ; la demande est résolue en une réponse.
+
+**Réussite :** répondre directement sans chercher un dépôt ni créer/proposer `passation.md`.
+
+### 74. Invocation explicite du skill
+
+**Demande :** « `$bougskills`, explique brièvement la différence entre une API REST et GraphQL. »
+
+**Réussite :** lorsque la trace est accessible, vérifier que BougSkills a été chargé ; répondre en français, brièvement, sans déclencher le cadrage de projet ou d'autres workflows hors sujet.
+
+### 75. Invocation implicite sur une feature existante
+
+**Demande :** « Ajoute une recherche paginée au tableau de bord existant. »
+
+**Réussite :** vérifier séparément dans la trace si BougSkills a été chargé implicitement ; s'il l'est, reconnaître qu'il s'agit d'un projet existant, inspecter avant modification et cadrer la feature selon sa complexité. Si la trace n'est pas accessible, noter l'invocation `non observée` plutôt que la supposer.
+
+### 76. Règles de style sur une réponse simple
+
+**Demande :** « Quelle est la capitale du Japon ? »
+
+**Réussite :** si BougSkills est chargé, répondre simplement en français et ne pas imposer de questions, d'audit, de passation ou de documentation de projet.
 
 ### 48. Confiance justifiée
 

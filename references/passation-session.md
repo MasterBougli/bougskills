@@ -6,31 +6,36 @@ Une longue session peut conserver les impasses, fausses hypothèses, essais inut
 
 La passation sert à transmettre l'état utile et vérifiable à une nouvelle session, sans lui transmettre tout le bruit de la conversation.
 
-## Quand déclencher une passation
+## Déclencheurs
 
-Proposer une passation lorsque l'un de ces cas apparaît :
+Proposer une passation dès qu'un seul de ces signaux de dérive apparaît :
 
-- la session devient longue ou difficile à suivre ;
-- le même bug résiste après plusieurs tentatives ;
-- plusieurs hypothèses ont été invalidées ;
-- l'agent se répète ou revient vers une solution déjà rejetée ;
-- le contexte contient trop de détails historiques inutiles ;
-- le projet change de session, d'agent ou de modèle ;
-- l'utilisateur demande explicitement un résumé de reprise.
+- au moins deux tentatives échouent sans nouvelle preuve ou l'agent revient à une hypothèse déjà infirmée ;
+- les réponses deviennent répétitives ou contradictoires, ou Bougli signale une baisse de qualité ;
+- le travail n'est pas terminé et Bougli indique qu'il ferme la session, veut reprendre plus tard, ou transfère le travail à un autre agent ;
 
-Ne pas créer une passation pour une demande simple ou une tâche courte déjà terminée.
+Une demande explicite n'est pas une simple proposition : appliquer directement les règles d'autorisation ci-dessous. Une demande de résumé copiable reste une réponse dans la conversation, sauf demande explicite de fichier.
 
-## Proposition avant création
+Ne pas se fonder uniquement sur une durée supposée : l'agent ne connaît pas toujours le temps réel écoulé. Ne pas proposer de fichier pour une demande simple déjà terminée ou lorsque le travail se poursuit normalement dans la même session.
 
-BougSkills doit proposer une passation lorsque plusieurs signaux apparaissent : session longue, répétitions, hypothèses contradictoires, plusieurs tentatives échouées ou changement d'agent/modèle. La proposition doit expliquer brièvement le signal observé et rappeler ce que la passation préservera.
+## Autorisation et création
 
-Attendre l'accord de Bougli avant de créer ou modifier `passation.md`, sauf si Bougli demande directement une passation, une reprise ou un résumé de transfert. Ne pas créer automatiquement un fichier de passation uniquement parce qu'une session dépasse une durée arbitraire.
+- Une demande directe comme « prépare une passation » ou « je ferme, prépare la reprise » autorise la création ou la mise à jour de `passation.md`. Ne pas demander une confirmation redondante.
+- Si Bougli demande uniquement un prompt court ou un résumé copiable, le fournir dans la réponse ; ne pas créer de fichier sauf demande explicite de fichier.
+- Si Bougli ne fait qu'indiquer un signal de dérive sans demander de passation, expliquer le signal en une phrase et poser une seule question de confirmation avant toute écriture. Continuer autrement selon sa réponse.
+- Après accord, créer ou mettre à jour le fichier et annoncer son chemin ainsi que le prompt court pour reprendre. Si Bougli refuse, ne rien écrire et fournir au besoin un résumé bref dans la conversation.
 
-## Proposition avant création
+## Détection à la reprise
 
-BougSkills doit proposer une passation lorsque plusieurs signaux apparaissent : session longue, répétitions, hypothèses contradictoires, plusieurs tentatives échouées ou changement d'agent/modèle. La proposition doit expliquer brièvement le signal observé et rappeler ce que la passation préservera.
+Quand Bougli demande de continuer, reprendre ou poursuivre un travail dans un projet, avant toute modification :
 
-Attendre l'accord de Bougli avant de créer ou modifier `passation.md`, sauf si Bougli demande directement une passation, une reprise ou un résumé de transfert. Ne pas créer automatiquement un fichier de passation uniquement parce qu'une session dépasse une durée arbitraire.
+1. vérifier à la racine du projet courant la présence de `passation.md` ;
+2. s'il existe, le lire, puis vérifier les instructions locales, les fichiers cités et l'état Git ;
+3. signaler toute contradiction ou information périmée avant d'agir ;
+4. reprendre à la prochaine action vérifiable, sans répéter les échecs documentés ;
+5. si aucun fichier n'existe et que le contexte de reprise manque, demander à Bougli où se trouve la passation ou quel état reprendre.
+
+Ne pas chercher récursivement sur tout le disque ni supposer qu'un fichier trouvé dans un autre projet concerne la tâche actuelle.
 
 ## Fichier de passation
 

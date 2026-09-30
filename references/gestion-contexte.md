@@ -32,22 +32,21 @@ Si un élément n'aide pas la prochaine décision, il ne doit pas rester dans le
 
 ## Seuils de changement de stratégie
 
-Proposer une réduction de contexte ou une passation lorsqu'au moins un signal apparaît :
+Proposer une réduction de contexte ou une passation dès qu'un signal concret apparaît :
 
 - deux tentatives échouent sans nouvelle preuve ;
 - l'agent revient à une hypothèse déjà infirmée ;
 - les réponses deviennent répétitives ou contradictoires ;
-- le périmètre change fortement ;
-- plusieurs fichiers ou références volumineux sont ouverts sans action claire ;
-- l'utilisateur signale une baisse de qualité ou demande de repartir proprement.
+- Bougli signale une baisse de qualité ou veut repartir proprement ;
+- un travail non terminé va être transféré à une nouvelle session ou à un autre agent.
 
-Après deux signaux ou une boucle de debug manifeste, recommander une session fraîche plutôt que de continuer automatiquement.
+Ne pas se baser sur une durée supposée ni exiger plusieurs signaux quand un de ces critères est déjà atteint. Après deux tentatives infructueuses, ne pas continuer la même approche sans preuve nouvelle.
 
 ## Procédure de réduction
 
 1. Arrêter les modifications non nécessaires.
 2. Préparer une synthèse courte dans la réponse ou dans un état temporaire, puis proposer la passation à Bougli.
-3. Après accord ou demande directe, écrire ou mettre à jour `passation.md` selon le protocole de passation.
+3. Après accord, ou immédiatement si Bougli a directement demandé une passation, écrire ou mettre à jour `passation.md` selon le protocole. Si Bougli demande seulement un résumé copiable, ne pas créer de fichier.
 4. Retirer du contexte les logs, essais et références devenus inutiles.
 5. Vérifier que la passation ne contient aucun secret.
 6. Ouvrir une nouvelle session ou utiliser un nouvel agent.

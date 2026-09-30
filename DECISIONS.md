@@ -135,7 +135,7 @@ Adapter le protocole sécurité au niveau du projet, protéger les secrets, vér
 La compression du contexte ne supprime pas toujours les impasses ou hypothèses erronées accumulées.
 
 ### Décision
-Créer `passation.md` avec l'état vérifiable du travail, puis reprendre dans une nouvelle session qui vérifie les fichiers et Git avant d'agir.
+Utiliser `passation.md` pour transférer l'état vérifiable du travail et reprendre après vérification des fichiers et de Git. Une demande directe de passation autorise l'écriture ; sinon, proposer la passation à un seuil concret et attendre l'accord.
 
 ### Alternatives
 - Continuer uniquement dans la même session — rejeté lorsque le raisonnement tourne en boucle.
@@ -309,7 +309,7 @@ Une passation protège le raisonnement utile, mais un fichier créé automatique
 
 ### Décision
 
-BougSkills détecte les signaux de dérive et propose une passation avec une raison concise. Il attend l'accord de Bougli avant de créer ou modifier `passation.md`, sauf demande directe de passation ou de reprise.
+BougSkills propose la passation dès qu'un seuil concret est atteint, en donnant une raison concise, et attend l'accord avant d'écrire. Une demande directe de préparer une passation autorise l'écriture sans reconfirmation ; une demande de reprise seule déclenche la lecture et la vérification du fichier existant, pas sa création automatique.
 
 ### Conséquences
 
@@ -320,6 +320,34 @@ BougSkills détecte les signaux de dérive et propose une passation avec une rai
 
 - `references/passation-session.md`
 - `references/gestion-contexte.md`
+
+## ADR-043 — Déclenchement explicite et évaluation des passations
+
+- Statut : Acceptée
+- Date : 2026-09-30
+- Portée : découverte automatique de BougSkills et continuité de session
+
+### Contexte
+
+Une description trop générale rend l'invocation implicite incertaine. Plusieurs consignes divergentes sur les seuils et le consentement peuvent aussi empêcher la passation, même quand le skill est chargé.
+
+### Décision
+
+Décrire les demandes et workflows de Bougli dans les métadonnées, conserver l'invocation implicite, recommander `$bougskills` lorsqu'une activation certaine est souhaitée, et garder le point d'entrée comme routeur vers des références ciblées. Unifier les seuils de passation, distinguer transfert explicite, dérive et reprise, et évaluer séparément le chargement du skill et son respect des consignes.
+
+### Conséquences
+
+- Positives : meilleure découvrabilité et cause d'un échec plus facile à distinguer (non-déclenchement ou non-conformité).
+- Négatives : l'invocation automatique reste probabiliste ; Bougli devra utiliser l'activation explicite quand il veut réduire cette incertitude.
+
+### Références
+
+- `SKILL.md`
+- `agents/openai.yaml`
+- `references/passation-session.md`
+- `references/gestion-contexte.md`
+- `tests/scenarios.md`
+- `tests/grille-evaluation.md`
 
 ## ADR-018 — Reconnaissance proportionnelle au risque
 

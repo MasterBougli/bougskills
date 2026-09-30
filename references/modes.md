@@ -122,7 +122,7 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 - Faire un changement ciblé ou un test discriminant.
 - Vérifier que le correctif traite la cause et ne masque pas le symptôme.
 - Ajouter ou améliorer un test de non-régression.
-- Créer une passation si plusieurs tentatives échouent ou si la session devient confuse.
+- Proposer une passation dès que les seuils concrets sont atteints ; ne pas exiger plusieurs signaux et ne pas écrire le fichier sans accord, sauf demande directe.
 - Ne valider une hypothèse qu'après un test qui la distingue réellement des causes concurrentes.
 - Remonter la chaîne d'appel jusqu'au déclencheur initial avant de corriger ; un patch qui masque seulement le symptôme n'est pas terminé.
 
@@ -165,7 +165,8 @@ Si plusieurs modes sont nécessaires, en choisir un principal et indiquer brièv
 
 À utiliser pour préparer ou reprendre une session. Lire `references/passation-session.md`.
 
-- Créer ou lire `passation.md`.
+- À une reprise, vérifier d'abord `passation.md` à la racine du projet courant, puis vérifier les fichiers et Git.
+- Créer ou modifier le fichier sans re-demander l'accord uniquement si Bougli a directement demandé une passation ; pour un simple signal de dérive, proposer et attendre sa réponse.
 - Vérifier les faits dans le workspace plutôt que de faire confiance au résumé seul.
 - Ne pas répéter les tentatives marquées comme échouées.
 - Mettre à jour la passation après une avancée importante.

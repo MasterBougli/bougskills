@@ -51,5 +51,5 @@ Ce cycle s'applique aux fonctionnalités non triviales. Il reste proportionné :
 ## Phase 7 — Passation et apprentissage
 
 - Mettre à jour la documentation et les décisions structurantes.
-- Si le travail continue ailleurs, créer `passation.md` avec objectif, problème, fichiers, faits, hypothèses, essais échoués, état Git et prochaine action.
+- Si le travail non terminé doit continuer ailleurs, appliquer `references/passation-session.md` : proposer une passation et attendre l'accord avant l'écriture, sauf demande directe de Bougli.
 - Transformer une correction durable en règle seulement si elle est générale, utile et documentée ; ne pas généraliser un accident local.

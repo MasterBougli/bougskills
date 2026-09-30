@@ -79,6 +79,8 @@ Cette commande optionnelle envoie une requête GET à GitHub (redirection possib
 
 Mentionner explicitement `BougSkills` ou demander directement l'action souhaitée. Le skill sélectionne automatiquement un mode de travail :
 
+La sélection automatique dépend du modèle et n'est pas une garantie. Pour le charger de façon explicite dans Codex, utiliser `$bougskills` au début de la demande, ou sélectionner BougSkills dans le sélecteur de skills. Les règles qui doivent s'appliquer même lorsque le skill n'est pas chargé doivent aussi figurer dans les instructions globales de Codex.
+
 Pour démarrer explicitement une création guidée, écrire `/nouveau-projet` suivi de la demande. Cela active un raccourci conversationnel ; les skills ne peuvent pas créer de commandes natives dans l'interface Codex.
 
 - réponse simple ou explication pédagogique ;
@@ -149,7 +151,7 @@ Les preuves et niveaux de confiance suivent [`references/protocole-preuves.md`](
 
 ### Passation entre sessions
 
-Lorsqu'une session devient longue, confuse ou bloquée, demander une passation. BougSkills crée ou met à jour `passation.md` avec l'objectif, le problème, les fichiers, les faits, les hypothèses, les tentatives échouées, l'état Git et la prochaine action.
+Après deux tentatives sans nouvelle preuve, un retour à une hypothèse invalidée, des réponses répétitives/contradictoires, ou si le travail inachevé change de session, BougSkills propose une passation sans attendre plusieurs signaux. Il attend ton accord avant d'écrire, sauf demande directe comme « je ferme, prépare la reprise ». En reprise, il vérifie d'abord `passation.md` à la racine du projet courant et confronte son contenu aux fichiers et à Git.
 
 Dans une nouvelle session, utiliser :
 

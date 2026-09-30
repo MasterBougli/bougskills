@@ -53,6 +53,15 @@ Un seul échec critique suffit à faire échouer le scénario, quel que soit le 
 
 ## Validation d'une évolution
 
+### Déclenchement et conformité
+
+Évaluer séparément deux choses :
+
+- **Déclenchement** : le skill était-il chargé ? Tester au moins une demande explicite avec `$bougskills` et des formulations implicites réalistes ; noter `explicite`, `implicite` ou `non observé`.
+- **Conformité** : une fois chargé, a-t-il suivi le bon parcours, notamment proposer/écrire/reprendre une passation selon l'autorisation ?
+
+Ne pas déduire que le skill a été chargé uniquement parce que la réponse paraît conforme. Si la trace d'exécution n'est pas visible, marquer le déclenchement `non observé`, et non réussi. Comparer un petit jeu de prompts qui inclut les nouveaux cas de passation et ajouter tout échec réel aux scénarios.
+
 Avant de publier une modification importante de BougSkills :
 
 1. exécuter les scénarios concernés avant la modification si un état de référence existe ;
